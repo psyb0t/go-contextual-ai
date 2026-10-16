@@ -1,0 +1,11 @@
+{
+  "name": "go-contextual-ai",
+  "version": "0.1.0",
+  "description": "Unofficial Go client for the Contextual AI API: typed methods for agents, queries, datastores, documents, generate, rerank, parse and LMUnit, generated from Contextual AI's OpenAPI spec.",
+  "author": { "name": "psyb0t", "url": "https://github.com/psyb0t" },
+  "homepage": "https://github.com/psyb0t/go-contextual-ai",
+  "repository": "https://github.com/psyb0t/go-contextual-ai",
+  "license": "MIT",
+  "keywords": ["contextual-ai", "rag", "api-client", "openapi", "go-library"],
+  "skills": "./skills/"
+}
