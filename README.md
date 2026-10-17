@@ -56,6 +56,8 @@ The same code is in `example_test.go`, so `make test` checks that it compiles.
 
 Method names come from the spec's operation IDs, which repeat the path and the HTTP method, so they are long: `ListDatastoresDatastoresGet` lists datastores, `QueryAgentsAgentIdQueryPost` queries an agent, `CreateAgentAgentsPost` creates one.
 
+The full API is in the [Go reference](https://pkg.go.dev/github.com/psyb0t/go-contextual-ai); after `go get`, `go doc github.com/psyb0t/go-contextual-ai` prints it locally.
+
 ## Auth
 
 Contextual AI authenticates with a bearer token: send the API key as `Authorization: Bearer <key>`. Keys are created in the Contextual AI console. The base URL is `https://api.contextual.ai/v1`.

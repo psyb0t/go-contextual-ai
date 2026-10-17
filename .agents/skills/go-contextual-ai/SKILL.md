@@ -1,6 +1,7 @@
 ---
 name: go-contextual-ai
-description: Unofficial Go client for the Contextual AI API, generated with oapi-codegen. `contextual.NewClientWithResponses(baseURL, opts...)` from `github.com/psyb0t/go-contextual-ai` gives a typed method for every endpoint in Contextual AI's OpenAPI spec (agents, agent queries, datastores, documents, generate, LMUnit, parse jobs, rerank, users), with request structs and decoded `JSON200`/`JSON422` response fields. Auth is a bearer API key added through a request editor. Use when Go code needs to call the Contextual AI API, or already imports go-contextual-ai.
+description: Writes Go code with go-contextual-ai (package contextual, github.com/psyb0t/go-contextual-ai), an unofficial client for the Contextual AI API generated with oapi-codegen. `contextual.NewClientWithResponses(baseURL, opts...)` gives a typed method for every endpoint in Contextual AI's OpenAPI spec (agents, agent queries, datastores, documents, generate, LMUnit, parse jobs, rerank, users), with request structs and decoded `JSON200`/`JSON422` response fields. Auth is a bearer API key added through a request editor. Use when Go code needs to call the Contextual AI API, or already imports go-contextual-ai.
+license: MIT
 homepage: https://github.com/psyb0t/go-contextual-ai
 user-invocable: true
 metadata:
@@ -9,8 +10,6 @@ metadata:
     requires:
       bins:
         - go
-      env:
-        - CONTEXTUAL_API_KEY
 permissions:
   filesystem: "Guides edits to the Go source of the current project. The library reads and writes no files."
   shell: "The Go toolchain (`go get`, `go build`, `go test`) to add and compile the dependency."
@@ -38,6 +37,20 @@ For install details, the method naming scheme and the operation list, see [refer
 
 - The code is not Go. Contextual AI ships official Python and Node SDKs.
 - You need streamed query output as parsed events. The client has no server-sent events parser; leave `Stream` unset to get one JSON response.
+
+## Finding endpoints and types
+
+The examples below cover a few calls. Every operation in the spec has a generated method, and the spec's descriptions are on them as Go doc comments. Look names and fields up instead of guessing. After `go get github.com/psyb0t/go-contextual-ai`, from inside your module:
+
+```bash
+go doc github.com/psyb0t/go-contextual-ai ClientWithResponsesInterface  # every endpoint method
+go doc github.com/psyb0t/go-contextual-ai QueryRequestV1                # one method, params type or model
+go doc -all github.com/psyb0t/go-contextual-ai                          # the whole package
+```
+
+The same documentation is at https://pkg.go.dev/github.com/psyb0t/go-contextual-ai.
+
+Method names come from the spec's operation IDs, which repeat the path and HTTP method (`ListDatastoresDatastoresGet`). `<OperationId>WithResponse` takes the context, then the path parameters in order, then `*<OperationId>Params` when the operation has query or header parameters, then the request body when it has one. Multipart uploads (document ingestion, parse) only have the `<OperationId>WithBodyWithResponse` form, which takes a content type and an `io.Reader`. The `JSON200` field (or `JSON422` and so on, per declared status) holds the decoded body; it is nil for any other status.
 
 ## Usage
 

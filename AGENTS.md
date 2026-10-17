@@ -9,7 +9,7 @@ The client is generated. `make generate` runs `go generate ./...`, which runs th
 1. `scripts/fetch-spec.sh` reads `openapi_spec_url` from the `.stats.yml` of ContextualAI/contextual-client-python and downloads that URL to `api/openapi.yaml`. Stainless hosts the spec under a content-hashed URL that changes on every update.
 2. `go tool oapi-codegen --config=config.yaml api/openapi.yaml` writes `client.gen.go`: models, `Client`, and `ClientWithResponses`.
 
-No patch step is needed today; the spec generates as published. If one becomes necessary it goes in `scripts/` and runs between those two lines.
+No patch step is needed; the spec generates as published. If one becomes necessary it goes in `scripts/` and runs between those two lines.
 
 ## Stack
 
