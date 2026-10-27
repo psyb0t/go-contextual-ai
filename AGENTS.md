@@ -13,7 +13,7 @@ No patch step is needed; the spec generates as published. If one becomes necessa
 
 ## Stack
 
-- Go 1.26.9, one package `contextual` at the module root.
+- Go 1.26.10, one package `contextual` at the module root.
 - oapi-codegen v2 as a `go.mod` tool, with `github.com/oapi-codegen/runtime` at runtime.
 - `config.yaml` maps `number` to `float64`.
 
