@@ -3,4 +3,4 @@
 package contextual
 
 //go:generate bash scripts/fetch-spec.sh
-//go:generate go tool oapi-codegen --config=config.yaml api/openapi.yaml
+//go:generate go tool oapi-codegen --config=config.yaml api/openapi.json

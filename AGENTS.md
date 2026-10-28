@@ -6,8 +6,8 @@ Unofficial Go client for the Contextual AI API. If you only want to use the clie
 
 The client is generated. `make generate` runs `go generate ./...`, which runs the `//go:generate` lines in `gen.go`:
 
-1. `scripts/fetch-spec.sh` reads `openapi_spec_url` from the `.stats.yml` of ContextualAI/contextual-client-python and downloads that URL to `api/openapi.yaml`. Stainless hosts the spec under a content-hashed URL that changes on every update.
-2. `go tool oapi-codegen --config=config.yaml api/openapi.yaml` writes `client.gen.go`: models, `Client`, and `ClientWithResponses`.
+1. `scripts/fetch-spec.sh` downloads the spec Contextual AI publishes with its API reference, `https://docs.contextual.ai/api-reference/openapi.json`, to `api/openapi.json` and checks with jq that it is an OpenAPI 3.x document.
+2. `go tool oapi-codegen --config=config.yaml api/openapi.json` writes `client.gen.go`: models, `Client`, and `ClientWithResponses`.
 
 No patch step is needed; the spec generates as published. If one becomes necessary it goes in `scripts/` and runs between those two lines.
 
@@ -41,8 +41,7 @@ make sec       # gitleaks, govulncheck, semgrep
 
 ## Project-specific landmines
 
-- The spec URL in `.stats.yml` changes with every upstream spec update, so never hardcode a Stainless URL.
-- The spec file is YAML written in JSON style. The dev image has no YAML parser, so `fetch-spec.sh` checks for the `openapi` key with grep.
+- The spec URL is fixed, but its content changes upstream without notice; schema and operation names can change with it.
 - Method names come from FastAPI-style operation IDs and carry the path and HTTP method (`ListDatastoresDatastoresGet`). A spec update that changes an operation ID renames the method.
 - `scripts/sec.sh` excludes one semgrep rule, the `interface{}` unmarshal check, because oapi-codegen decodes free-form `additionalProperties` that way.
 - CI skips the generate drift check, because the spec changes upstream without notice. Regenerate locally and commit the result.

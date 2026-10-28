@@ -52,7 +52,7 @@ func TestListDatastores(t *testing.T) {
 
 		w.Header().Set("Content-Type", "application/json")
 		_, _ = w.Write([]byte(
-			`{"total_count":1,"datastores":[{"id":"` + testDatastoreID +
+			`{"next_cursor":"next","datastores":[{"id":"` + testDatastoreID +
 				`","name":"docs","datastore_type":"UNSTRUCTURED",` +
 				`"created_at":"2026-01-02T03:04:05Z"}]}`,
 		))
@@ -68,7 +68,8 @@ func TestListDatastores(t *testing.T) {
 	require.Equal(t, http.StatusOK, res.StatusCode())
 	require.NotNil(t, res.JSON200)
 
-	assert.Equal(t, 1, res.JSON200.TotalCount)
+	require.NotNil(t, res.JSON200.NextCursor)
+	assert.Equal(t, "next", *res.JSON200.NextCursor)
 	require.Len(t, res.JSON200.Datastores, 1)
 
 	ds := res.JSON200.Datastores[0]

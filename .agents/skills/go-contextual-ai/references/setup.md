@@ -35,14 +35,16 @@ Method names are the spec's operation IDs, which repeat the path and HTTP method
 | Area | Typed methods (`...WithResponse`) |
 |---|---|
 | Agents | `ListAgentsAgentsGet`, `CreateAgentAgentsPost`, `EditAgentAgentsAgentIdPut`, `DeleteAgentAgentsAgentIdDelete`, `CopyAgentAgentsAgentIdCopyPost`, `GetAgentMetadataAgentsAgentIdMetadataGet`, `ResetAgentAgentsAgentIdResetPut` |
-| Agent queries | `QueryAgentsAgentIdQueryPost`, `ProvideFeedbackAgentsAgentIdFeedbackPost`, `GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGet`, `GetMetricsAgentsAgentIdMetricsGet` |
-| Templates | `ListTemplatesAgentsTemplatesGet`, `GetTemplateConfigurationAgentsTemplatesTemplateGet`, `SaveTemplateAgentsAgentIdTemplatePost` |
+| Agent queries | `QueryAgentsAgentIdQueryPost`, `QueryAgentsAgentIdQueryAclPost`, `ProvideFeedbackAgentsAgentIdFeedbackPost`, `GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGet`, `GetMetricsAgentsAgentIdMetricsGet` |
+| Templates | `ListTemplatesAgentsTemplatesGet`, `ListAclTemplatesAgentsTemplatesAclGet`, `GetTemplateConfigurationAgentsTemplatesTemplateGet`, `SaveTemplateAgentsAgentIdTemplatePost` |
 | Datastores | `ListDatastoresDatastoresGet`, `CreateDatastoreDatastoresPost`, `EditDatastoreConfigurationDatastoresDatastoreIdPut`, `DeleteDatastoreDatastoresDatastoreIdDelete`, `GetDatastoreMetadataDatastoresDatastoreIdMetadataGet`, `ResetDatastoreDatastoresDatastoreIdResetPut` |
 | Documents | `ListDocumentsDatastoresDatastoreIdDocumentsGet`, `IngestDocumentDatastoresDatastoreIdDocumentsPostWithBody` (multipart), `DeleteDocumentDatastoresDatastoreIdDocumentsDocumentIdDelete`, `GetDocumentMetadataDatastoresDatastoreIdDocumentsDocumentIdMetadataGet`, `UpdateDocumentMetadataDatastoresDatastoreIdDocumentsDocumentIdMetadataPut`, `GetParseResultsDatastoresDatastoreIdDocumentsDocumentIdParseGet` |
 | Contents and chunks | `GetDocumentContentsDatastoresDatastoreIdContentsGet`, `GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet`, `EditChunkContentDatastoresDatastoreIdChunksContentIdContentPut` |
 | Models | `GenerateGeneratePost`, `RerankRerankPost`, `LmunitLmunitPost` |
 | Parse | `ParseParsePostWithBody` (multipart), `ParseListJobsParseJobsGet`, `ParseStatusParseJobsJobIdStatusGet`, `ParseResultsParseJobsJobIdResultsGet` |
-| Users | `GetUsersUsersGet`, `InviteUsersUsersPost`, `UpdateUserUsersPut`, `RemoveUserUsersDelete` |
+| Extract | `ListSchemasExtractSchemasGet`, `CreateSchemaExtractSchemasPost`, `UploadDocumentExtractDocumentsUploadPostWithBody` (multipart), `StartExtractionJobExtractJobsPost`, `GetJobStatusExtractJobsJobIdGet`, `GetJobResultsExtractJobsJobIdResultsGet`, and the other `...Extract...` methods |
+| Billing | `GetBalanceBillingBalanceGet`, `GetMonthlyUsageEndpointBillingUsagesMonthlyGet`, and the other `...Billing...` methods |
+| Users and workspace | `GetUsersUsersGet`, `InviteUsersUsersPost`, `UpdateUserUsersPut`, `RemoveUserUsersDelete`, `GetConsentWorkspacesConsentGet`, `UpdateConsentWorkspacesConsentPut` |
 
 Check `client.gen.go` for the exact parameter and body types of a method before using it.
 

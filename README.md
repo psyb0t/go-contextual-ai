@@ -72,7 +72,7 @@ make generate
 
 `gen.go` declares the steps, so `make generate` is just `go generate ./...`:
 
-- `scripts/fetch-spec.sh` reads `openapi_spec_url` from the `.stats.yml` of [ContextualAI/contextual-client-python](https://github.com/ContextualAI/contextual-client-python) and downloads that URL to `api/openapi.yaml`. Stainless hosts the spec under a URL that contains a content hash, so the URL changes with every spec update.
+- `scripts/fetch-spec.sh` downloads the OpenAPI document Contextual AI publishes with its API reference, `https://docs.contextual.ai/api-reference/openapi.json`, to `api/openapi.json` and checks that it is an OpenAPI 3.x document.
 - oapi-codegen runs with `config.yaml`. The config maps `number` to `float64`, because the spec gives scores and other numbers no format and oapi-codegen would otherwise use `float32`.
 
 `.github/workflows/regen.yml` does the same every day in CI. When the new spec changes the client, it runs `make lint`, `make test` and `make sec`. If a check fails, Claude edits the code and the checks run again, up to three times, and a review step reads the result. A passing change is committed with a CHANGELOG entry and tagged as the next release: a patch version for fixes and additions, a minor version for breaking changes.

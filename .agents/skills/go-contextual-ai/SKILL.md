@@ -1,6 +1,6 @@
 ---
 name: go-contextual-ai
-description: Writes Go code with go-contextual-ai (package contextual, github.com/psyb0t/go-contextual-ai), an unofficial client for the Contextual AI API generated with oapi-codegen. `contextual.NewClientWithResponses(baseURL, opts...)` gives a typed method for every endpoint in Contextual AI's OpenAPI spec (agents, agent queries, datastores, documents, generate, LMUnit, parse jobs, rerank, users), with request structs and decoded `JSON200`/`JSON422` response fields. Auth is a bearer API key added through a request editor. Use when Go code needs to call the Contextual AI API, or already imports go-contextual-ai.
+description: Writes Go code with go-contextual-ai (package contextual, github.com/psyb0t/go-contextual-ai), an unofficial client for the Contextual AI API generated with oapi-codegen. `contextual.NewClientWithResponses(baseURL, opts...)` gives a typed method for every endpoint in Contextual AI's OpenAPI spec (agents, agent queries, datastores, documents, extraction, generate, LMUnit, parse jobs, rerank, billing, users), with request structs and decoded `JSON200`/`JSON422` response fields. Auth is a bearer API key added through a request editor. Use when Go code needs to call the Contextual AI API, or already imports go-contextual-ai.
 license: MIT
 homepage: https://github.com/psyb0t/go-contextual-ai
 user-invocable: true

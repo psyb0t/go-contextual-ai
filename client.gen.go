@@ -19,15 +19,78 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
-// Defines values for AgentLevelUserRolesEnum.
+// Defines values for ACLConfigName.
 const (
-	AgentLevelUserRolesEnumAGENTLEVELUSER AgentLevelUserRolesEnum = "AGENT_LEVEL_USER"
+	ACLConfigNameConditional                  ACLConfigName = "conditional"
+	ACLConfigNameDatastoreSearch              ACLConfigName = "datastore_search"
+	ACLConfigNameDefaultQuery                 ACLConfigName = "default_query"
+	ACLConfigNameDefaultQueryFineGrained      ACLConfigName = "default_query_fine_grained"
+	ACLConfigNameInstantSearchTest            ACLConfigName = "instant_search_test"
+	ACLConfigNameMetaQueries                  ACLConfigName = "meta_queries"
+	ACLConfigNameRootCauseAnalysis            ACLConfigName = "root_cause_analysis"
+	ACLConfigNameStructuredUnstructuredSearch ACLConfigName = "structured_unstructured_search"
+	ACLConfigNameWebSearch                    ACLConfigName = "web_search"
 )
 
-// Valid indicates whether the value is a known member of the AgentLevelUserRolesEnum enum.
-func (e AgentLevelUserRolesEnum) Valid() bool {
+// Valid indicates whether the value is a known member of the ACLConfigName enum.
+func (e ACLConfigName) Valid() bool {
 	switch e {
-	case AgentLevelUserRolesEnumAGENTLEVELUSER:
+	case ACLConfigNameConditional:
+		return true
+	case ACLConfigNameDatastoreSearch:
+		return true
+	case ACLConfigNameDefaultQuery:
+		return true
+	case ACLConfigNameDefaultQueryFineGrained:
+		return true
+	case ACLConfigNameInstantSearchTest:
+		return true
+	case ACLConfigNameMetaQueries:
+		return true
+	case ACLConfigNameRootCauseAnalysis:
+		return true
+	case ACLConfigNameStructuredUnstructuredSearch:
+		return true
+	case ACLConfigNameWebSearch:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ACLWorkflowEventVersion.
+const (
+	ACLWorkflowEventVersionV0 ACLWorkflowEventVersion = "v0"
+)
+
+// Valid indicates whether the value is a known member of the ACLWorkflowEventVersion enum.
+func (e ACLWorkflowEventVersion) Valid() bool {
+	switch e {
+	case ACLWorkflowEventVersionV0:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BillingMode.
+const (
+	BillingModeLEGACY              BillingMode = "LEGACY"
+	BillingModeONDEMANDPAYARREARS  BillingMode = "ON_DEMAND_PAY_ARREARS"
+	BillingModeONDEMANDPREPAID     BillingMode = "ON_DEMAND_PREPAID"
+	BillingModePROVISIONTHROUGHPUT BillingMode = "PROVISION_THROUGHPUT"
+)
+
+// Valid indicates whether the value is a known member of the BillingMode enum.
+func (e BillingMode) Valid() bool {
+	switch e {
+	case BillingModeLEGACY:
+		return true
+	case BillingModeONDEMANDPAYARREARS:
+		return true
+	case BillingModeONDEMANDPREPAID:
+		return true
+	case BillingModePROVISIONTHROUGHPUT:
 		return true
 	default:
 		return false
@@ -79,6 +142,45 @@ func (e CompositeOperator) Valid() bool {
 	}
 }
 
+// Defines values for ConsentType.
+const (
+	ConsentTypeCONSENTFULL    ConsentType = "CONSENT_FULL"
+	ConsentTypeCONSENTSUPPORT ConsentType = "CONSENT_SUPPORT"
+	ConsentTypeREVOKE         ConsentType = "REVOKE"
+	ConsentTypeUNKNOWN        ConsentType = "UNKNOWN"
+)
+
+// Valid indicates whether the value is a known member of the ConsentType enum.
+func (e ConsentType) Valid() bool {
+	switch e {
+	case ConsentTypeCONSENTFULL:
+		return true
+	case ConsentTypeCONSENTSUPPORT:
+		return true
+	case ConsentTypeREVOKE:
+		return true
+	case ConsentTypeUNKNOWN:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextualAgentContentMetadataContentType.
+const (
+	ContextualAgentContentMetadataContentTypeContextualAgentResponse ContextualAgentContentMetadataContentType = "contextual_agent_response"
+)
+
+// Valid indicates whether the value is a known member of the ContextualAgentContentMetadataContentType enum.
+func (e ContextualAgentContentMetadataContentType) Valid() bool {
+	switch e {
+	case ContextualAgentContentMetadataContentTypeContextualAgentResponse:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for DatastoreFigureCaptionMode.
 const (
 	DatastoreFigureCaptionModeCustom  DatastoreFigureCaptionMode = "custom"
@@ -109,6 +211,30 @@ const (
 func (e DatastoreOutputEntryDatastoreType) Valid() bool {
 	switch e {
 	case DatastoreOutputEntryDatastoreTypeUNSTRUCTURED:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DefaultTemplateName.
+const (
+	DefaultTemplateNameCompanyPolicyQAndA DefaultTemplateName = "company_policy_q_and_a"
+	DefaultTemplateNameCustomerSupport    DefaultTemplateName = "customer_support"
+	DefaultTemplateNameDefault            DefaultTemplateName = "default"
+	DefaultTemplateNameFinance            DefaultTemplateName = "finance"
+)
+
+// Valid indicates whether the value is a known member of the DefaultTemplateName enum.
+func (e DefaultTemplateName) Valid() bool {
+	switch e {
+	case DefaultTemplateNameCompanyPolicyQAndA:
+		return true
+	case DefaultTemplateNameCustomerSupport:
+		return true
+	case DefaultTemplateNameDefault:
+		return true
+	case DefaultTemplateNameFinance:
 		return true
 	default:
 		return false
@@ -154,6 +280,45 @@ func (e DocumentStatusEnum) Valid() bool {
 	case DocumentStatusEnumProcessing:
 		return true
 	case DocumentStatusEnumRetrying:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DynamicAgentEventVersion.
+const (
+	DynamicAgentEventVersionV0 DynamicAgentEventVersion = "v0"
+)
+
+// Valid indicates whether the value is a known member of the DynamicAgentEventVersion enum.
+func (e DynamicAgentEventVersion) Valid() bool {
+	switch e {
+	case DynamicAgentEventVersionV0:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ExtractConfigModel.
+const (
+	ExtractConfigModelGemini25Flash       ExtractConfigModel = "gemini-2.5-flash"
+	ExtractConfigModelGemini25Pro         ExtractConfigModel = "gemini-2.5-pro"
+	ExtractConfigModelGemini3FlashPreview ExtractConfigModel = "gemini-3-flash-preview"
+	ExtractConfigModelGemini3ProPreview   ExtractConfigModel = "gemini-3-pro-preview"
+)
+
+// Valid indicates whether the value is a known member of the ExtractConfigModel enum.
+func (e ExtractConfigModel) Valid() bool {
+	switch e {
+	case ExtractConfigModelGemini25Flash:
+		return true
+	case ExtractConfigModelGemini25Pro:
+		return true
+	case ExtractConfigModelGemini3FlashPreview:
+		return true
+	case ExtractConfigModelGemini3ProPreview:
 		return true
 	default:
 		return false
@@ -244,6 +409,51 @@ func (e FilterMetadataOperator) Valid() bool {
 	}
 }
 
+// Defines values for GenerationModelName.
+const (
+	GenerationModelNameClaudeOpus4       GenerationModelName = "Claude Opus 4"
+	GenerationModelNameClaudeSonnet4     GenerationModelName = "Claude Sonnet 4"
+	GenerationModelNameContextualGLM     GenerationModelName = "Contextual GLM"
+	GenerationModelNameDefault           GenerationModelName = "Default"
+	GenerationModelNameGPT5              GenerationModelName = "GPT-5"
+	GenerationModelNameGemini20Flash     GenerationModelName = "Gemini 2.0 Flash"
+	GenerationModelNameGemini20FlashLite GenerationModelName = "Gemini 2.0 Flash Lite"
+	GenerationModelNameGemini25Flash     GenerationModelName = "Gemini 2.5 Flash"
+	GenerationModelNameGemini25Pro       GenerationModelName = "Gemini 2.5 Pro"
+	GenerationModelNameGemini3Flash      GenerationModelName = "Gemini 3 Flash"
+	GenerationModelNameGemini3Pro        GenerationModelName = "Gemini 3 Pro"
+)
+
+// Valid indicates whether the value is a known member of the GenerationModelName enum.
+func (e GenerationModelName) Valid() bool {
+	switch e {
+	case GenerationModelNameClaudeOpus4:
+		return true
+	case GenerationModelNameClaudeSonnet4:
+		return true
+	case GenerationModelNameContextualGLM:
+		return true
+	case GenerationModelNameDefault:
+		return true
+	case GenerationModelNameGPT5:
+		return true
+	case GenerationModelNameGemini20Flash:
+		return true
+	case GenerationModelNameGemini20FlashLite:
+		return true
+	case GenerationModelNameGemini25Flash:
+		return true
+	case GenerationModelNameGemini25Pro:
+		return true
+	case GenerationModelNameGemini3Flash:
+		return true
+	case GenerationModelNameGemini3Pro:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for GetDatastoreResponseDatastoreType.
 const (
 	GetDatastoreResponseDatastoreTypeUNSTRUCTURED GetDatastoreResponseDatastoreType = "UNSTRUCTURED"
@@ -259,18 +469,21 @@ func (e GetDatastoreResponseDatastoreType) Valid() bool {
 	}
 }
 
-// Defines values for ParseFigureCaptionMode.
+// Defines values for IngestionTier.
 const (
-	ParseFigureCaptionModeConcise  ParseFigureCaptionMode = "concise"
-	ParseFigureCaptionModeDetailed ParseFigureCaptionMode = "detailed"
+	IngestionTierADVANCED IngestionTier = "ADVANCED"
+	IngestionTierPREMIUM  IngestionTier = "PREMIUM"
+	IngestionTierSTANDARD IngestionTier = "STANDARD"
 )
 
-// Valid indicates whether the value is a known member of the ParseFigureCaptionMode enum.
-func (e ParseFigureCaptionMode) Valid() bool {
+// Valid indicates whether the value is a known member of the IngestionTier enum.
+func (e IngestionTier) Valid() bool {
 	switch e {
-	case ParseFigureCaptionModeConcise:
+	case IngestionTierADVANCED:
 		return true
-	case ParseFigureCaptionModeDetailed:
+	case IngestionTierPREMIUM:
+		return true
+	case IngestionTierSTANDARD:
 		return true
 	default:
 		return false
@@ -484,6 +697,36 @@ func (e StructuredOutputType) Valid() bool {
 	}
 }
 
+// Defines values for ThinkingEventType.
+const (
+	ThinkingEventTypeThinkingEvent ThinkingEventType = "thinking_event"
+)
+
+// Valid indicates whether the value is a known member of the ThinkingEventType enum.
+func (e ThinkingEventType) Valid() bool {
+	switch e {
+	case ThinkingEventTypeThinkingEvent:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ToolCallType.
+const (
+	ToolCallTypeToolCall ToolCallType = "tool_call"
+)
+
+// Valid indicates whether the value is a known member of the ToolCallType enum.
+func (e ToolCallType) Valid() bool {
+	switch e {
+	case ToolCallTypeToolCall:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for UnstructuredContentMetadataContentType.
 const (
 	UnstructuredContentMetadataContentTypeUnstructured UnstructuredContentMetadataContentType = "unstructured"
@@ -493,6 +736,129 @@ const (
 func (e UnstructuredContentMetadataContentType) Valid() bool {
 	switch e {
 	case UnstructuredContentMetadataContentTypeUnstructured:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for UsageType.
+const (
+	UsageTypeACLCOST                             UsageType = "ACL_COST"
+	UsageTypeEVALREQUEST                         UsageType = "EVAL_REQUEST"
+	UsageTypeGENERATEINPUTTOKEN                  UsageType = "GENERATE_INPUT_TOKEN"
+	UsageTypeGENERATEOUTPUTTOKEN                 UsageType = "GENERATE_OUTPUT_TOKEN"
+	UsageTypeINGESTBASICPAGE                     UsageType = "INGEST_BASIC_PAGE"
+	UsageTypeINGESTSTANDARDPAGE                  UsageType = "INGEST_STANDARD_PAGE"
+	UsageTypeINGESTV3ADVANCEDPAGE                UsageType = "INGEST_V3_ADVANCED_PAGE"
+	UsageTypeINGESTV3PREMIUMPAGE                 UsageType = "INGEST_V3_PREMIUM_PAGE"
+	UsageTypeINGESTV3STANDARDPAGE                UsageType = "INGEST_V3_STANDARD_PAGE"
+	UsageTypeLMUNITTOKEN                         UsageType = "LMUNIT_TOKEN"
+	UsageTypePARSEBASICPAGE                      UsageType = "PARSE_BASIC_PAGE"
+	UsageTypePARSESTANDARDPAGE                   UsageType = "PARSE_STANDARD_PAGE"
+	UsageTypeQUERYCONTEXTUALIZATIONTOKEN         UsageType = "QUERY_CONTEXTUALIZATION_TOKEN"
+	UsageTypeQUERYEXPANSIONINPUTTOKEN            UsageType = "QUERY_EXPANSION_INPUT_TOKEN"
+	UsageTypeQUERYEXPANSIONOUTPUTTOKEN           UsageType = "QUERY_EXPANSION_OUTPUT_TOKEN"
+	UsageTypeQUERYFILTERTOKEN                    UsageType = "QUERY_FILTER_TOKEN"
+	UsageTypeQUERYGENERATIONINPUTTOKEN           UsageType = "QUERY_GENERATION_INPUT_TOKEN"
+	UsageTypeQUERYGENERATIONOUTPUTTOKEN          UsageType = "QUERY_GENERATION_OUTPUT_TOKEN"
+	UsageTypeQUERYGROUNDEDNESSTOKEN              UsageType = "QUERY_GROUNDEDNESS_TOKEN"
+	UsageTypeQUERYPLANNINGINPUTTOKEN             UsageType = "QUERY_PLANNING_INPUT_TOKEN"
+	UsageTypeQUERYPLANNINGOUTPUTTOKEN            UsageType = "QUERY_PLANNING_OUTPUT_TOKEN"
+	UsageTypeQUERYREFORMULATIONINPUTTOKEN        UsageType = "QUERY_REFORMULATION_INPUT_TOKEN"
+	UsageTypeQUERYREFORMULATIONOUTPUTTOKEN       UsageType = "QUERY_REFORMULATION_OUTPUT_TOKEN"
+	UsageTypeQUERYREQUEST                        UsageType = "QUERY_REQUEST"
+	UsageTypeQUERYRERANKTOKEN                    UsageType = "QUERY_RERANK_TOKEN"
+	UsageTypeQUERYRETRIEVALTOKEN                 UsageType = "QUERY_RETRIEVAL_TOKEN"
+	UsageTypeQUERYTRANSLATIONINPUTTOKEN          UsageType = "QUERY_TRANSLATION_INPUT_TOKEN"
+	UsageTypeQUERYTRANSLATIONOUTPUTTOKEN         UsageType = "QUERY_TRANSLATION_OUTPUT_TOKEN"
+	UsageTypeRERANKTOKEN                         UsageType = "RERANK_TOKEN"
+	UsageTypeRERANKV2MINITOKEN                   UsageType = "RERANK_V2_MINI_TOKEN"
+	UsageTypeRERANKV2TOKEN                       UsageType = "RERANK_V2_TOKEN"
+	UsageTypeSTRUCTUREDEXTRACTIONCACHEDTOKENS    UsageType = "STRUCTURED_EXTRACTION_CACHED_TOKENS"
+	UsageTypeSTRUCTUREDEXTRACTIONCOST            UsageType = "STRUCTURED_EXTRACTION_COST"
+	UsageTypeSTRUCTUREDEXTRACTIONINPUTTOKENS     UsageType = "STRUCTURED_EXTRACTION_INPUT_TOKENS"
+	UsageTypeSTRUCTUREDEXTRACTIONOUTPUTTOKENS    UsageType = "STRUCTURED_EXTRACTION_OUTPUT_TOKENS"
+	UsageTypeSTRUCTUREDEXTRACTIONREASONINGTOKENS UsageType = "STRUCTURED_EXTRACTION_REASONING_TOKENS"
+	UsageTypeTUNEREQUEST                         UsageType = "TUNE_REQUEST"
+)
+
+// Valid indicates whether the value is a known member of the UsageType enum.
+func (e UsageType) Valid() bool {
+	switch e {
+	case UsageTypeACLCOST:
+		return true
+	case UsageTypeEVALREQUEST:
+		return true
+	case UsageTypeGENERATEINPUTTOKEN:
+		return true
+	case UsageTypeGENERATEOUTPUTTOKEN:
+		return true
+	case UsageTypeINGESTBASICPAGE:
+		return true
+	case UsageTypeINGESTSTANDARDPAGE:
+		return true
+	case UsageTypeINGESTV3ADVANCEDPAGE:
+		return true
+	case UsageTypeINGESTV3PREMIUMPAGE:
+		return true
+	case UsageTypeINGESTV3STANDARDPAGE:
+		return true
+	case UsageTypeLMUNITTOKEN:
+		return true
+	case UsageTypePARSEBASICPAGE:
+		return true
+	case UsageTypePARSESTANDARDPAGE:
+		return true
+	case UsageTypeQUERYCONTEXTUALIZATIONTOKEN:
+		return true
+	case UsageTypeQUERYEXPANSIONINPUTTOKEN:
+		return true
+	case UsageTypeQUERYEXPANSIONOUTPUTTOKEN:
+		return true
+	case UsageTypeQUERYFILTERTOKEN:
+		return true
+	case UsageTypeQUERYGENERATIONINPUTTOKEN:
+		return true
+	case UsageTypeQUERYGENERATIONOUTPUTTOKEN:
+		return true
+	case UsageTypeQUERYGROUNDEDNESSTOKEN:
+		return true
+	case UsageTypeQUERYPLANNINGINPUTTOKEN:
+		return true
+	case UsageTypeQUERYPLANNINGOUTPUTTOKEN:
+		return true
+	case UsageTypeQUERYREFORMULATIONINPUTTOKEN:
+		return true
+	case UsageTypeQUERYREFORMULATIONOUTPUTTOKEN:
+		return true
+	case UsageTypeQUERYREQUEST:
+		return true
+	case UsageTypeQUERYRERANKTOKEN:
+		return true
+	case UsageTypeQUERYRETRIEVALTOKEN:
+		return true
+	case UsageTypeQUERYTRANSLATIONINPUTTOKEN:
+		return true
+	case UsageTypeQUERYTRANSLATIONOUTPUTTOKEN:
+		return true
+	case UsageTypeRERANKTOKEN:
+		return true
+	case UsageTypeRERANKV2MINITOKEN:
+		return true
+	case UsageTypeRERANKV2TOKEN:
+		return true
+	case UsageTypeSTRUCTUREDEXTRACTIONCACHEDTOKENS:
+		return true
+	case UsageTypeSTRUCTUREDEXTRACTIONCOST:
+		return true
+	case UsageTypeSTRUCTUREDEXTRACTIONINPUTTOKENS:
+		return true
+	case UsageTypeSTRUCTUREDEXTRACTIONOUTPUTTOKENS:
+		return true
+	case UsageTypeSTRUCTUREDEXTRACTIONREASONINGTOKENS:
+		return true
+	case UsageTypeTUNEREQUEST:
 		return true
 	default:
 		return false
@@ -547,18 +913,119 @@ func (e UserRolesEnum) Valid() bool {
 	}
 }
 
-// ACLConfig Captures ACL configurations for an Agent
+// ACLConfig Captures Agent Composer configurations for an Agent
 type ACLConfig struct {
-	// AclActive Whether to enable ACL.
+	// AclActive Deprecated field. To be removed in the future.
 	AclActive *bool `json:"acl_active,omitempty"`
 
-	// AclYaml The YAML file to use for ACL.
+	// AclYaml The YAML file to use for Agent Composer.
 	AclYaml *string `json:"acl_yaml,omitempty"`
+}
+
+// ACLConfigName defines model for ACLConfigName.
+type ACLConfigName string
+
+// ACLQueryResponse Response body for POST /query to Agent Composer
+type ACLQueryResponse struct {
+	// Attributions Attributions for the response. Extracted from outputs['attribution_result'].attributions if available.
+	Attributions *[]AttributionV01 `json:"attributions,omitempty"`
+
+	// ConversationId A unique identifier for the conversation. Can be passed to future `/query` calls to continue a conversation with the same message history.
+	ConversationId openapi_types.UUID `json:"conversation_id"`
+
+	// DynamicAgentTrace Tool calls and thinking events for the response
+	DynamicAgentTrace *map[string][]DynamicAgentEvent `json:"dynamic_agent_trace,omitempty"`
+
+	// GroundednessScores Groundedness scores for the response. Extracted from outputs['groundedness_scores'] if available.
+	GroundednessScores *[]GroundednessScore `json:"groundedness_scores,omitempty"`
+
+	// Message Response to the query request. Extracted from outputs['response'] if available.
+	Message *MessageAndRole `json:"message,omitempty"`
+
+	// MessageId A unique identifier for this specific message
+	MessageId *openapi_types.UUID `json:"message_id,omitempty"`
+
+	// Outputs Outputs of the agent
+	Outputs *map[string]interface{} `json:"outputs,omitempty"`
+
+	// RetrievalContents Relevant content retrieved to answer the query. Only included when include_retrieval_content_text is true.
+	RetrievalContents *[]RetrievalContentV01 `json:"retrieval_contents,omitempty"`
+
+	// RlTrainingContext RL training context for multi-turn training. Automatically included when policy_output is provided. Contains: full_message_history (complete conversation for next turn), message_history (original input), research_items (tool calls + results), tool_calls_summary (simplified), chunks_info (retrieved content).
+	RlTrainingContext *map[string]interface{} `json:"rl_training_context,omitempty"`
+
+	// WorkflowTrace Workflow trace for the response
+	WorkflowTrace *[]ACLWorkflowEvent `json:"workflow_trace,omitempty"`
+}
+
+// ACLTemplateEntry An Agent Composer template entry with metadata
+type ACLTemplateEntry struct {
+	// AclConfigName The Agent Composer config name to use (e.g., 'default_query', 'datastore_search')
+	AclConfigName ACLConfigName `json:"acl_config_name"`
+
+	// Badges Optional badge identifiers for UI presentation (e.g., 'dynamic-agent')
+	Badges *[]string `json:"badges,omitempty"`
+
+	// Description Description of what this template is for
+	Description string `json:"description"`
+
+	// Id Unique identifier for the Agent Composer template
+	Id string `json:"id"`
+
+	// Name Display name of the template
+	Name string `json:"name"`
+
+	// TemplateName The DB template name to use (e.g., 'finance', 'default')
+	TemplateName string `json:"template_name"`
+}
+
+// ACLWorkflowEvent defines model for ACLWorkflowEvent.
+type ACLWorkflowEvent struct {
+	// Duration Duration of the workflow event
+	Duration float64 `json:"duration"`
+
+	// Name Name of the workflow event
+	Name string `json:"name"`
+
+	// ParentId ID of the parent node in the workflow
+	ParentId *string                  `json:"parent_id"`
+	Version  *ACLWorkflowEventVersion `json:"version,omitempty"`
+}
+
+// ACLWorkflowEventVersion defines model for ACLWorkflowEvent.Version.
+type ACLWorkflowEventVersion string
+
+// AgentComposerStepUsage Single day's Agent Composer usage for a specific step.
+//
+// Represents aggregated usage data for a pipeline step on a specific date, summing across all models used by that step.
+type AgentComposerStepUsage struct {
+	// Date Date in ISO format (YYYY-MM-DD)
+	Date string `json:"date"`
+
+	// InputTokens Total input tokens for this step
+	InputTokens int `json:"input_tokens"`
+
+	// OutputTokens Total output tokens for this step
+	OutputTokens int `json:"output_tokens"`
+
+	// StepName Name of the pipeline step
+	StepName string `json:"step_name"`
+
+	// TotalCost Total cost in USD for this step
+	TotalCost float64 `json:"total_cost"`
+}
+
+// AgentComposerStepUsageResponse Response containing daily usages of advance queries grouped by steps.
+//
+// This API returns step-level breakdown of Agent Composer usage for visualization purposes. The costs in this response are already included in the ACL_COST entry from the daily_usages table and should not be double-counted.
+type AgentComposerStepUsageResponse struct {
+	// Usages List of Agent Composer step usages aggregated by step and date
+	Usages []AgentComposerStepUsage `json:"usages"`
 }
 
 // AgentConfigs Response to configs for different components
 type AgentConfigs struct {
-	// AclConfig Parameters that affect the agent's ACL workflow
+	// AclConfig Parameters that affect the agent's Agent Composer workflow
 	AclConfig *ACLConfig `json:"acl_config,omitempty"`
 
 	// FilterAndRerankConfig Parameters that affect filtering and reranking of retrieved knowledge
@@ -641,21 +1108,9 @@ type AgentEvaluationConfigOverride struct {
 
 	// TopP Override the top_p for the query. This will override the top_p for the agent during evaluation.
 	TopP *float64 `json:"top_p,omitempty"`
-}
 
-// AgentLevelUserRolesEnum User roles for agent-level permissions
-type AgentLevelUserRolesEnum string
-
-// AgentUsages Total API request counts for the agent.
-type AgentUsages struct {
-	// Eval eval request count
-	Eval int `json:"eval"`
-
-	// Query query request count
-	Query int `json:"query"`
-
-	// Tune tune request count
-	Tune int `json:"tune"`
+	// UseOptimizedContext Override whether to use optimized context for this request. When true, optimized context will be used if available. When false, optimized context is disabled. When null/omitted, uses the agent's configured setting.
+	UseOptimizedContext *bool `json:"use_optimized_context,omitempty"`
 }
 
 // AttributionV01 Attribution for some claim made in a generated message`.
@@ -668,6 +1123,12 @@ type AttributionV01 struct {
 
 	// StartIdx Start index of the attributed text in the generated message
 	StartIdx int `json:"start_idx"`
+}
+
+// BalanceResponse Response to GET /billing/balance request
+type BalanceResponse struct {
+	// Balance Balance of the user
+	Balance float64 `json:"balance"`
 }
 
 // BaseMetadataFilter Defines a custom metadata filter. The expected input is a dict which can have different operators, fields and values. For example:
@@ -721,6 +1182,33 @@ type BaseMetadataFilter_Value_4_Item struct {
 // BaseMetadataFilter_Value The value to be searched for in the field. In case of exists operator, it is not needed.
 type BaseMetadataFilter_Value struct {
 	union json.RawMessage
+}
+
+// BillingMetadataResponse Response to GET /billing/metadata request
+type BillingMetadataResponse struct {
+	// IsAutoTopUpEnabled Whether auto top-up is enabled
+	IsAutoTopUpEnabled bool `json:"is_auto_top_up_enabled"`
+
+	// IsLowBalance Whether the user is low on balance
+	IsLowBalance bool `json:"is_low_balance"`
+}
+
+// BillingMode defines model for BillingMode.
+type BillingMode string
+
+// BillingModeHistoryEntry Individual billing mode entry
+type BillingModeHistoryEntry struct {
+	// BillingMode Billing mode
+	BillingMode BillingMode `json:"billing_mode"`
+
+	// Date Date (yyyy-mm-dd) when the billing mode became effective
+	Date openapi_types.Date `json:"date"`
+}
+
+// BillingModeHistoryResponse Response to GET /billing/billing_mode/history request
+type BillingModeHistoryResponse struct {
+	// BillingModes List of billing mode entries for the specified month
+	BillingModes []BillingModeHistoryEntry `json:"billing_modes"`
 }
 
 // BlockBoundingBox Normalized bounding box of a block, as relative percentages of the page width and height.
@@ -777,11 +1265,6 @@ type BodyParseParsePost struct {
 	// Examples: false
 	EnableSplitTables *bool `json:"enable_split_tables,omitempty"`
 
-	// FigureCaptionMode Controls how thorough figure captions are. `concise` is short and minimizes chances of hallucinations. `detailed` is more thorough and can include commentary; this mode is in beta. Not permitted in `basic` parsing_mode.
-	//
-	// Examples: concise
-	FigureCaptionMode *ParseFigureCaptionMode `json:"figure_caption_mode,omitempty"`
-
 	// MaxSplitTableCells Threshold number of table cells beyond which large tables are split if `enable_split_tables` is True. Must be null if `enable_split_tables` is False.
 	//
 	// Examples: null
@@ -797,8 +1280,13 @@ type BodyParseParsePost struct {
 	// Examples: standard
 	ParseMode *ParseMode `json:"parse_mode,omitempty"`
 
-	// RawFile The file to be parsed. The file type must be PDF, DOC / DOCX, PPT / PPTX.
+	// RawFile The file to be parsed. The file type must be PDF, DOC / DOCX, PPT / PPTX, PNG, JPG / JPEG.
 	RawFile openapi_types.File `json:"raw_file"`
+}
+
+// BodyUploadDocumentExtractDocumentsUploadPost defines model for Body_upload_document_extract_documents_upload_post.
+type BodyUploadDocumentExtractDocumentsUploadPost struct {
+	File openapi_types.File `json:"file"`
 }
 
 // ChunkingConfiguration Configuration for document chunking settings.
@@ -822,7 +1310,8 @@ type ChunkingConfiguration struct {
 //
 // - `hierarchy_heading`: Creates a new chunk whenever any section heading is encountered.
 //
-// - `static_length`: Creates chunks of a fixed length. - `page_level`: Creates chunks that cannot run over page boundaries.
+// - `static_length`: Creates chunks of a fixed length.
+// - `page_level`: Creates chunks that cannot run over page boundaries.
 type ChunkingMode string
 
 // CompositeMetadataFilter "Defines a custom metadata filter as a Composite MetadataFilter. Which can be be a list of filters or nested filters.
@@ -841,6 +1330,25 @@ type CompositeMetadataFilter_Filters_Item struct {
 
 // CompositeOperator defines model for CompositeOperator.
 type CompositeOperator string
+
+// ConsentType defines model for ConsentType.
+type ConsentType string
+
+// ContextualAgentContentMetadata defines model for ContextualAgentContentMetadata.
+type ContextualAgentContentMetadata struct {
+	// AgentId Id of the agent that generated the response.
+	AgentId string `json:"agent_id"`
+
+	// ContentId Id of the content.
+	ContentId openapi_types.UUID `json:"content_id"`
+
+	// ContentText The text content of the agent response.
+	ContentText string                                     `json:"content_text"`
+	ContentType *ContextualAgentContentMetadataContentType `json:"content_type,omitempty"`
+}
+
+// ContextualAgentContentMetadataContentType defines model for ContextualAgentContentMetadata.ContentType.
+type ContextualAgentContentMetadataContentType string
 
 // CreateAgentOutput Response to POST /agents request
 type CreateAgentOutput struct {
@@ -880,14 +1388,37 @@ type CreateAgentRequest struct {
 	// SystemPrompt Instructions that your agent references when generating responses. Note that we do not guarantee that the system will follow these instructions exactly.
 	SystemPrompt *string `json:"system_prompt,omitempty"`
 
-	// TemplateName The template defining the base configuration for the agent.
-	TemplateName *string `json:"template_name,omitempty"`
+	// TemplateName The template defining the base configuration for the agent. This can be a built-in template (DefaultTemplateName) or a custom template name
+	TemplateName *CreateAgentRequest_TemplateName `json:"template_name,omitempty"`
+}
+
+// CreateAgentRequestTemplateName1 defines model for CreateAgentRequest.TemplateName.1.
+type CreateAgentRequestTemplateName1 = string
+
+// CreateAgentRequest_TemplateName The template defining the base configuration for the agent. This can be a built-in template (DefaultTemplateName) or a custom template name
+type CreateAgentRequest_TemplateName struct {
+	union json.RawMessage
 }
 
 // CreateDatastoreOutput defines model for CreateDatastoreOutput.
 type CreateDatastoreOutput struct {
 	// Id ID of the datastore
 	Id openapi_types.UUID `json:"id"`
+}
+
+// DailyUsage defines model for DailyUsage.
+type DailyUsage struct {
+	// Date Date of the usage
+	Date openapi_types.Date `json:"date"`
+
+	// Price Price per unit
+	Price float64 `json:"price"`
+
+	// Quantity Usage quantity
+	Quantity int `json:"quantity"`
+
+	// UsageType Type of usage
+	UsageType UsageType `json:"usage_type"`
 }
 
 // DatastoreFigureCaptionMode Mode for figure captioning.
@@ -936,9 +1467,6 @@ type DatastoreOutputList struct {
 
 	// NextCursor Next cursor to continue pagination. Omitted if there are no more datastores to retrieve.
 	NextCursor *string `json:"next_cursor,omitempty"`
-
-	// TotalCount Total number of available datastores
-	TotalCount int `json:"total_count"`
 }
 
 // DatastoreParseConfiguration Configuration for data extraction settings from documents at datastore level. Controls settings for document parsing. Includes those from `/parse` API along with some extra ingestion-only ones.
@@ -954,6 +1482,9 @@ type DatastoreParseConfiguration struct {
 	// FigureCaptioningPrompt Prompt to use for generating image captions. Must be non-empty if `figure_caption_mode` is `custom`. Otherwise, must be null.
 	FigureCaptioningPrompt *string `json:"figure_captioning_prompt,omitempty"`
 
+	// IngestionTier Ingestion tier for preset extraction configurations. Options: STANDARD, ADVANCED, PREMIUM, or None. When None (default), uses explicit config values or system defaults. When set, applies tier-based presets that can be overridden by explicit config.
+	IngestionTier *IngestionTier `json:"ingestion_tier,omitempty"`
+
 	// MaxSplitTableCells Maximum number of cells for split tables. Ignored if `enable_split_tables` is False.
 	MaxSplitTableCells *int `json:"max_split_table_cells,omitempty"`
 }
@@ -963,6 +1494,9 @@ type DatastoreUsages struct {
 	// SizeGb Actual size of the datastore in GB
 	SizeGb float64 `json:"size_gb"`
 }
+
+// DefaultTemplateName defines model for DefaultTemplateName.
+type DefaultTemplateName string
 
 // DocumentContentEntry defines model for DocumentContentEntry.
 type DocumentContentEntry struct {
@@ -985,7 +1519,9 @@ type DocumentDescription struct {
 	// CustomMetadata Custom metadata for the document, provided by the user at ingestion time.Must be a JSON-serializable dictionary with string keys and simple primitive values (str, int, float, bool). The total size must not exceed 2 KB.The strings with date format must stay in date format or be avodied if not in date format.The 'custom_metadata.url' field is automatically included in returned attributions during query time, if provided.The default maximum metadata fields that can be used is 15, contact support if more is needed.
 	CustomMetadata *map[string]DocumentDescription_CustomMetadata_AdditionalProperties `json:"custom_metadata,omitempty"`
 
-	// CustomMetadataConfig A dictionary mapping metadata field names to the configuration to use for each field. If a metadata field is not present in the dictionary, the default configuration will be used. If the dictionary is not provided, metadata will be added in context for rerank and generation but will not be returned back to the user in retrievals in query API. Limits: - Maximum characters per metadata field (for prompt or rerank): **400** - Maximum number of metadata fields (for prompt or retrieval): **10** Contact support@contextual.ai to request quota increases.
+	// CustomMetadataConfig A dictionary mapping metadata field names to the configuration to use for each field. If a metadata field is not present in the dictionary, the default configuration will be used. If the dictionary is not provided, metadata will be added in context for rerank and generation but will not be returned back to the user in retrievals in query API. Limits:
+	// - Maximum characters per metadata field (for prompt or rerank): **400**
+	// - Maximum number of metadata fields (for prompt or retrieval): **10** Contact support@contextual.ai to request quota increases.
 	CustomMetadataConfig *map[string]MetadataFieldConfig `json:"custom_metadata_config,omitempty"`
 
 	// HasAccess Whether the user has access to this document.
@@ -995,7 +1531,7 @@ type DocumentDescription struct {
 	Id openapi_types.UUID `json:"id"`
 
 	// IngestionConfig Ingestion configuration for the document when the document was ingested. It may be different from the current datastore configuration.
-	IngestionConfig *map[string]interface{} `json:"ingestion_config,omitempty"`
+	IngestionConfig interface{} `json:"ingestion_config,omitempty"`
 
 	// Name User specified name of the document
 	Name string `json:"name"`
@@ -1036,6 +1572,45 @@ type DocumentHierarchy struct {
 	TableOfContents *string `json:"table_of_contents,omitempty"`
 }
 
+// DocumentInfoResponse Response model for document information.
+type DocumentInfoResponse struct {
+	// DocumentId Unique ID of the document
+	DocumentId string `json:"document_id"`
+
+	// FileName Original filename
+	FileName string `json:"file_name"`
+
+	// FileSize File size in bytes
+	FileSize int `json:"file_size"`
+
+	// PageCount Number of pages in the document
+	PageCount int `json:"page_count"`
+
+	// SignedUrl Presigned download URL for the document (valid for 1 hour). Only available for GCS and S3 storage backends.
+	SignedUrl *string `json:"signed_url,omitempty"`
+
+	// Status Document status
+	Status string `json:"status"`
+
+	// UploadedAt Timestamp when the document was uploaded
+	UploadedAt string `json:"uploaded_at"`
+}
+
+// DocumentListResponse Response model for document listing.
+type DocumentListResponse struct {
+	// Documents List of documents
+	Documents []DocumentInfoResponse `json:"documents"`
+
+	// NextCursor Next cursor to continue pagination. Omitted if there are no more documents to retrieve.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor Previous cursor to go back in pagination. Omitted if this is the first page.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// TotalCount Total number of documents
+	TotalCount int `json:"total_count"`
+}
+
 // DocumentMetadata Metadata about the document that was parsed.
 type DocumentMetadata struct {
 	// Hierarchy Hierarchy of the document, as both heading blocks and a markdown table of contents
@@ -1044,6 +1619,47 @@ type DocumentMetadata struct {
 
 // DocumentStatusEnum defines model for DocumentStatusEnum.
 type DocumentStatusEnum string
+
+// DocumentUploadResponse Response model for document upload.
+type DocumentUploadResponse struct {
+	// DocumentId Unique ID of the uploaded document
+	DocumentId string `json:"document_id"`
+
+	// FileName Original filename of the uploaded document
+	FileName string `json:"file_name"`
+
+	// FileSize File size in bytes
+	FileSize int `json:"file_size"`
+
+	// PageCount Number of pages in the document
+	PageCount int `json:"page_count"`
+
+	// Status Upload status
+	Status string `json:"status"`
+
+	// UploadedAt Timestamp when the document was uploaded
+	UploadedAt string `json:"uploaded_at"`
+}
+
+// DynamicAgentEvent defines model for DynamicAgentEvent.
+type DynamicAgentEvent struct {
+	Event   DynamicAgentEvent_Event   `json:"event"`
+	Version *DynamicAgentEventVersion `json:"version,omitempty"`
+}
+
+// DynamicAgentEvent_Event defines model for DynamicAgentEvent.Event.
+type DynamicAgentEvent_Event struct {
+	union json.RawMessage
+}
+
+// DynamicAgentEventVersion defines model for DynamicAgentEvent.Version.
+type DynamicAgentEventVersion string
+
+// EarliestUsageDateResponse Response to GET /billing/usage/earliest_date request
+type EarliestUsageDateResponse struct {
+	// Date Earliest usage date
+	Date *openapi_types.Date `json:"date"`
+}
 
 // EditChunkContentRequest This class contains all editable content associated with an update to a chunk.
 type EditChunkContentRequest struct {
@@ -1069,6 +1685,70 @@ type EditDatastoreOutput struct {
 // EmptyResponse defines model for EmptyResponse.
 type EmptyResponse = map[string]interface{}
 
+// ExtractConfig Configuration for structured extraction. Most settings have sensible defaults, but you can customize them for your specific use case.
+type ExtractConfig struct {
+	// AdditionalInstructions Additional instructions to the model. This is a string that will be appended to the prompt. It is useful for providing additional context or instructions to the model.
+	AdditionalInstructions *string `json:"additional_instructions,omitempty"`
+
+	// EnableAgenticArrayExtraction If True, will use agentic array extraction to extract the array of objects when possible. Requires isolate_arrays=True in splitter_config. One can also enable agentic array extraction for specific arrays by setting agenticArrayExtractionMaxItemsPerTurn > 0 for the array in the JSON schema.
+	EnableAgenticArrayExtraction *bool `json:"enable_agentic_array_extraction,omitempty"`
+
+	// EnableThinking Enable reasoning which can improve accuracy but increases processing time and cost.
+	//
+	// Examples: true, false
+	EnableThinking *bool `json:"enable_thinking,omitempty"`
+
+	// Model Base model for extraction. 'gemini-2.5-flash' is faster and cheaper, while 'gemini-2.5-pro' is more accurate and expensive.
+	//
+	// Examples: gemini-2.5-flash, gemini-2.5-pro, gemini-3-pro-preview, gemini-3-flash-preview
+	Model *ExtractConfigModel `json:"model,omitempty"`
+
+	// PerKeyAttribution Set to include attributions for each extracted field including reasoning, confidence scores, and page numbers. This option increases processing time and cost.
+	//
+	// Examples: false, true
+	PerKeyAttribution *bool `json:"per_key_attribution,omitempty"`
+
+	// Temperature Sampling temperature (0.0-2.0). Lower values make output more deterministic and consistent, higher values vary more. Leave as None for model defaults.
+	//
+	// Examples: 0, 0.1, 0.5, 1, 2
+	Temperature *float64 `json:"temperature,omitempty"`
+}
+
+// ExtractConfigModel Base model for extraction. 'gemini-2.5-flash' is faster and cheaper, while 'gemini-2.5-pro' is more accurate and expensive.
+//
+// Examples: gemini-2.5-flash, gemini-2.5-pro, gemini-3-pro-preview, gemini-3-flash-preview
+type ExtractConfigModel string
+
+// ExtractJobRequest Request model for starting a structured extraction job.
+type ExtractJobRequest struct {
+	// Config Configuration options for the extraction process
+	Config *ExtractConfig `json:"config,omitempty"`
+
+	// DocumentId ID of the document to extract from
+	DocumentId string `json:"document_id"`
+
+	// SchemaId ID of the schema to use for extraction
+	SchemaId string `json:"schema_id"`
+
+	// Stream Whether to stream the results as they become available. If true, the response will be a stream of JSON objects.
+	Stream *bool `json:"stream,omitempty"`
+}
+
+// ExtractJobResponse Response model for extraction job creation.
+type ExtractJobResponse struct {
+	// CreatedAt Timestamp when the job was created
+	CreatedAt string `json:"created_at"`
+
+	// EstimatedCompletion Estimated completion time
+	EstimatedCompletion string `json:"estimated_completion"`
+
+	// JobId Unique ID of the extraction job
+	JobId string `json:"job_id"`
+
+	// Status Current status of the job
+	Status DocumentStatusEnum `json:"status"`
+}
+
 // FeedbackRequestV01 Input to POST feedback endpoint
 type FeedbackRequestV01 struct {
 	// ContentId ID of the content on which to provide feedback, if feedback is on retrieval. Do not set (or set to null) while providing generation feedback.
@@ -1082,6 +1762,9 @@ type FeedbackRequestV01 struct {
 
 	// MessageId ID of the message on which to provide feedback.
 	MessageId openapi_types.UUID `json:"message_id"`
+
+	// QueryCategory The query category for the feedback.
+	QueryCategory *string `json:"query_category,omitempty"`
 }
 
 // FeedbackStatus defines model for FeedbackStatus.
@@ -1182,6 +1865,9 @@ type GenerateResponseConfig struct {
 	// MaxNewTokens The maximum number of tokens the model can generate in a response.
 	MaxNewTokens *int `json:"max_new_tokens,omitempty"`
 
+	// Model The model to use for response generation.
+	Model *GenerationModelName `json:"model,omitempty"`
+
 	// Seed This parameter controls the randomness of how the model selects the next tokens during text generation.
 	Seed *int `json:"seed,omitempty"`
 
@@ -1198,13 +1884,13 @@ type GenerateResponseV1 struct {
 	Response string `json:"response"`
 }
 
+// GenerationModelName User-facing model names for API requests.
+type GenerationModelName string
+
 // GetAgentResponse Response to GET Agent request
 type GetAgentResponse struct {
 	// AgentConfigs The following advanced parameters are experimental and subject to change.
 	AgentConfigs *AgentConfigs `json:"agent_configs,omitempty"`
-
-	// AgentUsages API request counts for the agent.
-	AgentUsages *AgentUsages `json:"agent_usages,omitempty"`
 
 	// DatastoreIds The IDs of the datastore(s) associated with the agent
 	DatastoreIds []openapi_types.UUID `json:"datastore_ids"`
@@ -1232,6 +1918,18 @@ type GetAgentResponse struct {
 
 	// TemplateName The template used to create this agent.
 	TemplateName string `json:"template_name"`
+}
+
+// GetConsentResponse Response for the endpoint that retrieves the consent status for the workspace.
+type GetConsentResponse struct {
+	// CreatedAt The timestamp when the consent was granted or revoked
+	CreatedAt *string `json:"created_at"`
+
+	// Email The email of the user who granted or revoked the consent
+	Email *string `json:"email"`
+
+	// Status The current consent status in `ConsentType`.
+	Status string `json:"status"`
 }
 
 // GetDatastoreResponse defines model for GetDatastoreResponse.
@@ -1270,23 +1968,16 @@ type GetDocumentsResponse struct {
 	TotalCount *int `json:"total_count,omitempty"`
 }
 
-// GetTwilightAgentResponse Response to GET Agent request
-type GetTwilightAgentResponse struct {
-	// AgentConfigs The following advanced parameters are experimental and subject to change.
-	AgentConfigs *map[string]interface{} `json:"agent_configs,omitempty"`
+// GetTopUpHistoryResponse Response to GET /billing/free-credit request
+type GetTopUpHistoryResponse struct {
+	// Cursor Cursor for next page
+	Cursor *string `json:"cursor,omitempty"`
 
-	// AgentUsages API request counts for the agent.
-	AgentUsages *AgentUsages `json:"agent_usages,omitempty"`
+	// HasMore Whether there are more top-ups to fetch
+	HasMore bool `json:"has_more"`
 
-	// DatastoreIds The IDs of the datastore(s) associated with the agent
-	DatastoreIds []openapi_types.UUID `json:"datastore_ids"`
-
-	// Description Description of the agent
-	Description *string `json:"description,omitempty"`
-
-	// Name Name of the agent
-	Name         string `json:"name"`
-	TemplateName string `json:"template_name"`
+	// TopUps List of top-ups
+	TopUps []TopUpHistoryResponse `json:"top_ups"`
 }
 
 // GlobalConfig Captures global configs
@@ -1332,6 +2023,9 @@ type IngestionResponse struct {
 	// Id ID of the document being ingested
 	Id openapi_types.UUID `json:"id"`
 }
+
+// IngestionTier Ingestion tier levels that determine extraction quality and cost.
+type IngestionTier string
 
 // InnerRetrievableCtxlMetadata defines model for InnerRetrievableCtxlMetadata.
 type InnerRetrievableCtxlMetadata struct {
@@ -1385,6 +2079,76 @@ type InviteUsersResponse struct {
 	InvitedUserEmails []string `json:"invited_user_emails"`
 }
 
+// JobListResponse Response model for job listing.
+type JobListResponse struct {
+	// Jobs List of jobs
+	Jobs []JobStatusResponse `json:"jobs"`
+
+	// NextCursor Next cursor to continue pagination. Omitted if there are no more jobs to retrieve.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor Previous cursor to go back in pagination. Omitted if this is the first page.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// TotalCount Total number of jobs
+	TotalCount int `json:"total_count"`
+}
+
+// JobResultsResponse Response model for job results.
+//
+// The results field contains extracted data conforming to the provided JSON Schema. When per_key_attribution is enabled in ExtractConfig, primitive fields in results will be wrapped with AttributionInfo structures containing the extracted_value along with reasoning, confidence, and page location metadata.
+type JobResultsResponse struct {
+	// Config Configuration used for the extraction job (model, temperature, etc.)
+	Config *ExtractConfig `json:"config,omitempty"`
+
+	// JobId Unique ID of the extraction job
+	JobId string `json:"job_id"`
+
+	// Metadata Metadata about the extraction process. May include has_attributions boolean flag indicating if attribution data is present in results.
+	Metadata map[string]interface{} `json:"metadata"`
+
+	// Results Extracted results conforming to the provided JSON Schema. When per_key_attribution is enabled, primitive values are wrapped with AttributionInfo containing extracted_value, reasoning, confidence, and location fields.
+	Results map[string]interface{} `json:"results"`
+
+	// Status Current status of the job
+	Status DocumentStatusEnum `json:"status"`
+}
+
+// JobResultsUpdateRequest Request model for updating the results of a completed extraction job.
+type JobResultsUpdateRequest struct {
+	// Results Extracted results conforming to the provided JSON Schema.
+	Results map[string]interface{} `json:"results"`
+}
+
+// JobStatusResponse Response model for job status.
+//
+// Returns basic job status and progress.
+type JobStatusResponse struct {
+	// Config Configuration used for the extraction job (model, temperature, etc.)
+	Config *ExtractConfig `json:"config,omitempty"`
+
+	// CreatedAt Timestamp when the job was created
+	CreatedAt string `json:"created_at"`
+
+	// CurrentActivity Current activity being performed
+	CurrentActivity string `json:"current_activity"`
+
+	// DocumentId ID of the document used for the extraction
+	DocumentId string `json:"document_id"`
+
+	// JobId Unique ID of the extraction job
+	JobId string `json:"job_id"`
+
+	// Progress Progress information
+	Progress ProgressInfo `json:"progress"`
+
+	// SchemaId ID of the schema used for the extraction
+	SchemaId string `json:"schema_id"`
+
+	// Status Current status of the job
+	Status DocumentStatusEnum `json:"status"`
+}
+
 // LMUnitRequestV1 LMUnit input request object.
 type LMUnitRequestV1 struct {
 	// Query The prompt to which the model responds
@@ -1403,6 +2167,12 @@ type LMUnitResponseV1 struct {
 	Score float64 `json:"score"`
 }
 
+// ListACLTemplatesResponse defines model for ListACLTemplatesResponse.
+type ListACLTemplatesResponse struct {
+	// Templates List of available Agent Composer templates.
+	Templates *[]ACLTemplateEntry `json:"templates,omitempty"`
+}
+
 // ListAgentsResponse defines model for ListAgentsResponse.
 type ListAgentsResponse struct {
 	// Agents List of active agents
@@ -1410,9 +2180,6 @@ type ListAgentsResponse struct {
 
 	// NextCursor Next cursor to continue pagination. Omitted if there are no more agents to retrieve.
 	NextCursor *string `json:"next_cursor,omitempty"`
-
-	// TotalCount Total number of available agents
-	TotalCount int `json:"total_count"`
 }
 
 // ListContentResponse defines model for ListContentResponse.
@@ -1473,7 +2240,9 @@ type MetadataRequest struct {
 	// CustomMetadata Custom metadata for the document, provided by the user at ingestion time.Must be a JSON-serializable dictionary with string keys and simple primitive values (str, int, float, bool). The total size must not exceed 2 KB.The strings with date format must stay in date format or be avodied if not in date format.The 'custom_metadata.url' field is automatically included in returned attributions during query time, if provided.The default maximum metadata fields that can be used is 15, contact support if more is needed.
 	CustomMetadata *map[string]MetadataRequest_CustomMetadata_AdditionalProperties `json:"custom_metadata,omitempty"`
 
-	// CustomMetadataConfig A dictionary mapping metadata field names to the configuration to use for each field. If a metadata field is not present in the dictionary, the default configuration will be used. If the dictionary is not provided, metadata will be added in context for rerank and generation but will not be returned back to the user in retrievals in query API. Limits: - Maximum characters per metadata field (for prompt or rerank): **400** - Maximum number of metadata fields (for prompt or retrieval): **10** Contact support@contextual.ai to request quota increases.
+	// CustomMetadataConfig A dictionary mapping metadata field names to the configuration to use for each field. If a metadata field is not present in the dictionary, the default configuration will be used. If the dictionary is not provided, metadata will be added in context for rerank and generation but will not be returned back to the user in retrievals in query API. Limits:
+	// - Maximum characters per metadata field (for prompt or rerank): **400**
+	// - Maximum number of metadata fields (for prompt or retrieval): **10** Contact support@contextual.ai to request quota increases.
 	CustomMetadataConfig *map[string]MetadataFieldConfig `json:"custom_metadata_config,omitempty"`
 }
 
@@ -1539,8 +2308,11 @@ type ModifyAgentRequest struct {
 	SystemPrompt *string `json:"system_prompt,omitempty"`
 }
 
-// ParseFigureCaptionMode defines model for ParseFigureCaptionMode.
-type ParseFigureCaptionMode string
+// MonthlyUsageResponse Response to GET /billing/usage/monthly request
+type MonthlyUsageResponse struct {
+	// Usages List of daily usages
+	Usages []DailyUsage `json:"usages"`
+}
 
 // ParseListJobsItem defines model for ParseListJobsItem.
 type ParseListJobsItem struct {
@@ -1662,16 +2434,19 @@ type ParsedPage struct {
 	Markdown *string `json:"markdown,omitempty"`
 }
 
-// PerAgentRoles The schema used to capture agent level roles
-type PerAgentRoles struct {
-	// AgentId ID of the agent on which to grant/revoke the role.
-	AgentId openapi_types.UUID `json:"agent_id"`
+// ProgressInfo Progress information for an extraction job.
+type ProgressInfo struct {
+	// CompletionPercentage Overall progress percentage (0-100)
+	CompletionPercentage int `json:"completion_percentage"`
 
-	// Grant When set to true, the roles will be granted o/w revoked.
-	Grant bool `json:"grant"`
+	// CurrentStep Current processing stage or step description
+	CurrentStep string `json:"current_step"`
 
-	// Roles The roles that are granted/revoked
-	Roles []AgentLevelUserRolesEnum `json:"roles"`
+	// FieldsProcessed Number of schema fields that have been processed
+	FieldsProcessed *int `json:"fields_processed,omitempty"`
+
+	// TotalFields Total number of schema fields to process
+	TotalFields *int `json:"total_fields,omitempty"`
 }
 
 // QueryRequestV1 Request body for a POST `/agents/{agent_id}/query` request
@@ -1869,7 +2644,9 @@ type RetrievalContentV01 struct {
 	// CustomMetadata Custom metadata for the document, provided by the user at ingestion time.Must be a JSON-serializable dictionary with string keys and simple primitive values (str, int, float, bool). The total size must not exceed 2 KB.The strings with date format must stay in date format or be avodied if not in date format.The 'custom_metadata.url' field is automatically included in returned attributions during query time, if provided.The default maximum metadata fields that can be used is 15, contact support if more is needed.
 	CustomMetadata *map[string]RetrievalContentV01_CustomMetadata_AdditionalProperties `json:"custom_metadata,omitempty"`
 
-	// CustomMetadataConfig A dictionary mapping metadata field names to the configuration to use for each field. If a metadata field is not present in the dictionary, the default configuration will be used. If the dictionary is not provided, metadata will be added in context for rerank and generation but will not be returned back to the user in retrievals in query API. Limits: - Maximum characters per metadata field (for prompt or rerank): **400** - Maximum number of metadata fields (for prompt or retrieval): **10** Contact support@contextual.ai to request quota increases.
+	// CustomMetadataConfig A dictionary mapping metadata field names to the configuration to use for each field. If a metadata field is not present in the dictionary, the default configuration will be used. If the dictionary is not provided, metadata will be added in context for rerank and generation but will not be returned back to the user in retrievals in query API. Limits:
+	// - Maximum characters per metadata field (for prompt or rerank): **400**
+	// - Maximum number of metadata fields (for prompt or retrieval): **10** Contact support@contextual.ai to request quota increases.
 	CustomMetadataConfig *map[string]MetadataFieldConfig `json:"custom_metadata_config,omitempty"`
 
 	// DatastoreId Unique identifier of the datastore
@@ -1940,6 +2717,79 @@ type SaveTemplateRequest struct {
 	Name string `json:"name"`
 }
 
+// SchemaCreateRequest Request model for creating a new extraction schema.
+//
+// The schema_definition must be a valid JSON Schema that defines the structure of data to extract from documents. The system supports a subset of JSON Schema 2020-12 features optimized for document extraction.
+type SchemaCreateRequest struct {
+	// Description Description of the schema
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Additional metadata for the schema
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Name Name of the schema
+	Name string `json:"name"`
+
+	// SchemaDefinition JSON Schema definition. Must be a valid JSON Schema that defines the structure of data to extract from documents. See the comprehensive schema guide in the API documentation for detailed examples and supported features.
+	//
+	// Examples: {"properties":{"company_name":{"description":"The name of the company exactly as it appears in the document","type":"string"},"form_type":{"description":"The type of SEC form","enum":["10-K","10-Q","8-K","S-1"],"type":"string"},"trading_symbol":{"description":"The trading symbol of the company","type":"string"},"zip_code":{"description":"The zip code of the company headquarters","type":"integer"}},"required":["company_name","form_type","trading_symbol","zip_code"],"type":"object"}
+	SchemaDefinition map[string]interface{} `json:"schema_definition"`
+}
+
+// SchemaListResponse Response model for schema listing.
+type SchemaListResponse struct {
+	// NextCursor Next cursor to continue pagination. Omitted if there are no more schemas to retrieve.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor Previous cursor to go back in pagination. Omitted if this is the first page.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// Schemas List of schemas
+	Schemas []SchemaResponse `json:"schemas"`
+
+	// TotalCount Total number of schemas
+	TotalCount int `json:"total_count"`
+}
+
+// SchemaResponse Response model for schema information.
+type SchemaResponse struct {
+	// CreatedAt Timestamp when the schema was created
+	CreatedAt string `json:"created_at"`
+
+	// Description Description of the schema
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Schema metadata
+	Metadata map[string]interface{} `json:"metadata"`
+
+	// Name Name of the schema
+	Name string `json:"name"`
+
+	// SchemaDefinition JSON schema definition
+	SchemaDefinition map[string]interface{} `json:"schema_definition"`
+
+	// SchemaId Unique ID of the schema
+	SchemaId string `json:"schema_id"`
+
+	// UpdatedAt Timestamp when the schema was last updated
+	UpdatedAt string `json:"updated_at"`
+}
+
+// SchemaUpdateRequest Request model for updating a schema.
+type SchemaUpdateRequest struct {
+	// Description Description of the schema
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Additional metadata
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Name Name of the schema
+	Name *string `json:"name,omitempty"`
+
+	// SchemaDefinition JSON schema definition
+	SchemaDefinition *map[string]interface{} `json:"schema_definition,omitempty"`
+}
+
 // SenderType defines model for SenderType.
 type SenderType string
 
@@ -1989,17 +2839,11 @@ type StructuredOutputType string
 
 // TenantNewUserInfo The schema used for creating new users or updating existing users.
 type TenantNewUserInfo struct {
-	// AgentLevelRoles The user level roles of the user for agent level roles.
-	AgentLevelRoles *[]AgentLevelUserRolesEnum `json:"agent_level_roles,omitempty"`
-
 	// Email The email of the user
 	Email string `json:"email"`
 
 	// IsTenantAdmin Flag indicating if the user is a tenant admin
 	IsTenantAdmin *bool `json:"is_tenant_admin,omitempty"`
-
-	// PerAgentRoles Per agent level roles for the user. If a user is granted any role under `agent_level_roles`, then the user has that role for all the agents. Only the roles that need to be updated should be part of this.
-	PerAgentRoles *[]PerAgentRoles `json:"per_agent_roles,omitempty"`
 
 	// Roles The user level roles of the user.
 	Roles *[]UserRolesEnum `json:"roles,omitempty"`
@@ -2013,9 +2857,6 @@ type TenantRemoveUser struct {
 
 // TenantUserInfo The schema used for listing existing (activated / deactivated) users.
 type TenantUserInfo struct {
-	// AgentLevelRoles The user level roles of the user for agent level roles.
-	AgentLevelRoles *[]AgentLevelUserRolesEnum `json:"agent_level_roles,omitempty"`
-
 	// EffectiveRoles The effective roles of the user.
 	EffectiveRoles *[]UserRolesEnum `json:"effective_roles,omitempty"`
 
@@ -2026,11 +2867,64 @@ type TenantUserInfo struct {
 	// IsTenantAdmin Flag indicating if the user is a tenant admin
 	IsTenantAdmin *bool `json:"is_tenant_admin,omitempty"`
 
-	// PerAgentRoles Per agent level roles for the user. If a user is granted any role under `agent_level_roles`, then the user has that role for all the agents. Only the roles that need to be updated should be part of this.
-	PerAgentRoles *[]PerAgentRoles `json:"per_agent_roles,omitempty"`
-
 	// Roles The user level roles of the user.
 	Roles *[]UserRolesEnum `json:"roles,omitempty"`
+}
+
+// ThinkingEvent Thinking event for dynamic agents
+type ThinkingEvent struct {
+	// Duration Duration of the thinking
+	Duration float64 `json:"duration"`
+
+	// ThinkingSummary Thinking summary
+	ThinkingSummary *string            `json:"thinking_summary"`
+	Type            *ThinkingEventType `json:"type,omitempty"`
+}
+
+// ThinkingEventType defines model for ThinkingEvent.Type.
+type ThinkingEventType string
+
+// ToolCall Tool call for the response
+type ToolCall struct {
+	// Duration Duration of the tool call
+	Duration float64 `json:"duration"`
+
+	// Error Error message if the tool call was not successful
+	Error *string `json:"error,omitempty"`
+
+	// Successful Whether the tool call was successful
+	Successful bool `json:"successful"`
+
+	// ToolArgs Arguments of the tool called
+	ToolArgs string `json:"tool_args"`
+
+	// ToolName Name of the tool called
+	ToolName string `json:"tool_name"`
+
+	// ToolOutput Output of the tool called
+	ToolOutput *string       `json:"tool_output,omitempty"`
+	Type       *ToolCallType `json:"type,omitempty"`
+}
+
+// ToolCallType defines model for ToolCall.Type.
+type ToolCallType string
+
+// TopUpHistoryResponse Individual top-up entry
+type TopUpHistoryResponse struct {
+	// Amount Amount of the top-up
+	Amount float64 `json:"amount"`
+
+	// CreatedAt Date when the top-up was created
+	CreatedAt time.Time `json:"created_at"`
+
+	// Description Description of the top-up
+	Description string `json:"description"`
+
+	// EndingBalance Ending balance after the top-up
+	EndingBalance float64 `json:"ending_balance"`
+
+	// StartingBalance Starting balance before the top-up
+	StartingBalance float64 `json:"starting_balance"`
 }
 
 // TranslationConfig Captures Translation configurations for an Agent
@@ -2094,6 +2988,15 @@ type UnstructuredDatastoreConfigModel struct {
 	Parsing *DatastoreParseConfiguration `json:"parsing,omitempty"`
 }
 
+// UpdateConsentRequest Request to update the consent status for the workspace.
+type UpdateConsentRequest struct {
+	// Type The new consent status
+	Type ConsentType `json:"type"`
+}
+
+// UsageType defines model for UsageType.
+type UsageType string
+
 // UserRolesEnum defines model for UserRolesEnum.
 type UserRolesEnum string
 
@@ -2133,10 +3036,8 @@ type ListAgentsAgentsGetParams struct {
 	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
 }
 
-// GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody defines parameters for GetAgentMetadataAgentsAgentIdMetadataGet.
-type GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody struct {
-	union json.RawMessage
-}
+// GetTemplateConfigurationAgentsTemplatesTemplateGetParamsTemplate1 defines parameters for GetTemplateConfigurationAgentsTemplatesTemplateGet.
+type GetTemplateConfigurationAgentsTemplatesTemplateGetParamsTemplate1 = string
 
 // GetMetricsAgentsAgentIdMetricsGetParams defines parameters for GetMetricsAgentsAgentIdMetricsGet.
 type GetMetricsAgentsAgentIdMetricsGetParams struct {
@@ -2168,10 +3069,45 @@ type QueryAgentsAgentIdQueryPostParams struct {
 	IncludeRetrievalContentText *bool `form:"include_retrieval_content_text,omitempty" json:"include_retrieval_content_text,omitempty"`
 }
 
+// QueryAgentsAgentIdQueryAclPostParams defines parameters for QueryAgentsAgentIdQueryAclPost.
+type QueryAgentsAgentIdQueryAclPostParams struct {
+	// RetrievalsOnly Set to `true` to fetch retrieval content and metadata, and then skip generation of the response.
+	RetrievalsOnly *bool `form:"retrievals_only,omitempty" json:"retrievals_only,omitempty"`
+
+	// IncludeRetrievalContentText Set to `true` to include the text of the retrieved contents in the response. If `false`, only metadata about the retrieved contents will be included, not content text. This parameter is ignored if `retrievals_only` is `true`, in which case `content_text` will always be returned. Content text and other metadata can also be fetched separately using the `/agents/{agent_id}/query/{message_id}/retrieval/info` endpoint.
+	IncludeRetrievalContentText *bool `form:"include_retrieval_content_text,omitempty" json:"include_retrieval_content_text,omitempty"`
+}
+
 // GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGetParams defines parameters for GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGet.
 type GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGetParams struct {
 	// ContentIds List of content ids for which to get the metadata.
 	ContentIds []openapi_types.UUID `form:"content_ids" json:"content_ids"`
+}
+
+// GetTopUpHistoryEndpointBillingBalanceTopUpsGetParams defines parameters for GetTopUpHistoryEndpointBillingBalanceTopUpsGet.
+type GetTopUpHistoryEndpointBillingBalanceTopUpsGetParams struct {
+	Limit  *int    `form:"limit,omitempty" json:"limit,omitempty"`
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+}
+
+// GetBillingModeHistoryBillingBillingModeHistoryGetParams defines parameters for GetBillingModeHistoryBillingBillingModeHistoryGet.
+type GetBillingModeHistoryBillingBillingModeHistoryGetParams struct {
+	Year  int `form:"year" json:"year"`
+	Month int `form:"month" json:"month"`
+}
+
+// GetAclStepUsageEndpointBillingUsagesAclGetParams defines parameters for GetAclStepUsageEndpointBillingUsagesAclGet.
+type GetAclStepUsageEndpointBillingUsagesAclGetParams struct {
+	Year       int                 `form:"year" json:"year"`
+	Month      int                 `form:"month" json:"month"`
+	ResourceId *openapi_types.UUID `form:"resource_id,omitempty" json:"resource_id,omitempty"`
+}
+
+// GetMonthlyUsageEndpointBillingUsagesMonthlyGetParams defines parameters for GetMonthlyUsageEndpointBillingUsagesMonthlyGet.
+type GetMonthlyUsageEndpointBillingUsagesMonthlyGetParams struct {
+	Year       int                 `form:"year" json:"year"`
+	Month      int                 `form:"month" json:"month"`
+	ResourceId *openapi_types.UUID `form:"resource_id,omitempty" json:"resource_id,omitempty"`
 }
 
 // ListDatastoresDatastoresGetParams defines parameters for ListDatastoresDatastoresGet.
@@ -2236,6 +3172,9 @@ type ListDocumentsDatastoresDatastoreIdDocumentsGetParams struct {
 
 	// DocumentNamePrefix Filters documents with the given prefix.
 	DocumentNamePrefix *string `form:"document_name_prefix,omitempty" json:"document_name_prefix,omitempty"`
+
+	// DocumentNameSearch Filters documents whose name contains the search term (case-insensitive substring match).
+	DocumentNameSearch *string `form:"document_name_search,omitempty" json:"document_name_search,omitempty"`
 }
 
 // GetParseResultsDatastoresDatastoreIdDocumentsDocumentIdParseGetParams defines parameters for GetParseResultsDatastoresDatastoreIdDocumentsDocumentIdParseGet.
@@ -2243,6 +3182,28 @@ type GetParseResultsDatastoresDatastoreIdDocumentsDocumentIdParseGetParams struc
 	// OutputTypes The desired output format(s) of the parsed file. Must be `markdown-document`, `markdown-per-page`, and/or `blocks-per-page`. Specify multiple values to get multiple formats in the response. `markdown-document` parses the whole document into a single concatenated markdown output. `markdown-per-page` provides markdown output per page. `blocks-per-page` provides a structured JSON representation of the content blocks on each page, sorted by reading order.
 	//
 	OutputTypes *[]ParseOutputFormat `form:"output_types,omitempty" json:"output_types,omitempty"`
+}
+
+// ListDocumentsExtractDocumentsGetParams defines parameters for ListDocumentsExtractDocumentsGet.
+type ListDocumentsExtractDocumentsGetParams struct {
+	Limit  *int    `form:"limit,omitempty" json:"limit,omitempty"`
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+	Search *string `form:"search,omitempty" json:"search,omitempty"`
+}
+
+// ListJobsExtractJobsGetParams defines parameters for ListJobsExtractJobsGet.
+type ListJobsExtractJobsGetParams struct {
+	Limit     *int    `form:"limit,omitempty" json:"limit,omitempty"`
+	Cursor    *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+	JobStatus *string `form:"job_status,omitempty" json:"job_status,omitempty"`
+	Search    *string `form:"search,omitempty" json:"search,omitempty"`
+}
+
+// ListSchemasExtractSchemasGetParams defines parameters for ListSchemasExtractSchemasGet.
+type ListSchemasExtractSchemasGetParams struct {
+	Limit  *int    `form:"limit,omitempty" json:"limit,omitempty"`
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+	Search *string `form:"search,omitempty" json:"search,omitempty"`
 }
 
 // ParseListJobsParseJobsGetParams defines parameters for ParseListJobsParseJobsGet.
@@ -2291,6 +3252,9 @@ type ProvideFeedbackAgentsAgentIdFeedbackPostJSONRequestBody = FeedbackRequestV0
 // QueryAgentsAgentIdQueryPostJSONRequestBody defines body for QueryAgentsAgentIdQueryPost for application/json ContentType.
 type QueryAgentsAgentIdQueryPostJSONRequestBody = QueryRequestV1
 
+// QueryAgentsAgentIdQueryAclPostJSONRequestBody defines body for QueryAgentsAgentIdQueryAclPost for application/json ContentType.
+type QueryAgentsAgentIdQueryAclPostJSONRequestBody = QueryRequestV1
+
 // SaveTemplateAgentsAgentIdTemplatePostJSONRequestBody defines body for SaveTemplateAgentsAgentIdTemplatePost for application/json ContentType.
 type SaveTemplateAgentsAgentIdTemplatePostJSONRequestBody = SaveTemplateRequest
 
@@ -2308,6 +3272,21 @@ type IngestDocumentDatastoresDatastoreIdDocumentsPostMultipartRequestBody = Body
 
 // UpdateDocumentMetadataDatastoresDatastoreIdDocumentsDocumentIdMetadataPutJSONRequestBody defines body for UpdateDocumentMetadataDatastoresDatastoreIdDocumentsDocumentIdMetadataPut for application/json ContentType.
 type UpdateDocumentMetadataDatastoresDatastoreIdDocumentsDocumentIdMetadataPutJSONRequestBody = MetadataRequest
+
+// UploadDocumentExtractDocumentsUploadPostMultipartRequestBody defines body for UploadDocumentExtractDocumentsUploadPost for multipart/form-data ContentType.
+type UploadDocumentExtractDocumentsUploadPostMultipartRequestBody = BodyUploadDocumentExtractDocumentsUploadPost
+
+// StartExtractionJobExtractJobsPostJSONRequestBody defines body for StartExtractionJobExtractJobsPost for application/json ContentType.
+type StartExtractionJobExtractJobsPostJSONRequestBody = ExtractJobRequest
+
+// UpdateJobResultsExtractJobsJobIdResultsPutJSONRequestBody defines body for UpdateJobResultsExtractJobsJobIdResultsPut for application/json ContentType.
+type UpdateJobResultsExtractJobsJobIdResultsPutJSONRequestBody = JobResultsUpdateRequest
+
+// CreateSchemaExtractSchemasPostJSONRequestBody defines body for CreateSchemaExtractSchemasPost for application/json ContentType.
+type CreateSchemaExtractSchemasPostJSONRequestBody = SchemaCreateRequest
+
+// UpdateSchemaExtractSchemasSchemaIdPutJSONRequestBody defines body for UpdateSchemaExtractSchemasSchemaIdPut for application/json ContentType.
+type UpdateSchemaExtractSchemasSchemaIdPutJSONRequestBody = SchemaUpdateRequest
 
 // GenerateGeneratePostJSONRequestBody defines body for GenerateGeneratePost for application/json ContentType.
 type GenerateGeneratePostJSONRequestBody = GenerateRequestV1
@@ -2329,6 +3308,9 @@ type InviteUsersUsersPostJSONRequestBody = InviteUsersRequest
 
 // UpdateUserUsersPutJSONRequestBody defines body for UpdateUserUsersPut for application/json ContentType.
 type UpdateUserUsersPutJSONRequestBody = TenantNewUserInfo
+
+// UpdateConsentWorkspacesConsentPutJSONRequestBody defines body for UpdateConsentWorkspacesConsentPut for application/json ContentType.
+type UpdateConsentWorkspacesConsentPutJSONRequestBody = UpdateConsentRequest
 
 // Getter for additional properties for InnerRetrievableCtxlMetadata. Returns the specified
 // element and whether it was found
@@ -2849,6 +3831,68 @@ func (t *CompositeMetadataFilter_Filters_Item) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsDefaultTemplateName returns the union data inside the CreateAgentRequest_TemplateName as a DefaultTemplateName
+func (t CreateAgentRequest_TemplateName) AsDefaultTemplateName() (DefaultTemplateName, error) {
+	var body DefaultTemplateName
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDefaultTemplateName overwrites any union data inside the CreateAgentRequest_TemplateName as the provided DefaultTemplateName
+func (t *CreateAgentRequest_TemplateName) FromDefaultTemplateName(v DefaultTemplateName) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDefaultTemplateName performs a merge with any union data inside the CreateAgentRequest_TemplateName, using the provided DefaultTemplateName
+func (t *CreateAgentRequest_TemplateName) MergeDefaultTemplateName(v DefaultTemplateName) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCreateAgentRequestTemplateName1 returns the union data inside the CreateAgentRequest_TemplateName as a CreateAgentRequestTemplateName1
+func (t CreateAgentRequest_TemplateName) AsCreateAgentRequestTemplateName1() (CreateAgentRequestTemplateName1, error) {
+	var body CreateAgentRequestTemplateName1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCreateAgentRequestTemplateName1 overwrites any union data inside the CreateAgentRequest_TemplateName as the provided CreateAgentRequestTemplateName1
+func (t *CreateAgentRequest_TemplateName) FromCreateAgentRequestTemplateName1(v CreateAgentRequestTemplateName1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCreateAgentRequestTemplateName1 performs a merge with any union data inside the CreateAgentRequest_TemplateName, using the provided CreateAgentRequestTemplateName1
+func (t *CreateAgentRequest_TemplateName) MergeCreateAgentRequestTemplateName1(v CreateAgentRequestTemplateName1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CreateAgentRequest_TemplateName) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CreateAgentRequest_TemplateName) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // AsDocumentDescriptionCustomMetadata0 returns the union data inside the DocumentDescription_CustomMetadata_AdditionalProperties as a DocumentDescriptionCustomMetadata0
 func (t DocumentDescription_CustomMetadata_AdditionalProperties) AsDocumentDescriptionCustomMetadata0() (DocumentDescriptionCustomMetadata0, error) {
 	var body DocumentDescriptionCustomMetadata0
@@ -2985,6 +4029,107 @@ func (t DocumentDescription_CustomMetadata_AdditionalProperties) MarshalJSON() (
 }
 
 func (t *DocumentDescription_CustomMetadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsToolCall returns the union data inside the DynamicAgentEvent_Event as a ToolCall
+func (t DynamicAgentEvent_Event) AsToolCall() (ToolCall, error) {
+	var body ToolCall
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromToolCall overwrites any union data inside the DynamicAgentEvent_Event as the provided ToolCall
+func (t *DynamicAgentEvent_Event) FromToolCall(v ToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_call"}`))
+	t.union = b
+	return err
+}
+
+// MergeToolCall performs a merge with any union data inside the DynamicAgentEvent_Event, using the provided ToolCall
+func (t *DynamicAgentEvent_Event) MergeToolCall(v ToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_call"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsThinkingEvent returns the union data inside the DynamicAgentEvent_Event as a ThinkingEvent
+func (t DynamicAgentEvent_Event) AsThinkingEvent() (ThinkingEvent, error) {
+	var body ThinkingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromThinkingEvent overwrites any union data inside the DynamicAgentEvent_Event as the provided ThinkingEvent
+func (t *DynamicAgentEvent_Event) FromThinkingEvent(v ThinkingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"thinking_event"}`))
+	t.union = b
+	return err
+}
+
+// MergeThinkingEvent performs a merge with any union data inside the DynamicAgentEvent_Event, using the provided ThinkingEvent
+func (t *DynamicAgentEvent_Event) MergeThinkingEvent(v ThinkingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"thinking_event"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t DynamicAgentEvent_Event) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t DynamicAgentEvent_Event) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "thinking_event":
+		return t.AsThinkingEvent()
+	case "tool_call":
+		return t.AsToolCall()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t DynamicAgentEvent_Event) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *DynamicAgentEvent_Event) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -3596,6 +4741,40 @@ func (t *RetrievalInfoQueryResponse_ContentMetadatas_Item) MergeFileAnalysisCont
 	return err
 }
 
+// AsContextualAgentContentMetadata returns the union data inside the RetrievalInfoQueryResponse_ContentMetadatas_Item as a ContextualAgentContentMetadata
+func (t RetrievalInfoQueryResponse_ContentMetadatas_Item) AsContextualAgentContentMetadata() (ContextualAgentContentMetadata, error) {
+	var body ContextualAgentContentMetadata
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContextualAgentContentMetadata overwrites any union data inside the RetrievalInfoQueryResponse_ContentMetadatas_Item as the provided ContextualAgentContentMetadata
+func (t *RetrievalInfoQueryResponse_ContentMetadatas_Item) FromContextualAgentContentMetadata(v ContextualAgentContentMetadata) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"content_type":"contextual_agent_response"}`))
+	t.union = b
+	return err
+}
+
+// MergeContextualAgentContentMetadata performs a merge with any union data inside the RetrievalInfoQueryResponse_ContentMetadatas_Item, using the provided ContextualAgentContentMetadata
+func (t *RetrievalInfoQueryResponse_ContentMetadatas_Item) MergeContextualAgentContentMetadata(v ContextualAgentContentMetadata) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"content_type":"contextual_agent_response"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t RetrievalInfoQueryResponse_ContentMetadatas_Item) Discriminator() (string, error) {
 	var discriminator struct {
 		Discriminator string `json:"content_type"`
@@ -3610,6 +4789,8 @@ func (t RetrievalInfoQueryResponse_ContentMetadatas_Item) ValueByDiscriminator()
 		return nil, err
 	}
 	switch discriminator {
+	case "contextual_agent_response":
+		return t.AsContextualAgentContentMetadata()
 	case "file_analysis":
 		return t.AsFileAnalysisContentMetadata()
 	case "structured":
@@ -3689,68 +4870,6 @@ func (t ValidationError_Loc_Item) MarshalJSON() ([]byte, error) {
 }
 
 func (t *ValidationError_Loc_Item) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsGetAgentResponse returns the union data inside the GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody as a GetAgentResponse
-func (t GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) AsGetAgentResponse() (GetAgentResponse, error) {
-	var body GetAgentResponse
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromGetAgentResponse overwrites any union data inside the GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody as the provided GetAgentResponse
-func (t *GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) FromGetAgentResponse(v GetAgentResponse) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeGetAgentResponse performs a merge with any union data inside the GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody, using the provided GetAgentResponse
-func (t *GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) MergeGetAgentResponse(v GetAgentResponse) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsGetTwilightAgentResponse returns the union data inside the GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody as a GetTwilightAgentResponse
-func (t GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) AsGetTwilightAgentResponse() (GetTwilightAgentResponse, error) {
-	var body GetTwilightAgentResponse
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromGetTwilightAgentResponse overwrites any union data inside the GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody as the provided GetTwilightAgentResponse
-func (t *GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) FromGetTwilightAgentResponse(v GetTwilightAgentResponse) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeGetTwilightAgentResponse performs a merge with any union data inside the GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody, using the provided GetTwilightAgentResponse
-func (t *GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) MergeGetTwilightAgentResponse(v GetTwilightAgentResponse) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -3857,6 +4976,40 @@ func (t *GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200J
 	return err
 }
 
+// AsContextualAgentContentMetadata returns the union data inside the GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JSONResponseBody as a ContextualAgentContentMetadata
+func (t GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JSONResponseBody) AsContextualAgentContentMetadata() (ContextualAgentContentMetadata, error) {
+	var body ContextualAgentContentMetadata
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContextualAgentContentMetadata overwrites any union data inside the GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JSONResponseBody as the provided ContextualAgentContentMetadata
+func (t *GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JSONResponseBody) FromContextualAgentContentMetadata(v ContextualAgentContentMetadata) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"content_type":"contextual_agent_response"}`))
+	t.union = b
+	return err
+}
+
+// MergeContextualAgentContentMetadata performs a merge with any union data inside the GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JSONResponseBody, using the provided ContextualAgentContentMetadata
+func (t *GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JSONResponseBody) MergeContextualAgentContentMetadata(v ContextualAgentContentMetadata) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"content_type":"contextual_agent_response"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JSONResponseBody) Discriminator() (string, error) {
 	var discriminator struct {
 		Discriminator string `json:"content_type"`
@@ -3871,6 +5024,8 @@ func (t GetContentMetadataDatastoresDatastoreIdContentsContentIdMetadataGet200JS
 		return nil, err
 	}
 	switch discriminator {
+	case "contextual_agent_response":
+		return t.AsContextualAgentContentMetadata()
 	case "file_analysis":
 		return t.AsFileAnalysisContentMetadata()
 	case "structured":
@@ -3981,8 +5136,6 @@ type ClientInterface interface {
 	//
 	// Retrieval and generation parameters are defined in the provided `Agent` configuration.
 	//
-	// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
-	//
 	// > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 	//
 	// Takes any type of body and a specified content type.
@@ -3998,8 +5151,6 @@ type ClientInterface interface {
 	//
 	// Retrieval and generation parameters are defined in the provided `Agent` configuration.
 	//
-	// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
-	//
 	// > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 	//
 	// Takes a body of the `application/json` content type.
@@ -4014,10 +5165,19 @@ type ClientInterface interface {
 	// Corresponds with GET /agents/templates (the `ListTemplatesAgentsTemplatesGet` operationId).
 	ListTemplatesAgentsTemplatesGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ListAclTemplatesAgentsTemplatesAclGet List Agent Composer Templates
+	//
+	// Retrieve a list of all available Agent Composer Templates.
+	//
+	// Corresponds with GET /agents/templates/acl (the `ListAclTemplatesAgentsTemplatesAclGet` operationId).
+	ListAclTemplatesAgentsTemplatesAclGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetTemplateConfigurationAgentsTemplatesTemplateGet Get Template Configuration
 	//
 	// Corresponds with GET /agents/templates/{template} (the `GetTemplateConfigurationAgentsTemplatesTemplateGet` operationId).
-	GetTemplateConfigurationAgentsTemplatesTemplateGet(ctx context.Context, template string, reqEditors ...RequestEditorFn) (*http.Response, error)
+	GetTemplateConfigurationAgentsTemplatesTemplateGet(ctx context.Context, template struct {
+		union json.RawMessage
+	}, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// DeleteAgentAgentsAgentIdDelete Delete Agent
 	//
@@ -4107,6 +5267,24 @@ type ClientInterface interface {
 	// Corresponds with POST /agents/{agent_id}/query (the `QueryAgentsAgentIdQueryPost` operationId).
 	QueryAgentsAgentIdQueryPost(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryPostParams, body QueryAgentsAgentIdQueryPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// QueryAgentsAgentIdQueryAclPostWithBody Query
+	//
+	// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+	QueryAgentsAgentIdQueryAclPostWithBody(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// QueryAgentsAgentIdQueryAclPost Query
+	//
+	// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+	QueryAgentsAgentIdQueryAclPost(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, body QueryAgentsAgentIdQueryAclPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGet Get Retrieval Info
 	//
 	// Return metadata of the contents used to generate the response for a given message.
@@ -4134,6 +5312,71 @@ type ClientInterface interface {
 	//
 	// Corresponds with POST /agents/{agent_id}/template (the `SaveTemplateAgentsAgentIdTemplatePost` operationId).
 	SaveTemplateAgentsAgentIdTemplatePost(ctx context.Context, agentId openapi_types.UUID, body SaveTemplateAgentsAgentIdTemplatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetBalanceBillingBalanceGet Get Balance
+	//
+	// Get the remaining balance for a tenant.
+	//
+	// Corresponds with GET /billing/balance (the `GetBalanceBillingBalanceGet` operationId).
+	GetBalanceBillingBalanceGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetTopUpHistoryEndpointBillingBalanceTopUpsGet Get Top Up History Endpoint
+	//
+	// Get the top-up history for a tenant. Paginated.
+	//
+	// Corresponds with GET /billing/balance/top-ups (the `GetTopUpHistoryEndpointBillingBalanceTopUpsGet` operationId).
+	GetTopUpHistoryEndpointBillingBalanceTopUpsGet(ctx context.Context, params *GetTopUpHistoryEndpointBillingBalanceTopUpsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetBillingModeHistoryBillingBillingModeHistoryGet Get Billing Mode History
+	//
+	// Get the billing mode history for a tenant for a specific month.
+	//
+	// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions
+	//
+	// Returns: Billing mode history records for the specified month and year Returns at least one entry which is the mode of the first date of the given month, with potential mode changes in the middle of the month. If no record found, defaults to LEGACY mode.
+	//
+	// Corresponds with GET /billing/billing_mode/history (the `GetBillingModeHistoryBillingBillingModeHistoryGet` operationId).
+	GetBillingModeHistoryBillingBillingModeHistoryGet(ctx context.Context, params *GetBillingModeHistoryBillingBillingModeHistoryGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetBillingMetadataBillingMetadataGet Get Billing Metadata
+	//
+	// Non admin endpoint for getting the billing metadata for a tenant.
+	//
+	// Corresponds with GET /billing/metadata (the `GetBillingMetadataBillingMetadataGet` operationId).
+	GetBillingMetadataBillingMetadataGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetAclStepUsageEndpointBillingUsagesAclGet Get Agent Composer Step Usage
+	//
+	// Get Agent Composer step-level usage data for a specific month.
+	//
+	// This API returns daily usages of advance queries grouped by steps. The data is used for visualization purposes to show users which Agent Composer steps were executed and their associated costs and token consumption.
+	//
+	// Note: The costs returned here are already included in the ACL_COST entry from the daily_usages table and should not be double-counted in billing.
+	//
+	// Args: request: Request object containing year, month, and optional resource_id user_context: User context with tenant admin permissions
+	//
+	// Returns: Agent Composer step usage data aggregated by step and date
+	//
+	// Corresponds with GET /billing/usages/acl (the `GetAclStepUsageEndpointBillingUsagesAclGet` operationId).
+	GetAclStepUsageEndpointBillingUsagesAclGet(ctx context.Context, params *GetAclStepUsageEndpointBillingUsagesAclGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet Get Earliest Usage Date Endpoint
+	//
+	// Get the earliest usage date for a tenant.
+	//
+	// Corresponds with GET /billing/usages/earliest_date (the `GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet` operationId).
+	GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetMonthlyUsageEndpointBillingUsagesMonthlyGet Get Monthly Usage Endpoint
+	//
+	// Get monthly usage data for a tenant with validation for year and month parameters.
+	//
+	// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions resource_id: Optional[UUID]. If provided, get usage data for a specific resource. Otherwise, get aggregated usage data across all resources.
+	//
+	// Returns: Monthly usage records for the specified month and year
+	//
+	// Corresponds with GET /billing/usages/monthly (the `GetMonthlyUsageEndpointBillingUsagesMonthlyGet` operationId).
+	GetMonthlyUsageEndpointBillingUsagesMonthlyGet(ctx context.Context, params *GetMonthlyUsageEndpointBillingUsagesMonthlyGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ListDatastoresDatastoresGet List Datastores
 	//
@@ -4244,7 +5487,7 @@ type ClientInterface interface {
 	//
 	// This `id` can also be used to delete the document through the `DELETE /datastores/{datastore_id}/documents/{document_id}` API.
 	//
-	// `file` must be a PDF, HTML, DOC(X) or PPT(X) file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`.
+	// `file` must be a PDF, HTML, DOC(X), PPT(X), PNG, JPG, or JPEG file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`, `.png`, `.jpg`, `.jpeg`.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -4304,6 +5547,700 @@ type ClientInterface interface {
 	// Corresponds with PUT /datastores/{datastore_id}/reset (the `ResetDatastoreDatastoresDatastoreIdResetPut` operationId).
 	ResetDatastoreDatastoresDatastoreIdResetPut(ctx context.Context, datastoreId openapi_types.UUID, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ListDocumentsExtractDocumentsGet List Documents
+	//
+	// List documents for structured extraction.
+	//
+	// Corresponds with GET /extract/documents (the `ListDocumentsExtractDocumentsGet` operationId).
+	ListDocumentsExtractDocumentsGet(ctx context.Context, params *ListDocumentsExtractDocumentsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UploadDocumentExtractDocumentsUploadPostWithBody Upload Document
+	//
+	// Upload a document for structured extraction.
+	//
+	// Uploads a PDF document that can be used for structured data extraction. Only PDF files are supported.
+	//
+	// Supported File Types:
+	//
+	// 1. PDF files only (`.pdf` extension)
+	// 2. Maximum file size: 50MB (recommended)
+	// 3. Documents are processed and validated upon upload
+	//
+	// Document Processing:
+	//
+	// 1. File size and page count are automatically calculated
+	// 2. Document is validated for PDF format and readability
+	// 3. Metadata is extracted and stored for future reference
+	// 4. Document is stored securely and can be referenced by ID
+	//
+	// Usage:
+	//
+	// After uploading, you'll receive a `document_id` that can be used with:
+	//
+	// 1. `POST /jobs` endpoint to start extraction jobs
+	// 2. `GET /documents/{document_id}` to retrieve document information
+	// 3. `DELETE /documents/{document_id}` to remove the document
+	//
+	// Example Response:
+	// ```json
+	// {
+	//   "document_id": "123e4567-e89b-12d3-a456-426614174000",
+	//   "file_name": "financial_report.pdf",
+	//   "file_size": 2048576,
+	//   "page_count": 45,
+	//   "uploaded_at": "2025-01-11T18:35:00Z",
+	//   "status": "uploaded"
+	// }
+	// ```
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /extract/documents/upload (the `UploadDocumentExtractDocumentsUploadPost` operationId).
+	UploadDocumentExtractDocumentsUploadPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteDocumentExtractDocumentsDocumentIdDelete Delete Document
+	//
+	// Delete a document.
+	//
+	// Corresponds with DELETE /extract/documents/{document_id} (the `DeleteDocumentExtractDocumentsDocumentIdDelete` operationId).
+	DeleteDocumentExtractDocumentsDocumentIdDelete(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetDocumentExtractDocumentsDocumentIdGet Get Document
+	//
+	// Get document information by ID.
+	//
+	// Corresponds with GET /extract/documents/{document_id} (the `GetDocumentExtractDocumentsDocumentIdGet` operationId).
+	GetDocumentExtractDocumentsDocumentIdGet(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListJobsExtractJobsGet List Jobs
+	//
+	// List extraction jobs.
+	//
+	// Corresponds with GET /extract/jobs (the `ListJobsExtractJobsGet` operationId).
+	ListJobsExtractJobsGet(ctx context.Context, params *ListJobsExtractJobsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StartExtractionJobExtractJobsPostWithBody Start Extraction Job
+	//
+	// Start a new structured extraction job.
+	//
+	// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+	//
+	// How It Works:
+	//
+	// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+	// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+	// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+	// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+	// 5. Results: Structured data is returned in the format defined by your schema
+	//
+	// Supported Models:
+	//
+	// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+	// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+	//
+	// Configuration Options:
+	//
+	// Basic Settings:
+	//
+	// 1. `model`: AI model to use for extraction
+	// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+	// 3. `validate_response_schema`: Whether to validate extracted data against schema
+	//
+	// Advanced Settings:
+	//
+	// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+	// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+	// 3. `seed`: Set random seed for reproducible results
+	// 4. `enable_thinking`: Show AI reasoning process
+	// 5. `n_max_retries`: Maximum retry attempts for failed requests
+	//
+	// Streaming Mode (`stream=true`):
+	//
+	// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+	//
+	// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+	// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+	// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+	// - Automatic retries: Temporal handles activity failures and retries automatically
+	// - Use case: Interactive frontend UI where users want real-time extraction progress
+	//
+	// SSE Event Types:
+	//
+	// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+	// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+	// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+	//
+	// See `STREAMING-DESIGN.md` for full protocol specification.
+	//
+	// Job Lifecycle:
+	//
+	// 1. `pending`: Job is queued and waiting to start
+	// 2. `processing`: AI is actively extracting data from the document
+	// 3. `completed`: Extraction finished successfully with results
+	// 4. `failed`: Extraction failed due to an error
+	// 5. `cancelled`: Job was cancelled before completion
+	//
+	// Monitoring Progress:
+	//
+	// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+	//
+	// 1. `completion_percentage`: Overall progress (0-100)
+	// 2. `current_step`: Current processing stage
+	// 3. `fields_processed`: Number of schema fields completed
+	// 4. `total_fields`: Total number of schema fields to process
+	//
+	// Getting Results:
+	//
+	// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+	//
+	// 1. `results`: Extracted data conforming to your schema
+	// 2. `metadata`: Processing information, costs, and performance metrics
+	// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+	//
+	// Example Request:
+	// ```json
+	// {
+	//   "document_id": "123e4567-e89b-12d3-a456-426614174000",
+	//   "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+	//   "config": {
+	//     "model": "gemini-2.5-flash",
+	//     "per_key_attribution": true,
+	//     "temperature": 0.1,
+	//     "enable_thinking": true
+	//     "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+	//   }
+	// }
+	// ```
+	//
+	// Example Response:
+	// ```json
+	// {
+	//   "job_id": "456e7890-e89b-12d3-a456-426614174000",
+	//   "status": "pending",
+	//   "created_at": "2025-01-11T18:35:00Z",
+	//   "estimated_completion": "2025-01-11T18:40:00Z"
+	// }
+	// ```
+	//
+	// Error Handling:
+	//
+	// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+	//
+	// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+	// - `404`: Not Found (document or schema not found)
+	// - `422`: Unprocessable Entity (invalid schema definition)
+	// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+	// - `500`: Internal Server Error (processing error)
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+	StartExtractionJobExtractJobsPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StartExtractionJobExtractJobsPost Start Extraction Job
+	//
+	// Start a new structured extraction job.
+	//
+	// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+	//
+	// How It Works:
+	//
+	// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+	// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+	// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+	// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+	// 5. Results: Structured data is returned in the format defined by your schema
+	//
+	// Supported Models:
+	//
+	// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+	// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+	//
+	// Configuration Options:
+	//
+	// Basic Settings:
+	//
+	// 1. `model`: AI model to use for extraction
+	// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+	// 3. `validate_response_schema`: Whether to validate extracted data against schema
+	//
+	// Advanced Settings:
+	//
+	// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+	// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+	// 3. `seed`: Set random seed for reproducible results
+	// 4. `enable_thinking`: Show AI reasoning process
+	// 5. `n_max_retries`: Maximum retry attempts for failed requests
+	//
+	// Streaming Mode (`stream=true`):
+	//
+	// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+	//
+	// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+	// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+	// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+	// - Automatic retries: Temporal handles activity failures and retries automatically
+	// - Use case: Interactive frontend UI where users want real-time extraction progress
+	//
+	// SSE Event Types:
+	//
+	// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+	// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+	// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+	//
+	// See `STREAMING-DESIGN.md` for full protocol specification.
+	//
+	// Job Lifecycle:
+	//
+	// 1. `pending`: Job is queued and waiting to start
+	// 2. `processing`: AI is actively extracting data from the document
+	// 3. `completed`: Extraction finished successfully with results
+	// 4. `failed`: Extraction failed due to an error
+	// 5. `cancelled`: Job was cancelled before completion
+	//
+	// Monitoring Progress:
+	//
+	// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+	//
+	// 1. `completion_percentage`: Overall progress (0-100)
+	// 2. `current_step`: Current processing stage
+	// 3. `fields_processed`: Number of schema fields completed
+	// 4. `total_fields`: Total number of schema fields to process
+	//
+	// Getting Results:
+	//
+	// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+	//
+	// 1. `results`: Extracted data conforming to your schema
+	// 2. `metadata`: Processing information, costs, and performance metrics
+	// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+	//
+	// Example Request:
+	// ```json
+	// {
+	//   "document_id": "123e4567-e89b-12d3-a456-426614174000",
+	//   "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+	//   "config": {
+	//     "model": "gemini-2.5-flash",
+	//     "per_key_attribution": true,
+	//     "temperature": 0.1,
+	//     "enable_thinking": true
+	//     "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+	//   }
+	// }
+	// ```
+	//
+	// Example Response:
+	// ```json
+	// {
+	//   "job_id": "456e7890-e89b-12d3-a456-426614174000",
+	//   "status": "pending",
+	//   "created_at": "2025-01-11T18:35:00Z",
+	//   "estimated_completion": "2025-01-11T18:40:00Z"
+	// }
+	// ```
+	//
+	// Error Handling:
+	//
+	// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+	//
+	// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+	// - `404`: Not Found (document or schema not found)
+	// - `422`: Unprocessable Entity (invalid schema definition)
+	// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+	// - `500`: Internal Server Error (processing error)
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+	StartExtractionJobExtractJobsPost(ctx context.Context, body StartExtractionJobExtractJobsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetJobStatusExtractJobsJobIdGet Get Job Status
+	//
+	// Get the status of an extraction job.
+	//
+	// For running jobs with a Temporal workflow, returns accumulated results and failed subtrees from workflow queries. For completed/failed jobs or jobs without workflow, these fields are empty.
+	//
+	// Corresponds with GET /extract/jobs/{job_id} (the `GetJobStatusExtractJobsJobIdGet` operationId).
+	GetJobStatusExtractJobsJobIdGet(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetJobResultsExtractJobsJobIdResultsGet Get Job Results
+	//
+	// Get the results of a completed extraction job.
+	//
+	// Corresponds with GET /extract/jobs/{job_id}/results (the `GetJobResultsExtractJobsJobIdResultsGet` operationId).
+	GetJobResultsExtractJobsJobIdResultsGet(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateJobResultsExtractJobsJobIdResultsPutWithBody Update Job Results
+	//
+	// Update the results of a completed extraction job.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+	UpdateJobResultsExtractJobsJobIdResultsPutWithBody(ctx context.Context, jobId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateJobResultsExtractJobsJobIdResultsPut Update Job Results
+	//
+	// Update the results of a completed extraction job.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+	UpdateJobResultsExtractJobsJobIdResultsPut(ctx context.Context, jobId string, body UpdateJobResultsExtractJobsJobIdResultsPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ResumeStreamingExtractionExtractJobsJobIdStreamGet Resume Streaming Extraction
+	//
+	// Resume streaming events for an existing extraction job.
+	//
+	// This endpoint:
+	// 1. Validates the job exists and is still processing
+	// 2. Queries Temporal workflow for current state (accumulated_results)
+	// 3. Sends current state as initial event
+	// 4. Streams new events going forward
+	//
+	// Corresponds with GET /extract/jobs/{job_id}/stream (the `ResumeStreamingExtractionExtractJobsJobIdStreamGet` operationId).
+	ResumeStreamingExtractionExtractJobsJobIdStreamGet(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListSchemasExtractSchemasGet List Schemas
+	//
+	// List schemas with optional search.
+	//
+	// Corresponds with GET /extract/schemas (the `ListSchemasExtractSchemasGet` operationId).
+	ListSchemasExtractSchemasGet(ctx context.Context, params *ListSchemasExtractSchemasGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateSchemaExtractSchemasPostWithBody Create Schema
+	//
+	// Create a new extraction schema.
+	//
+	// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+	//
+	// Supported Schema Features:
+	//
+	// Basic Types:
+	//
+	// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+	// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 4. `boolean`: True/false values
+	// 5. `null`: Null values (often used with `anyOf` for optional fields)
+	//
+	// Complex Types:
+	//
+	// 1. `object`: Key-value pairs with defined properties
+	// 2. `array`: Lists of items with defined item schemas
+	// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+	//
+	// String Formats:
+	//
+	// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+	//
+	// Schema Structure:
+	//
+	// 1. Root schema must be an `object` type
+	// 2. Use `$defs` for reusable schema components
+	// 3. Use `$ref` to reference definitions
+	// 4. Arrays must have `items` schema defined
+	//
+	// Constraints:
+	//
+	// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+	// 2. No circular references in `$ref` definitions
+	// 3. String formats must be from the supported list
+	//
+	// Example Schemas:
+	//
+	// Simple Company Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "company_name": {
+	//       "type": "string",
+	//       "description": "The name of the company exactly as it appears in the document"
+	//     },
+	//     "form_type": {
+	//       "type": "string",
+	//       "enum": ["10-K", "10-Q", "8-K", "S-1"],
+	//       "description": "The type of SEC form"
+	//     },
+	//     "trading_symbol": {
+	//       "type": "string",
+	//       "description": "The trading symbol of the company"
+	//     },
+	//     "zip_code": {
+	//       "type": "integer",
+	//       "description": "The zip code of the company headquarters"
+	//     }
+	//   },
+	//   "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+	// }
+	// ```
+	//
+	// Complex Resume Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "personalInfo": {
+	//       "type": "object",
+	//       "properties": {
+	//         "fullName": {"type": "string"},
+	//         "contact": {
+	//           "type": "object",
+	//           "properties": {
+	//             "emails": {
+	//               "type": "array",
+	//               "items": {"type": "string", "format": "email"}
+	//             },
+	//             "phones": {
+	//               "type": "array",
+	//               "items": {"type": "string"}
+	//             }
+	//           }
+	//         }
+	//       },
+	//       "required": ["fullName"]
+	//     },
+	//     "workExperience": {
+	//       "type": "array",
+	//       "items": {
+	//         "type": "object",
+	//         "properties": {
+	//           "jobTitle": {"type": "string"},
+	//           "company": {"type": "string"},
+	//           "startDate": {"type": "string"},
+	//           "endDate": {"type": ["string", "null"]},
+	//           "isCurrent": {"type": "boolean"}
+	//         },
+	//         "required": ["jobTitle", "company", "startDate"]
+	//       }
+	//     }
+	//   },
+	//   "required": ["personalInfo", "workExperience"]
+	// }
+	// ```
+	//
+	// Schema with References:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "algorithms": {
+	//       "type": "array",
+	//       "items": {"$ref": "#/$defs/algorithm"}
+	//     }
+	//   },
+	//   "$defs": {
+	//     "algorithm": {
+	//       "type": "object",
+	//       "properties": {
+	//         "name": {"type": "string"},
+	//         "description": {"type": "string"}
+	//       },
+	//       "required": ["name"]
+	//     }
+	//   }
+	// }
+	// ```
+	//
+	// Best Practices:
+	//
+	// 1. Use descriptive field names that clearly indicate what data should be extracted
+	// 2. Add detailed descriptions to help the AI understand what to extract
+	// 3. Use `enum` for known values (e.g., form types, status values)
+	// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+	// 5. Use arrays for lists of similar items (e.g., work experience, education)
+	// 6. Keep schemas focused - avoid overly complex nested structures
+	// 7. Test with sample documents to ensure the schema captures the expected data
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+	CreateSchemaExtractSchemasPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateSchemaExtractSchemasPost Create Schema
+	//
+	// Create a new extraction schema.
+	//
+	// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+	//
+	// Supported Schema Features:
+	//
+	// Basic Types:
+	//
+	// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+	// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 4. `boolean`: True/false values
+	// 5. `null`: Null values (often used with `anyOf` for optional fields)
+	//
+	// Complex Types:
+	//
+	// 1. `object`: Key-value pairs with defined properties
+	// 2. `array`: Lists of items with defined item schemas
+	// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+	//
+	// String Formats:
+	//
+	// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+	//
+	// Schema Structure:
+	//
+	// 1. Root schema must be an `object` type
+	// 2. Use `$defs` for reusable schema components
+	// 3. Use `$ref` to reference definitions
+	// 4. Arrays must have `items` schema defined
+	//
+	// Constraints:
+	//
+	// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+	// 2. No circular references in `$ref` definitions
+	// 3. String formats must be from the supported list
+	//
+	// Example Schemas:
+	//
+	// Simple Company Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "company_name": {
+	//       "type": "string",
+	//       "description": "The name of the company exactly as it appears in the document"
+	//     },
+	//     "form_type": {
+	//       "type": "string",
+	//       "enum": ["10-K", "10-Q", "8-K", "S-1"],
+	//       "description": "The type of SEC form"
+	//     },
+	//     "trading_symbol": {
+	//       "type": "string",
+	//       "description": "The trading symbol of the company"
+	//     },
+	//     "zip_code": {
+	//       "type": "integer",
+	//       "description": "The zip code of the company headquarters"
+	//     }
+	//   },
+	//   "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+	// }
+	// ```
+	//
+	// Complex Resume Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "personalInfo": {
+	//       "type": "object",
+	//       "properties": {
+	//         "fullName": {"type": "string"},
+	//         "contact": {
+	//           "type": "object",
+	//           "properties": {
+	//             "emails": {
+	//               "type": "array",
+	//               "items": {"type": "string", "format": "email"}
+	//             },
+	//             "phones": {
+	//               "type": "array",
+	//               "items": {"type": "string"}
+	//             }
+	//           }
+	//         }
+	//       },
+	//       "required": ["fullName"]
+	//     },
+	//     "workExperience": {
+	//       "type": "array",
+	//       "items": {
+	//         "type": "object",
+	//         "properties": {
+	//           "jobTitle": {"type": "string"},
+	//           "company": {"type": "string"},
+	//           "startDate": {"type": "string"},
+	//           "endDate": {"type": ["string", "null"]},
+	//           "isCurrent": {"type": "boolean"}
+	//         },
+	//         "required": ["jobTitle", "company", "startDate"]
+	//       }
+	//     }
+	//   },
+	//   "required": ["personalInfo", "workExperience"]
+	// }
+	// ```
+	//
+	// Schema with References:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "algorithms": {
+	//       "type": "array",
+	//       "items": {"$ref": "#/$defs/algorithm"}
+	//     }
+	//   },
+	//   "$defs": {
+	//     "algorithm": {
+	//       "type": "object",
+	//       "properties": {
+	//         "name": {"type": "string"},
+	//         "description": {"type": "string"}
+	//       },
+	//       "required": ["name"]
+	//     }
+	//   }
+	// }
+	// ```
+	//
+	// Best Practices:
+	//
+	// 1. Use descriptive field names that clearly indicate what data should be extracted
+	// 2. Add detailed descriptions to help the AI understand what to extract
+	// 3. Use `enum` for known values (e.g., form types, status values)
+	// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+	// 5. Use arrays for lists of similar items (e.g., work experience, education)
+	// 6. Keep schemas focused - avoid overly complex nested structures
+	// 7. Test with sample documents to ensure the schema captures the expected data
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+	CreateSchemaExtractSchemasPost(ctx context.Context, body CreateSchemaExtractSchemasPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteSchemaExtractSchemasSchemaIdDelete Delete Schema
+	//
+	// Delete a schema.
+	//
+	// Corresponds with DELETE /extract/schemas/{schema_id} (the `DeleteSchemaExtractSchemasSchemaIdDelete` operationId).
+	DeleteSchemaExtractSchemasSchemaIdDelete(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetSchemaExtractSchemasSchemaIdGet Get Schema
+	//
+	// Get schema information by ID.
+	//
+	// Corresponds with GET /extract/schemas/{schema_id} (the `GetSchemaExtractSchemasSchemaIdGet` operationId).
+	GetSchemaExtractSchemasSchemaIdGet(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateSchemaExtractSchemasSchemaIdPutWithBody Update Schema
+	//
+	// Update an existing schema.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+	UpdateSchemaExtractSchemasSchemaIdPutWithBody(ctx context.Context, schemaId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateSchemaExtractSchemasSchemaIdPut Update Schema
+	//
+	// Update an existing schema.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+	UpdateSchemaExtractSchemasSchemaIdPut(ctx context.Context, schemaId string, body UpdateSchemaExtractSchemasSchemaIdPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GenerateGeneratePostWithBody Generate
 	//
 	// Generate a response using Contextual's Grounded Language Model (GLM), an LLM engineered specifically to prioritize faithfulness to in-context retrievals over parametric knowledge to reduce hallucinations in Retrieval-Augmented Generation and agentic use cases.
@@ -4358,7 +6295,7 @@ type ClientInterface interface {
 
 	// ParseParsePostWithBody Parse File
 	//
-	// Parse a file into a structured Markdown and/or JSON. Files must be less than 100MB and 400 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
+	// Parse a file into a structured Markdown and/or JSON. Files must be less than 300MB and 2000 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
 	//
 	// See our [blog post](https://contextual.ai/blog/document-parser-for-rag) and [code examples](https://github.com/ContextualAI/examples/blob/main/03-standalone-api/04-parse/parse.ipynb). Email [parse-feedback@contextual.ai](mailto:parse-feedback@contextual.ai) with any feedback or questions.
 	//
@@ -4484,6 +6421,31 @@ type ClientInterface interface {
 	//
 	// Corresponds with PUT /users (the `UpdateUserUsersPut` operationId).
 	UpdateUserUsersPut(ctx context.Context, body UpdateUserUsersPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetConsentWorkspacesConsentGet Get Consent
+	//
+	// Retrieve the current consent status for the workspace.
+	//
+	// Corresponds with GET /workspaces/consent (the `GetConsentWorkspacesConsentGet` operationId).
+	GetConsentWorkspacesConsentGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateConsentWorkspacesConsentPutWithBody Update Consent
+	//
+	// Update the consent status for the workspace.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+	UpdateConsentWorkspacesConsentPutWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateConsentWorkspacesConsentPut Update Consent
+	//
+	// Update the consent status for the workspace.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+	UpdateConsentWorkspacesConsentPut(ctx context.Context, body UpdateConsentWorkspacesConsentPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 }
 
 // ListAgentsAgentsGet List Agents
@@ -4511,8 +6473,6 @@ func (c *Client) ListAgentsAgentsGet(ctx context.Context, params *ListAgentsAgen
 //
 // Retrieval and generation parameters are defined in the provided `Agent` configuration.
 //
-// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
-//
 // > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 //
 // Takes any type of body and a specified content type.
@@ -4537,8 +6497,6 @@ func (c *Client) CreateAgentAgentsPostWithBody(ctx context.Context, contentType 
 // This creates a specialized RAG `Agent` which queries over one or multiple `Datastores` to retrieve relevant data on which its generations are grounded.
 //
 // Retrieval and generation parameters are defined in the provided `Agent` configuration.
-//
-// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
 //
 // > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 //
@@ -4574,10 +6532,29 @@ func (c *Client) ListTemplatesAgentsTemplatesGet(ctx context.Context, reqEditors
 	return c.Client.Do(req)
 }
 
+// ListAclTemplatesAgentsTemplatesAclGet List Agent Composer Templates
+//
+// Retrieve a list of all available Agent Composer Templates.
+//
+// Corresponds with GET /agents/templates/acl (the `ListAclTemplatesAgentsTemplatesAclGet` operationId).
+func (c *Client) ListAclTemplatesAgentsTemplatesAclGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListAclTemplatesAgentsTemplatesAclGetRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // GetTemplateConfigurationAgentsTemplatesTemplateGet Get Template Configuration
 //
 // Corresponds with GET /agents/templates/{template} (the `GetTemplateConfigurationAgentsTemplatesTemplateGet` operationId).
-func (c *Client) GetTemplateConfigurationAgentsTemplatesTemplateGet(ctx context.Context, template string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+func (c *Client) GetTemplateConfigurationAgentsTemplatesTemplateGet(ctx context.Context, template struct {
+	union json.RawMessage
+}, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetTemplateConfigurationAgentsTemplatesTemplateGetRequest(c.Server, template)
 	if err != nil {
 		return nil, err
@@ -4777,6 +6754,44 @@ func (c *Client) QueryAgentsAgentIdQueryPost(ctx context.Context, agentId openap
 	return c.Client.Do(req)
 }
 
+// QueryAgentsAgentIdQueryAclPostWithBody Query
+//
+// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+func (c *Client) QueryAgentsAgentIdQueryAclPostWithBody(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewQueryAgentsAgentIdQueryAclPostRequestWithBody(c.Server, agentId, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// QueryAgentsAgentIdQueryAclPost Query
+//
+// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+func (c *Client) QueryAgentsAgentIdQueryAclPost(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, body QueryAgentsAgentIdQueryAclPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewQueryAgentsAgentIdQueryAclPostRequest(c.Server, agentId, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGet Get Retrieval Info
 //
 // Return metadata of the contents used to generate the response for a given message.
@@ -4835,6 +6850,141 @@ func (c *Client) SaveTemplateAgentsAgentIdTemplatePostWithBody(ctx context.Conte
 // Corresponds with POST /agents/{agent_id}/template (the `SaveTemplateAgentsAgentIdTemplatePost` operationId).
 func (c *Client) SaveTemplateAgentsAgentIdTemplatePost(ctx context.Context, agentId openapi_types.UUID, body SaveTemplateAgentsAgentIdTemplatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewSaveTemplateAgentsAgentIdTemplatePostRequest(c.Server, agentId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetBalanceBillingBalanceGet Get Balance
+//
+// Get the remaining balance for a tenant.
+//
+// Corresponds with GET /billing/balance (the `GetBalanceBillingBalanceGet` operationId).
+func (c *Client) GetBalanceBillingBalanceGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetBalanceBillingBalanceGetRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetTopUpHistoryEndpointBillingBalanceTopUpsGet Get Top Up History Endpoint
+//
+// Get the top-up history for a tenant. Paginated.
+//
+// Corresponds with GET /billing/balance/top-ups (the `GetTopUpHistoryEndpointBillingBalanceTopUpsGet` operationId).
+func (c *Client) GetTopUpHistoryEndpointBillingBalanceTopUpsGet(ctx context.Context, params *GetTopUpHistoryEndpointBillingBalanceTopUpsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetTopUpHistoryEndpointBillingBalanceTopUpsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetBillingModeHistoryBillingBillingModeHistoryGet Get Billing Mode History
+//
+// Get the billing mode history for a tenant for a specific month.
+//
+// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions
+//
+// Returns: Billing mode history records for the specified month and year Returns at least one entry which is the mode of the first date of the given month, with potential mode changes in the middle of the month. If no record found, defaults to LEGACY mode.
+//
+// Corresponds with GET /billing/billing_mode/history (the `GetBillingModeHistoryBillingBillingModeHistoryGet` operationId).
+func (c *Client) GetBillingModeHistoryBillingBillingModeHistoryGet(ctx context.Context, params *GetBillingModeHistoryBillingBillingModeHistoryGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetBillingModeHistoryBillingBillingModeHistoryGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetBillingMetadataBillingMetadataGet Get Billing Metadata
+//
+// Non admin endpoint for getting the billing metadata for a tenant.
+//
+// Corresponds with GET /billing/metadata (the `GetBillingMetadataBillingMetadataGet` operationId).
+func (c *Client) GetBillingMetadataBillingMetadataGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetBillingMetadataBillingMetadataGetRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetAclStepUsageEndpointBillingUsagesAclGet Get Agent Composer Step Usage
+//
+// Get Agent Composer step-level usage data for a specific month.
+//
+// This API returns daily usages of advance queries grouped by steps. The data is used for visualization purposes to show users which Agent Composer steps were executed and their associated costs and token consumption.
+//
+// Note: The costs returned here are already included in the ACL_COST entry from the daily_usages table and should not be double-counted in billing.
+//
+// Args: request: Request object containing year, month, and optional resource_id user_context: User context with tenant admin permissions
+//
+// Returns: Agent Composer step usage data aggregated by step and date
+//
+// Corresponds with GET /billing/usages/acl (the `GetAclStepUsageEndpointBillingUsagesAclGet` operationId).
+func (c *Client) GetAclStepUsageEndpointBillingUsagesAclGet(ctx context.Context, params *GetAclStepUsageEndpointBillingUsagesAclGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetAclStepUsageEndpointBillingUsagesAclGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet Get Earliest Usage Date Endpoint
+//
+// Get the earliest usage date for a tenant.
+//
+// Corresponds with GET /billing/usages/earliest_date (the `GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet` operationId).
+func (c *Client) GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetEarliestUsageDateEndpointBillingUsagesEarliestDateGetRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetMonthlyUsageEndpointBillingUsagesMonthlyGet Get Monthly Usage Endpoint
+//
+// Get monthly usage data for a tenant with validation for year and month parameters.
+//
+// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions resource_id: Optional[UUID]. If provided, get usage data for a specific resource. Otherwise, get aggregated usage data across all resources.
+//
+// Returns: Monthly usage records for the specified month and year
+//
+// Corresponds with GET /billing/usages/monthly (the `GetMonthlyUsageEndpointBillingUsagesMonthlyGet` operationId).
+func (c *Client) GetMonthlyUsageEndpointBillingUsagesMonthlyGet(ctx context.Context, params *GetMonthlyUsageEndpointBillingUsagesMonthlyGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetMonthlyUsageEndpointBillingUsagesMonthlyGetRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -5064,7 +7214,7 @@ func (c *Client) ListDocumentsDatastoresDatastoreIdDocumentsGet(ctx context.Cont
 //
 // This `id` can also be used to delete the document through the `DELETE /datastores/{datastore_id}/documents/{document_id}` API.
 //
-// `file` must be a PDF, HTML, DOC(X) or PPT(X) file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`.
+// `file` must be a PDF, HTML, DOC(X), PPT(X), PNG, JPG, or JPEG file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`, `.png`, `.jpg`, `.jpeg`.
 //
 // Takes any type of body and a specified content type.
 //
@@ -5204,6 +7354,912 @@ func (c *Client) ResetDatastoreDatastoresDatastoreIdResetPut(ctx context.Context
 	return c.Client.Do(req)
 }
 
+// ListDocumentsExtractDocumentsGet List Documents
+//
+// List documents for structured extraction.
+//
+// Corresponds with GET /extract/documents (the `ListDocumentsExtractDocumentsGet` operationId).
+func (c *Client) ListDocumentsExtractDocumentsGet(ctx context.Context, params *ListDocumentsExtractDocumentsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListDocumentsExtractDocumentsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UploadDocumentExtractDocumentsUploadPostWithBody Upload Document
+//
+// Upload a document for structured extraction.
+//
+// Uploads a PDF document that can be used for structured data extraction. Only PDF files are supported.
+//
+// Supported File Types:
+//
+// 1. PDF files only (`.pdf` extension)
+// 2. Maximum file size: 50MB (recommended)
+// 3. Documents are processed and validated upon upload
+//
+// Document Processing:
+//
+// 1. File size and page count are automatically calculated
+// 2. Document is validated for PDF format and readability
+// 3. Metadata is extracted and stored for future reference
+// 4. Document is stored securely and can be referenced by ID
+//
+// Usage:
+//
+// After uploading, you'll receive a `document_id` that can be used with:
+//
+// 1. `POST /jobs` endpoint to start extraction jobs
+// 2. `GET /documents/{document_id}` to retrieve document information
+// 3. `DELETE /documents/{document_id}` to remove the document
+//
+// Example Response:
+// ```json
+//
+//	{
+//	  "document_id": "123e4567-e89b-12d3-a456-426614174000",
+//	  "file_name": "financial_report.pdf",
+//	  "file_size": 2048576,
+//	  "page_count": 45,
+//	  "uploaded_at": "2025-01-11T18:35:00Z",
+//	  "status": "uploaded"
+//	}
+//
+// ```
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /extract/documents/upload (the `UploadDocumentExtractDocumentsUploadPost` operationId).
+func (c *Client) UploadDocumentExtractDocumentsUploadPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUploadDocumentExtractDocumentsUploadPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteDocumentExtractDocumentsDocumentIdDelete Delete Document
+//
+// Delete a document.
+//
+// Corresponds with DELETE /extract/documents/{document_id} (the `DeleteDocumentExtractDocumentsDocumentIdDelete` operationId).
+func (c *Client) DeleteDocumentExtractDocumentsDocumentIdDelete(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteDocumentExtractDocumentsDocumentIdDeleteRequest(c.Server, documentId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetDocumentExtractDocumentsDocumentIdGet Get Document
+//
+// Get document information by ID.
+//
+// Corresponds with GET /extract/documents/{document_id} (the `GetDocumentExtractDocumentsDocumentIdGet` operationId).
+func (c *Client) GetDocumentExtractDocumentsDocumentIdGet(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetDocumentExtractDocumentsDocumentIdGetRequest(c.Server, documentId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ListJobsExtractJobsGet List Jobs
+//
+// List extraction jobs.
+//
+// Corresponds with GET /extract/jobs (the `ListJobsExtractJobsGet` operationId).
+func (c *Client) ListJobsExtractJobsGet(ctx context.Context, params *ListJobsExtractJobsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListJobsExtractJobsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// StartExtractionJobExtractJobsPostWithBody Start Extraction Job
+//
+// Start a new structured extraction job.
+//
+// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+//
+// How It Works:
+//
+// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+// 5. Results: Structured data is returned in the format defined by your schema
+//
+// Supported Models:
+//
+// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+//
+// Configuration Options:
+//
+// Basic Settings:
+//
+// 1. `model`: AI model to use for extraction
+// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+// 3. `validate_response_schema`: Whether to validate extracted data against schema
+//
+// Advanced Settings:
+//
+// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+// 3. `seed`: Set random seed for reproducible results
+// 4. `enable_thinking`: Show AI reasoning process
+// 5. `n_max_retries`: Maximum retry attempts for failed requests
+//
+// Streaming Mode (`stream=true`):
+//
+// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+//
+// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+// - Automatic retries: Temporal handles activity failures and retries automatically
+// - Use case: Interactive frontend UI where users want real-time extraction progress
+//
+// SSE Event Types:
+//
+// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+//
+// See `STREAMING-DESIGN.md` for full protocol specification.
+//
+// Job Lifecycle:
+//
+// 1. `pending`: Job is queued and waiting to start
+// 2. `processing`: AI is actively extracting data from the document
+// 3. `completed`: Extraction finished successfully with results
+// 4. `failed`: Extraction failed due to an error
+// 5. `cancelled`: Job was cancelled before completion
+//
+// Monitoring Progress:
+//
+// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+//
+// 1. `completion_percentage`: Overall progress (0-100)
+// 2. `current_step`: Current processing stage
+// 3. `fields_processed`: Number of schema fields completed
+// 4. `total_fields`: Total number of schema fields to process
+//
+// Getting Results:
+//
+// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+//
+// 1. `results`: Extracted data conforming to your schema
+// 2. `metadata`: Processing information, costs, and performance metrics
+// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+//
+// Example Request:
+// ```json
+//
+//	{
+//	  "document_id": "123e4567-e89b-12d3-a456-426614174000",
+//	  "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+//	  "config": {
+//	    "model": "gemini-2.5-flash",
+//	    "per_key_attribution": true,
+//	    "temperature": 0.1,
+//	    "enable_thinking": true
+//	    "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+//	  }
+//	}
+//
+// ```
+//
+// Example Response:
+// ```json
+//
+//	{
+//	  "job_id": "456e7890-e89b-12d3-a456-426614174000",
+//	  "status": "pending",
+//	  "created_at": "2025-01-11T18:35:00Z",
+//	  "estimated_completion": "2025-01-11T18:40:00Z"
+//	}
+//
+// ```
+//
+// Error Handling:
+//
+// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+//
+// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+// - `404`: Not Found (document or schema not found)
+// - `422`: Unprocessable Entity (invalid schema definition)
+// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+// - `500`: Internal Server Error (processing error)
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+func (c *Client) StartExtractionJobExtractJobsPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStartExtractionJobExtractJobsPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// StartExtractionJobExtractJobsPost Start Extraction Job
+//
+// Start a new structured extraction job.
+//
+// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+//
+// How It Works:
+//
+// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+// 5. Results: Structured data is returned in the format defined by your schema
+//
+// Supported Models:
+//
+// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+//
+// Configuration Options:
+//
+// Basic Settings:
+//
+// 1. `model`: AI model to use for extraction
+// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+// 3. `validate_response_schema`: Whether to validate extracted data against schema
+//
+// Advanced Settings:
+//
+// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+// 3. `seed`: Set random seed for reproducible results
+// 4. `enable_thinking`: Show AI reasoning process
+// 5. `n_max_retries`: Maximum retry attempts for failed requests
+//
+// Streaming Mode (`stream=true`):
+//
+// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+//
+// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+// - Automatic retries: Temporal handles activity failures and retries automatically
+// - Use case: Interactive frontend UI where users want real-time extraction progress
+//
+// SSE Event Types:
+//
+// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+//
+// See `STREAMING-DESIGN.md` for full protocol specification.
+//
+// Job Lifecycle:
+//
+// 1. `pending`: Job is queued and waiting to start
+// 2. `processing`: AI is actively extracting data from the document
+// 3. `completed`: Extraction finished successfully with results
+// 4. `failed`: Extraction failed due to an error
+// 5. `cancelled`: Job was cancelled before completion
+//
+// Monitoring Progress:
+//
+// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+//
+// 1. `completion_percentage`: Overall progress (0-100)
+// 2. `current_step`: Current processing stage
+// 3. `fields_processed`: Number of schema fields completed
+// 4. `total_fields`: Total number of schema fields to process
+//
+// Getting Results:
+//
+// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+//
+// 1. `results`: Extracted data conforming to your schema
+// 2. `metadata`: Processing information, costs, and performance metrics
+// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+//
+// Example Request:
+// ```json
+//
+//	{
+//	  "document_id": "123e4567-e89b-12d3-a456-426614174000",
+//	  "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+//	  "config": {
+//	    "model": "gemini-2.5-flash",
+//	    "per_key_attribution": true,
+//	    "temperature": 0.1,
+//	    "enable_thinking": true
+//	    "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+//	  }
+//	}
+//
+// ```
+//
+// Example Response:
+// ```json
+//
+//	{
+//	  "job_id": "456e7890-e89b-12d3-a456-426614174000",
+//	  "status": "pending",
+//	  "created_at": "2025-01-11T18:35:00Z",
+//	  "estimated_completion": "2025-01-11T18:40:00Z"
+//	}
+//
+// ```
+//
+// Error Handling:
+//
+// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+//
+// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+// - `404`: Not Found (document or schema not found)
+// - `422`: Unprocessable Entity (invalid schema definition)
+// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+// - `500`: Internal Server Error (processing error)
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+func (c *Client) StartExtractionJobExtractJobsPost(ctx context.Context, body StartExtractionJobExtractJobsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStartExtractionJobExtractJobsPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetJobStatusExtractJobsJobIdGet Get Job Status
+//
+// Get the status of an extraction job.
+//
+// For running jobs with a Temporal workflow, returns accumulated results and failed subtrees from workflow queries. For completed/failed jobs or jobs without workflow, these fields are empty.
+//
+// Corresponds with GET /extract/jobs/{job_id} (the `GetJobStatusExtractJobsJobIdGet` operationId).
+func (c *Client) GetJobStatusExtractJobsJobIdGet(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetJobStatusExtractJobsJobIdGetRequest(c.Server, jobId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetJobResultsExtractJobsJobIdResultsGet Get Job Results
+//
+// Get the results of a completed extraction job.
+//
+// Corresponds with GET /extract/jobs/{job_id}/results (the `GetJobResultsExtractJobsJobIdResultsGet` operationId).
+func (c *Client) GetJobResultsExtractJobsJobIdResultsGet(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetJobResultsExtractJobsJobIdResultsGetRequest(c.Server, jobId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateJobResultsExtractJobsJobIdResultsPutWithBody Update Job Results
+//
+// Update the results of a completed extraction job.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+func (c *Client) UpdateJobResultsExtractJobsJobIdResultsPutWithBody(ctx context.Context, jobId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateJobResultsExtractJobsJobIdResultsPutRequestWithBody(c.Server, jobId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateJobResultsExtractJobsJobIdResultsPut Update Job Results
+//
+// Update the results of a completed extraction job.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+func (c *Client) UpdateJobResultsExtractJobsJobIdResultsPut(ctx context.Context, jobId string, body UpdateJobResultsExtractJobsJobIdResultsPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateJobResultsExtractJobsJobIdResultsPutRequest(c.Server, jobId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ResumeStreamingExtractionExtractJobsJobIdStreamGet Resume Streaming Extraction
+//
+// Resume streaming events for an existing extraction job.
+//
+// This endpoint:
+// 1. Validates the job exists and is still processing
+// 2. Queries Temporal workflow for current state (accumulated_results)
+// 3. Sends current state as initial event
+// 4. Streams new events going forward
+//
+// Corresponds with GET /extract/jobs/{job_id}/stream (the `ResumeStreamingExtractionExtractJobsJobIdStreamGet` operationId).
+func (c *Client) ResumeStreamingExtractionExtractJobsJobIdStreamGet(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewResumeStreamingExtractionExtractJobsJobIdStreamGetRequest(c.Server, jobId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ListSchemasExtractSchemasGet List Schemas
+//
+// List schemas with optional search.
+//
+// Corresponds with GET /extract/schemas (the `ListSchemasExtractSchemasGet` operationId).
+func (c *Client) ListSchemasExtractSchemasGet(ctx context.Context, params *ListSchemasExtractSchemasGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListSchemasExtractSchemasGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CreateSchemaExtractSchemasPostWithBody Create Schema
+//
+// Create a new extraction schema.
+//
+// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+//
+// Supported Schema Features:
+//
+// Basic Types:
+//
+// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 4. `boolean`: True/false values
+// 5. `null`: Null values (often used with `anyOf` for optional fields)
+//
+// Complex Types:
+//
+// 1. `object`: Key-value pairs with defined properties
+// 2. `array`: Lists of items with defined item schemas
+// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+//
+// String Formats:
+//
+// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+//
+// Schema Structure:
+//
+// 1. Root schema must be an `object` type
+// 2. Use `$defs` for reusable schema components
+// 3. Use `$ref` to reference definitions
+// 4. Arrays must have `items` schema defined
+//
+// Constraints:
+//
+// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+// 2. No circular references in `$ref` definitions
+// 3. String formats must be from the supported list
+//
+// Example Schemas:
+//
+// Simple Company Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "company_name": {
+//	      "type": "string",
+//	      "description": "The name of the company exactly as it appears in the document"
+//	    },
+//	    "form_type": {
+//	      "type": "string",
+//	      "enum": ["10-K", "10-Q", "8-K", "S-1"],
+//	      "description": "The type of SEC form"
+//	    },
+//	    "trading_symbol": {
+//	      "type": "string",
+//	      "description": "The trading symbol of the company"
+//	    },
+//	    "zip_code": {
+//	      "type": "integer",
+//	      "description": "The zip code of the company headquarters"
+//	    }
+//	  },
+//	  "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+//	}
+//
+// ```
+//
+// Complex Resume Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "personalInfo": {
+//	      "type": "object",
+//	      "properties": {
+//	        "fullName": {"type": "string"},
+//	        "contact": {
+//	          "type": "object",
+//	          "properties": {
+//	            "emails": {
+//	              "type": "array",
+//	              "items": {"type": "string", "format": "email"}
+//	            },
+//	            "phones": {
+//	              "type": "array",
+//	              "items": {"type": "string"}
+//	            }
+//	          }
+//	        }
+//	      },
+//	      "required": ["fullName"]
+//	    },
+//	    "workExperience": {
+//	      "type": "array",
+//	      "items": {
+//	        "type": "object",
+//	        "properties": {
+//	          "jobTitle": {"type": "string"},
+//	          "company": {"type": "string"},
+//	          "startDate": {"type": "string"},
+//	          "endDate": {"type": ["string", "null"]},
+//	          "isCurrent": {"type": "boolean"}
+//	        },
+//	        "required": ["jobTitle", "company", "startDate"]
+//	      }
+//	    }
+//	  },
+//	  "required": ["personalInfo", "workExperience"]
+//	}
+//
+// ```
+//
+// Schema with References:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "algorithms": {
+//	      "type": "array",
+//	      "items": {"$ref": "#/$defs/algorithm"}
+//	    }
+//	  },
+//	  "$defs": {
+//	    "algorithm": {
+//	      "type": "object",
+//	      "properties": {
+//	        "name": {"type": "string"},
+//	        "description": {"type": "string"}
+//	      },
+//	      "required": ["name"]
+//	    }
+//	  }
+//	}
+//
+// ```
+//
+// Best Practices:
+//
+// 1. Use descriptive field names that clearly indicate what data should be extracted
+// 2. Add detailed descriptions to help the AI understand what to extract
+// 3. Use `enum` for known values (e.g., form types, status values)
+// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+// 5. Use arrays for lists of similar items (e.g., work experience, education)
+// 6. Keep schemas focused - avoid overly complex nested structures
+// 7. Test with sample documents to ensure the schema captures the expected data
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+func (c *Client) CreateSchemaExtractSchemasPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateSchemaExtractSchemasPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CreateSchemaExtractSchemasPost Create Schema
+//
+// Create a new extraction schema.
+//
+// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+//
+// Supported Schema Features:
+//
+// Basic Types:
+//
+// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 4. `boolean`: True/false values
+// 5. `null`: Null values (often used with `anyOf` for optional fields)
+//
+// Complex Types:
+//
+// 1. `object`: Key-value pairs with defined properties
+// 2. `array`: Lists of items with defined item schemas
+// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+//
+// String Formats:
+//
+// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+//
+// Schema Structure:
+//
+// 1. Root schema must be an `object` type
+// 2. Use `$defs` for reusable schema components
+// 3. Use `$ref` to reference definitions
+// 4. Arrays must have `items` schema defined
+//
+// Constraints:
+//
+// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+// 2. No circular references in `$ref` definitions
+// 3. String formats must be from the supported list
+//
+// Example Schemas:
+//
+// Simple Company Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "company_name": {
+//	      "type": "string",
+//	      "description": "The name of the company exactly as it appears in the document"
+//	    },
+//	    "form_type": {
+//	      "type": "string",
+//	      "enum": ["10-K", "10-Q", "8-K", "S-1"],
+//	      "description": "The type of SEC form"
+//	    },
+//	    "trading_symbol": {
+//	      "type": "string",
+//	      "description": "The trading symbol of the company"
+//	    },
+//	    "zip_code": {
+//	      "type": "integer",
+//	      "description": "The zip code of the company headquarters"
+//	    }
+//	  },
+//	  "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+//	}
+//
+// ```
+//
+// Complex Resume Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "personalInfo": {
+//	      "type": "object",
+//	      "properties": {
+//	        "fullName": {"type": "string"},
+//	        "contact": {
+//	          "type": "object",
+//	          "properties": {
+//	            "emails": {
+//	              "type": "array",
+//	              "items": {"type": "string", "format": "email"}
+//	            },
+//	            "phones": {
+//	              "type": "array",
+//	              "items": {"type": "string"}
+//	            }
+//	          }
+//	        }
+//	      },
+//	      "required": ["fullName"]
+//	    },
+//	    "workExperience": {
+//	      "type": "array",
+//	      "items": {
+//	        "type": "object",
+//	        "properties": {
+//	          "jobTitle": {"type": "string"},
+//	          "company": {"type": "string"},
+//	          "startDate": {"type": "string"},
+//	          "endDate": {"type": ["string", "null"]},
+//	          "isCurrent": {"type": "boolean"}
+//	        },
+//	        "required": ["jobTitle", "company", "startDate"]
+//	      }
+//	    }
+//	  },
+//	  "required": ["personalInfo", "workExperience"]
+//	}
+//
+// ```
+//
+// Schema with References:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "algorithms": {
+//	      "type": "array",
+//	      "items": {"$ref": "#/$defs/algorithm"}
+//	    }
+//	  },
+//	  "$defs": {
+//	    "algorithm": {
+//	      "type": "object",
+//	      "properties": {
+//	        "name": {"type": "string"},
+//	        "description": {"type": "string"}
+//	      },
+//	      "required": ["name"]
+//	    }
+//	  }
+//	}
+//
+// ```
+//
+// Best Practices:
+//
+// 1. Use descriptive field names that clearly indicate what data should be extracted
+// 2. Add detailed descriptions to help the AI understand what to extract
+// 3. Use `enum` for known values (e.g., form types, status values)
+// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+// 5. Use arrays for lists of similar items (e.g., work experience, education)
+// 6. Keep schemas focused - avoid overly complex nested structures
+// 7. Test with sample documents to ensure the schema captures the expected data
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+func (c *Client) CreateSchemaExtractSchemasPost(ctx context.Context, body CreateSchemaExtractSchemasPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateSchemaExtractSchemasPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteSchemaExtractSchemasSchemaIdDelete Delete Schema
+//
+// Delete a schema.
+//
+// Corresponds with DELETE /extract/schemas/{schema_id} (the `DeleteSchemaExtractSchemasSchemaIdDelete` operationId).
+func (c *Client) DeleteSchemaExtractSchemasSchemaIdDelete(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteSchemaExtractSchemasSchemaIdDeleteRequest(c.Server, schemaId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetSchemaExtractSchemasSchemaIdGet Get Schema
+//
+// Get schema information by ID.
+//
+// Corresponds with GET /extract/schemas/{schema_id} (the `GetSchemaExtractSchemasSchemaIdGet` operationId).
+func (c *Client) GetSchemaExtractSchemasSchemaIdGet(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetSchemaExtractSchemasSchemaIdGetRequest(c.Server, schemaId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateSchemaExtractSchemasSchemaIdPutWithBody Update Schema
+//
+// Update an existing schema.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+func (c *Client) UpdateSchemaExtractSchemasSchemaIdPutWithBody(ctx context.Context, schemaId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateSchemaExtractSchemasSchemaIdPutRequestWithBody(c.Server, schemaId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateSchemaExtractSchemasSchemaIdPut Update Schema
+//
+// Update an existing schema.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+func (c *Client) UpdateSchemaExtractSchemasSchemaIdPut(ctx context.Context, schemaId string, body UpdateSchemaExtractSchemasSchemaIdPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateSchemaExtractSchemasSchemaIdPutRequest(c.Server, schemaId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // GenerateGeneratePostWithBody Generate
 //
 // Generate a response using Contextual's Grounded Language Model (GLM), an LLM engineered specifically to prioritize faithfulness to in-context retrievals over parametric knowledge to reduce hallucinations in Retrieval-Augmented Generation and agentic use cases.
@@ -5298,7 +8354,7 @@ func (c *Client) LmunitLmunitPost(ctx context.Context, body LmunitLmunitPostJSON
 
 // ParseParsePostWithBody Parse File
 //
-// Parse a file into a structured Markdown and/or JSON. Files must be less than 100MB and 400 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
+// Parse a file into a structured Markdown and/or JSON. Files must be less than 300MB and 2000 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
 //
 // See our [blog post](https://contextual.ai/blog/document-parser-for-rag) and [code examples](https://github.com/ContextualAI/examples/blob/main/03-standalone-api/04-parse/parse.ipynb). Email [parse-feedback@contextual.ai](mailto:parse-feedback@contextual.ai) with any feedback or questions.
 //
@@ -5555,6 +8611,61 @@ func (c *Client) UpdateUserUsersPut(ctx context.Context, body UpdateUserUsersPut
 	return c.Client.Do(req)
 }
 
+// GetConsentWorkspacesConsentGet Get Consent
+//
+// Retrieve the current consent status for the workspace.
+//
+// Corresponds with GET /workspaces/consent (the `GetConsentWorkspacesConsentGet` operationId).
+func (c *Client) GetConsentWorkspacesConsentGet(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetConsentWorkspacesConsentGetRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateConsentWorkspacesConsentPutWithBody Update Consent
+//
+// Update the consent status for the workspace.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+func (c *Client) UpdateConsentWorkspacesConsentPutWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateConsentWorkspacesConsentPutRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateConsentWorkspacesConsentPut Update Consent
+//
+// Update the consent status for the workspace.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+func (c *Client) UpdateConsentWorkspacesConsentPut(ctx context.Context, body UpdateConsentWorkspacesConsentPutJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateConsentWorkspacesConsentPutRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // NewListAgentsAgentsGetRequest constructs an http.Request for the ListAgentsAgentsGet method
 func NewListAgentsAgentsGetRequest(server string, params *ListAgentsAgentsGetParams) (*http.Request, error) {
 	var err error
@@ -5688,13 +8799,42 @@ func NewListTemplatesAgentsTemplatesGetRequest(server string) (*http.Request, er
 	return req, nil
 }
 
+// NewListAclTemplatesAgentsTemplatesAclGetRequest constructs an http.Request for the ListAclTemplatesAgentsTemplatesAclGet method
+func NewListAclTemplatesAgentsTemplatesAclGetRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/agents/templates/acl")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetTemplateConfigurationAgentsTemplatesTemplateGetRequest constructs an http.Request for the GetTemplateConfigurationAgentsTemplatesTemplateGet method
-func NewGetTemplateConfigurationAgentsTemplatesTemplateGetRequest(server string, template string) (*http.Request, error) {
+func NewGetTemplateConfigurationAgentsTemplatesTemplateGetRequest(server string, template struct {
+	union json.RawMessage
+}) (*http.Request, error) {
 	var err error
 
 	var pathParam0 string
 
-	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "template", template, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "template", template, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "", Format: ""})
 	if err != nil {
 		return nil, err
 	}
@@ -6125,6 +9265,92 @@ func NewQueryAgentsAgentIdQueryPostRequestWithBody(server string, agentId openap
 	return req, nil
 }
 
+// NewQueryAgentsAgentIdQueryAclPostRequest calls the generic QueryAgentsAgentIdQueryAclPost builder with application/json body
+func NewQueryAgentsAgentIdQueryAclPostRequest(server string, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, body QueryAgentsAgentIdQueryAclPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewQueryAgentsAgentIdQueryAclPostRequestWithBody(server, agentId, params, "application/json", bodyReader)
+}
+
+// NewQueryAgentsAgentIdQueryAclPostRequestWithBody constructs an http.Request for the QueryAgentsAgentIdQueryAclPost method, with any body, and a specified content type
+func NewQueryAgentsAgentIdQueryAclPostRequestWithBody(server string, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "agent_id", agentId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: "uuid"})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/agents/%s/query/acl", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.RetrievalsOnly != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "retrievals_only", *params.RetrievalsOnly, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.IncludeRetrievalContentText != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "include_retrieval_content_text", *params.IncludeRetrievalContentText, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "boolean", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewGetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGetRequest constructs an http.Request for the GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGet method
 func NewGetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGetRequest(server string, agentId openapi_types.UUID, messageId openapi_types.UUID, params *GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGetParams) (*http.Request, error) {
 	var err error
@@ -6270,6 +9496,351 @@ func NewSaveTemplateAgentsAgentIdTemplatePostRequestWithBody(server string, agen
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetBalanceBillingBalanceGetRequest constructs an http.Request for the GetBalanceBillingBalanceGet method
+func NewGetBalanceBillingBalanceGetRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/billing/balance")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetTopUpHistoryEndpointBillingBalanceTopUpsGetRequest constructs an http.Request for the GetTopUpHistoryEndpointBillingBalanceTopUpsGet method
+func NewGetTopUpHistoryEndpointBillingBalanceTopUpsGetRequest(server string, params *GetTopUpHistoryEndpointBillingBalanceTopUpsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/billing/balance/top-ups")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "cursor", *params.Cursor, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetBillingModeHistoryBillingBillingModeHistoryGetRequest constructs an http.Request for the GetBillingModeHistoryBillingBillingModeHistoryGet method
+func NewGetBillingModeHistoryBillingBillingModeHistoryGetRequest(server string, params *GetBillingModeHistoryBillingBillingModeHistoryGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/billing/billing_mode/history")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "year", params.Year, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "month", params.Month, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetBillingMetadataBillingMetadataGetRequest constructs an http.Request for the GetBillingMetadataBillingMetadataGet method
+func NewGetBillingMetadataBillingMetadataGetRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/billing/metadata")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetAclStepUsageEndpointBillingUsagesAclGetRequest constructs an http.Request for the GetAclStepUsageEndpointBillingUsagesAclGet method
+func NewGetAclStepUsageEndpointBillingUsagesAclGetRequest(server string, params *GetAclStepUsageEndpointBillingUsagesAclGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/billing/usages/acl")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "year", params.Year, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "month", params.Month, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if params.ResourceId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "resource_id", *params.ResourceId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetEarliestUsageDateEndpointBillingUsagesEarliestDateGetRequest constructs an http.Request for the GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet method
+func NewGetEarliestUsageDateEndpointBillingUsagesEarliestDateGetRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/billing/usages/earliest_date")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetMonthlyUsageEndpointBillingUsagesMonthlyGetRequest constructs an http.Request for the GetMonthlyUsageEndpointBillingUsagesMonthlyGet method
+func NewGetMonthlyUsageEndpointBillingUsagesMonthlyGetRequest(server string, params *GetMonthlyUsageEndpointBillingUsagesMonthlyGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/billing/usages/monthly")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "year", params.Year, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if queryFrag, err := runtime.StyleParamWithOptions("form", true, "month", params.Month, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+			return nil, err
+		} else {
+			for _, qp := range strings.Split(queryFrag, "&") {
+				rawQueryFragments = append(rawQueryFragments, qp)
+			}
+		}
+
+		if params.ResourceId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "resource_id", *params.ResourceId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -6801,6 +10372,18 @@ func NewListDocumentsDatastoresDatastoreIdDocumentsGetRequest(server string, dat
 
 		}
 
+		if params.DocumentNameSearch != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "document_name_search", *params.DocumentNameSearch, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
 		if encoded := queryValues.Encode(); encoded != "" {
 			rawQueryFragments = append(rawQueryFragments, encoded)
 		}
@@ -7119,6 +10702,693 @@ func NewResetDatastoreDatastoresDatastoreIdResetPutRequest(server string, datast
 	if err != nil {
 		return nil, err
 	}
+
+	return req, nil
+}
+
+// NewListDocumentsExtractDocumentsGetRequest constructs an http.Request for the ListDocumentsExtractDocumentsGet method
+func NewListDocumentsExtractDocumentsGetRequest(server string, params *ListDocumentsExtractDocumentsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/documents")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "cursor", *params.Cursor, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Search != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUploadDocumentExtractDocumentsUploadPostRequestWithBody constructs an http.Request for the UploadDocumentExtractDocumentsUploadPost method, with any body, and a specified content type
+func NewUploadDocumentExtractDocumentsUploadPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/documents/upload")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeleteDocumentExtractDocumentsDocumentIdDeleteRequest constructs an http.Request for the DeleteDocumentExtractDocumentsDocumentIdDelete method
+func NewDeleteDocumentExtractDocumentsDocumentIdDeleteRequest(server string, documentId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "document_id", documentId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/documents/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetDocumentExtractDocumentsDocumentIdGetRequest constructs an http.Request for the GetDocumentExtractDocumentsDocumentIdGet method
+func NewGetDocumentExtractDocumentsDocumentIdGetRequest(server string, documentId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "document_id", documentId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/documents/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListJobsExtractJobsGetRequest constructs an http.Request for the ListJobsExtractJobsGet method
+func NewListJobsExtractJobsGetRequest(server string, params *ListJobsExtractJobsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/jobs")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "cursor", *params.Cursor, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.JobStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "job_status", *params.JobStatus, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Search != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewStartExtractionJobExtractJobsPostRequest calls the generic StartExtractionJobExtractJobsPost builder with application/json body
+func NewStartExtractionJobExtractJobsPostRequest(server string, body StartExtractionJobExtractJobsPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewStartExtractionJobExtractJobsPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewStartExtractionJobExtractJobsPostRequestWithBody constructs an http.Request for the StartExtractionJobExtractJobsPost method, with any body, and a specified content type
+func NewStartExtractionJobExtractJobsPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/jobs")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetJobStatusExtractJobsJobIdGetRequest constructs an http.Request for the GetJobStatusExtractJobsJobIdGet method
+func NewGetJobStatusExtractJobsJobIdGetRequest(server string, jobId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "job_id", jobId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/jobs/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetJobResultsExtractJobsJobIdResultsGetRequest constructs an http.Request for the GetJobResultsExtractJobsJobIdResultsGet method
+func NewGetJobResultsExtractJobsJobIdResultsGetRequest(server string, jobId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "job_id", jobId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/jobs/%s/results", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUpdateJobResultsExtractJobsJobIdResultsPutRequest calls the generic UpdateJobResultsExtractJobsJobIdResultsPut builder with application/json body
+func NewUpdateJobResultsExtractJobsJobIdResultsPutRequest(server string, jobId string, body UpdateJobResultsExtractJobsJobIdResultsPutJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateJobResultsExtractJobsJobIdResultsPutRequestWithBody(server, jobId, "application/json", bodyReader)
+}
+
+// NewUpdateJobResultsExtractJobsJobIdResultsPutRequestWithBody constructs an http.Request for the UpdateJobResultsExtractJobsJobIdResultsPut method, with any body, and a specified content type
+func NewUpdateJobResultsExtractJobsJobIdResultsPutRequestWithBody(server string, jobId string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "job_id", jobId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/jobs/%s/results", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewResumeStreamingExtractionExtractJobsJobIdStreamGetRequest constructs an http.Request for the ResumeStreamingExtractionExtractJobsJobIdStreamGet method
+func NewResumeStreamingExtractionExtractJobsJobIdStreamGetRequest(server string, jobId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "job_id", jobId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/jobs/%s/stream", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListSchemasExtractSchemasGetRequest constructs an http.Request for the ListSchemasExtractSchemasGet method
+func NewListSchemasExtractSchemasGetRequest(server string, params *ListSchemasExtractSchemasGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/schemas")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "cursor", *params.Cursor, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Search != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCreateSchemaExtractSchemasPostRequest calls the generic CreateSchemaExtractSchemasPost builder with application/json body
+func NewCreateSchemaExtractSchemasPostRequest(server string, body CreateSchemaExtractSchemasPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCreateSchemaExtractSchemasPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCreateSchemaExtractSchemasPostRequestWithBody constructs an http.Request for the CreateSchemaExtractSchemasPost method, with any body, and a specified content type
+func NewCreateSchemaExtractSchemasPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/schemas")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeleteSchemaExtractSchemasSchemaIdDeleteRequest constructs an http.Request for the DeleteSchemaExtractSchemasSchemaIdDelete method
+func NewDeleteSchemaExtractSchemasSchemaIdDeleteRequest(server string, schemaId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "schema_id", schemaId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/schemas/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetSchemaExtractSchemasSchemaIdGetRequest constructs an http.Request for the GetSchemaExtractSchemasSchemaIdGet method
+func NewGetSchemaExtractSchemasSchemaIdGetRequest(server string, schemaId string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "schema_id", schemaId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/schemas/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUpdateSchemaExtractSchemasSchemaIdPutRequest calls the generic UpdateSchemaExtractSchemasSchemaIdPut builder with application/json body
+func NewUpdateSchemaExtractSchemasSchemaIdPutRequest(server string, schemaId string, body UpdateSchemaExtractSchemasSchemaIdPutJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateSchemaExtractSchemasSchemaIdPutRequestWithBody(server, schemaId, "application/json", bodyReader)
+}
+
+// NewUpdateSchemaExtractSchemasSchemaIdPutRequestWithBody constructs an http.Request for the UpdateSchemaExtractSchemasSchemaIdPut method, with any body, and a specified content type
+func NewUpdateSchemaExtractSchemasSchemaIdPutRequestWithBody(server string, schemaId string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "schema_id", schemaId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/extract/schemas/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -7655,6 +11925,73 @@ func NewUpdateUserUsersPutRequestWithBody(server string, contentType string, bod
 	return req, nil
 }
 
+// NewGetConsentWorkspacesConsentGetRequest constructs an http.Request for the GetConsentWorkspacesConsentGet method
+func NewGetConsentWorkspacesConsentGetRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/workspaces/consent")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUpdateConsentWorkspacesConsentPutRequest calls the generic UpdateConsentWorkspacesConsentPut builder with application/json body
+func NewUpdateConsentWorkspacesConsentPutRequest(server string, body UpdateConsentWorkspacesConsentPutJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateConsentWorkspacesConsentPutRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewUpdateConsentWorkspacesConsentPutRequestWithBody constructs an http.Request for the UpdateConsentWorkspacesConsentPut method, with any body, and a specified content type
+func NewUpdateConsentWorkspacesConsentPutRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/workspaces/consent")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPut, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 func (c *Client) applyEditors(ctx context.Context, req *http.Request, additionalEditors []RequestEditorFn) error {
 	for _, r := range c.RequestEditors {
 		if err := r(ctx, req); err != nil {
@@ -7716,8 +12053,6 @@ type ClientWithResponsesInterface interface {
 	//
 	// Retrieval and generation parameters are defined in the provided `Agent` configuration.
 	//
-	// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
-	//
 	// > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
@@ -7732,8 +12067,6 @@ type ClientWithResponsesInterface interface {
 	// This creates a specialized RAG `Agent` which queries over one or multiple `Datastores` to retrieve relevant data on which its generations are grounded.
 	//
 	// Retrieval and generation parameters are defined in the provided `Agent` configuration.
-	//
-	// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
 	//
 	// > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 	//
@@ -7751,12 +12084,23 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /agents/templates (the `ListTemplatesAgentsTemplatesGet` operationId).
 	ListTemplatesAgentsTemplatesGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ListTemplatesAgentsTemplatesGetResponse, error)
 
+	// ListAclTemplatesAgentsTemplatesAclGetWithResponse List Agent Composer Templates
+	//
+	// Retrieve a list of all available Agent Composer Templates.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /agents/templates/acl (the `ListAclTemplatesAgentsTemplatesAclGet` operationId).
+	ListAclTemplatesAgentsTemplatesAclGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ListAclTemplatesAgentsTemplatesAclGetResponse, error)
+
 	// GetTemplateConfigurationAgentsTemplatesTemplateGetWithResponse Get Template Configuration
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with GET /agents/templates/{template} (the `GetTemplateConfigurationAgentsTemplatesTemplateGet` operationId).
-	GetTemplateConfigurationAgentsTemplatesTemplateGetWithResponse(ctx context.Context, template string, reqEditors ...RequestEditorFn) (*GetTemplateConfigurationAgentsTemplatesTemplateGetResponse, error)
+	GetTemplateConfigurationAgentsTemplatesTemplateGetWithResponse(ctx context.Context, template struct {
+		union json.RawMessage
+	}, reqEditors ...RequestEditorFn) (*GetTemplateConfigurationAgentsTemplatesTemplateGetResponse, error)
 
 	// DeleteAgentAgentsAgentIdDeleteWithResponse Delete Agent
 	//
@@ -7854,6 +12198,24 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /agents/{agent_id}/query (the `QueryAgentsAgentIdQueryPost` operationId).
 	QueryAgentsAgentIdQueryPostWithResponse(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryPostParams, body QueryAgentsAgentIdQueryPostJSONRequestBody, reqEditors ...RequestEditorFn) (*QueryAgentsAgentIdQueryPostResponse, error)
 
+	// QueryAgentsAgentIdQueryAclPostWithBodyWithResponse Query
+	//
+	// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+	QueryAgentsAgentIdQueryAclPostWithBodyWithResponse(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*QueryAgentsAgentIdQueryAclPostResponse, error)
+
+	// QueryAgentsAgentIdQueryAclPostWithResponse Query
+	//
+	// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+	QueryAgentsAgentIdQueryAclPostWithResponse(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, body QueryAgentsAgentIdQueryAclPostJSONRequestBody, reqEditors ...RequestEditorFn) (*QueryAgentsAgentIdQueryAclPostResponse, error)
+
 	// GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGetWithResponse Get Retrieval Info
 	//
 	// Return metadata of the contents used to generate the response for a given message.
@@ -7885,6 +12247,85 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /agents/{agent_id}/template (the `SaveTemplateAgentsAgentIdTemplatePost` operationId).
 	SaveTemplateAgentsAgentIdTemplatePostWithResponse(ctx context.Context, agentId openapi_types.UUID, body SaveTemplateAgentsAgentIdTemplatePostJSONRequestBody, reqEditors ...RequestEditorFn) (*SaveTemplateAgentsAgentIdTemplatePostResponse, error)
+
+	// GetBalanceBillingBalanceGetWithResponse Get Balance
+	//
+	// Get the remaining balance for a tenant.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /billing/balance (the `GetBalanceBillingBalanceGet` operationId).
+	GetBalanceBillingBalanceGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetBalanceBillingBalanceGetResponse, error)
+
+	// GetTopUpHistoryEndpointBillingBalanceTopUpsGetWithResponse Get Top Up History Endpoint
+	//
+	// Get the top-up history for a tenant. Paginated.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /billing/balance/top-ups (the `GetTopUpHistoryEndpointBillingBalanceTopUpsGet` operationId).
+	GetTopUpHistoryEndpointBillingBalanceTopUpsGetWithResponse(ctx context.Context, params *GetTopUpHistoryEndpointBillingBalanceTopUpsGetParams, reqEditors ...RequestEditorFn) (*GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse, error)
+
+	// GetBillingModeHistoryBillingBillingModeHistoryGetWithResponse Get Billing Mode History
+	//
+	// Get the billing mode history for a tenant for a specific month.
+	//
+	// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions
+	//
+	// Returns: Billing mode history records for the specified month and year Returns at least one entry which is the mode of the first date of the given month, with potential mode changes in the middle of the month. If no record found, defaults to LEGACY mode.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /billing/billing_mode/history (the `GetBillingModeHistoryBillingBillingModeHistoryGet` operationId).
+	GetBillingModeHistoryBillingBillingModeHistoryGetWithResponse(ctx context.Context, params *GetBillingModeHistoryBillingBillingModeHistoryGetParams, reqEditors ...RequestEditorFn) (*GetBillingModeHistoryBillingBillingModeHistoryGetResponse, error)
+
+	// GetBillingMetadataBillingMetadataGetWithResponse Get Billing Metadata
+	//
+	// Non admin endpoint for getting the billing metadata for a tenant.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /billing/metadata (the `GetBillingMetadataBillingMetadataGet` operationId).
+	GetBillingMetadataBillingMetadataGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetBillingMetadataBillingMetadataGetResponse, error)
+
+	// GetAclStepUsageEndpointBillingUsagesAclGetWithResponse Get Agent Composer Step Usage
+	//
+	// Get Agent Composer step-level usage data for a specific month.
+	//
+	// This API returns daily usages of advance queries grouped by steps. The data is used for visualization purposes to show users which Agent Composer steps were executed and their associated costs and token consumption.
+	//
+	// Note: The costs returned here are already included in the ACL_COST entry from the daily_usages table and should not be double-counted in billing.
+	//
+	// Args: request: Request object containing year, month, and optional resource_id user_context: User context with tenant admin permissions
+	//
+	// Returns: Agent Composer step usage data aggregated by step and date
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /billing/usages/acl (the `GetAclStepUsageEndpointBillingUsagesAclGet` operationId).
+	GetAclStepUsageEndpointBillingUsagesAclGetWithResponse(ctx context.Context, params *GetAclStepUsageEndpointBillingUsagesAclGetParams, reqEditors ...RequestEditorFn) (*GetAclStepUsageEndpointBillingUsagesAclGetResponse, error)
+
+	// GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetWithResponse Get Earliest Usage Date Endpoint
+	//
+	// Get the earliest usage date for a tenant.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /billing/usages/earliest_date (the `GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet` operationId).
+	GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse, error)
+
+	// GetMonthlyUsageEndpointBillingUsagesMonthlyGetWithResponse Get Monthly Usage Endpoint
+	//
+	// Get monthly usage data for a tenant with validation for year and month parameters.
+	//
+	// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions resource_id: Optional[UUID]. If provided, get usage data for a specific resource. Otherwise, get aggregated usage data across all resources.
+	//
+	// Returns: Monthly usage records for the specified month and year
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /billing/usages/monthly (the `GetMonthlyUsageEndpointBillingUsagesMonthlyGet` operationId).
+	GetMonthlyUsageEndpointBillingUsagesMonthlyGetWithResponse(ctx context.Context, params *GetMonthlyUsageEndpointBillingUsagesMonthlyGetParams, reqEditors ...RequestEditorFn) (*GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse, error)
 
 	// ListDatastoresDatastoresGetWithResponse List Datastores
 	//
@@ -8005,7 +12446,7 @@ type ClientWithResponsesInterface interface {
 	//
 	// This `id` can also be used to delete the document through the `DELETE /datastores/{datastore_id}/documents/{document_id}` API.
 	//
-	// `file` must be a PDF, HTML, DOC(X) or PPT(X) file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`.
+	// `file` must be a PDF, HTML, DOC(X), PPT(X), PNG, JPG, or JPEG file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`, `.png`, `.jpg`, `.jpeg`.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -8075,6 +12516,720 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with PUT /datastores/{datastore_id}/reset (the `ResetDatastoreDatastoresDatastoreIdResetPut` operationId).
 	ResetDatastoreDatastoresDatastoreIdResetPutWithResponse(ctx context.Context, datastoreId openapi_types.UUID, reqEditors ...RequestEditorFn) (*ResetDatastoreDatastoresDatastoreIdResetPutResponse, error)
 
+	// ListDocumentsExtractDocumentsGetWithResponse List Documents
+	//
+	// List documents for structured extraction.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/documents (the `ListDocumentsExtractDocumentsGet` operationId).
+	ListDocumentsExtractDocumentsGetWithResponse(ctx context.Context, params *ListDocumentsExtractDocumentsGetParams, reqEditors ...RequestEditorFn) (*ListDocumentsExtractDocumentsGetResponse, error)
+
+	// UploadDocumentExtractDocumentsUploadPostWithBodyWithResponse Upload Document
+	//
+	// Upload a document for structured extraction.
+	//
+	// Uploads a PDF document that can be used for structured data extraction. Only PDF files are supported.
+	//
+	// Supported File Types:
+	//
+	// 1. PDF files only (`.pdf` extension)
+	// 2. Maximum file size: 50MB (recommended)
+	// 3. Documents are processed and validated upon upload
+	//
+	// Document Processing:
+	//
+	// 1. File size and page count are automatically calculated
+	// 2. Document is validated for PDF format and readability
+	// 3. Metadata is extracted and stored for future reference
+	// 4. Document is stored securely and can be referenced by ID
+	//
+	// Usage:
+	//
+	// After uploading, you'll receive a `document_id` that can be used with:
+	//
+	// 1. `POST /jobs` endpoint to start extraction jobs
+	// 2. `GET /documents/{document_id}` to retrieve document information
+	// 3. `DELETE /documents/{document_id}` to remove the document
+	//
+	// Example Response:
+	// ```json
+	// {
+	//   "document_id": "123e4567-e89b-12d3-a456-426614174000",
+	//   "file_name": "financial_report.pdf",
+	//   "file_size": 2048576,
+	//   "page_count": 45,
+	//   "uploaded_at": "2025-01-11T18:35:00Z",
+	//   "status": "uploaded"
+	// }
+	// ```
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /extract/documents/upload (the `UploadDocumentExtractDocumentsUploadPost` operationId).
+	UploadDocumentExtractDocumentsUploadPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UploadDocumentExtractDocumentsUploadPostResponse, error)
+
+	// DeleteDocumentExtractDocumentsDocumentIdDeleteWithResponse Delete Document
+	//
+	// Delete a document.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /extract/documents/{document_id} (the `DeleteDocumentExtractDocumentsDocumentIdDelete` operationId).
+	DeleteDocumentExtractDocumentsDocumentIdDeleteWithResponse(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*DeleteDocumentExtractDocumentsDocumentIdDeleteResponse, error)
+
+	// GetDocumentExtractDocumentsDocumentIdGetWithResponse Get Document
+	//
+	// Get document information by ID.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/documents/{document_id} (the `GetDocumentExtractDocumentsDocumentIdGet` operationId).
+	GetDocumentExtractDocumentsDocumentIdGetWithResponse(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*GetDocumentExtractDocumentsDocumentIdGetResponse, error)
+
+	// ListJobsExtractJobsGetWithResponse List Jobs
+	//
+	// List extraction jobs.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/jobs (the `ListJobsExtractJobsGet` operationId).
+	ListJobsExtractJobsGetWithResponse(ctx context.Context, params *ListJobsExtractJobsGetParams, reqEditors ...RequestEditorFn) (*ListJobsExtractJobsGetResponse, error)
+
+	// StartExtractionJobExtractJobsPostWithBodyWithResponse Start Extraction Job
+	//
+	// Start a new structured extraction job.
+	//
+	// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+	//
+	// How It Works:
+	//
+	// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+	// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+	// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+	// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+	// 5. Results: Structured data is returned in the format defined by your schema
+	//
+	// Supported Models:
+	//
+	// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+	// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+	//
+	// Configuration Options:
+	//
+	// Basic Settings:
+	//
+	// 1. `model`: AI model to use for extraction
+	// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+	// 3. `validate_response_schema`: Whether to validate extracted data against schema
+	//
+	// Advanced Settings:
+	//
+	// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+	// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+	// 3. `seed`: Set random seed for reproducible results
+	// 4. `enable_thinking`: Show AI reasoning process
+	// 5. `n_max_retries`: Maximum retry attempts for failed requests
+	//
+	// Streaming Mode (`stream=true`):
+	//
+	// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+	//
+	// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+	// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+	// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+	// - Automatic retries: Temporal handles activity failures and retries automatically
+	// - Use case: Interactive frontend UI where users want real-time extraction progress
+	//
+	// SSE Event Types:
+	//
+	// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+	// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+	// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+	//
+	// See `STREAMING-DESIGN.md` for full protocol specification.
+	//
+	// Job Lifecycle:
+	//
+	// 1. `pending`: Job is queued and waiting to start
+	// 2. `processing`: AI is actively extracting data from the document
+	// 3. `completed`: Extraction finished successfully with results
+	// 4. `failed`: Extraction failed due to an error
+	// 5. `cancelled`: Job was cancelled before completion
+	//
+	// Monitoring Progress:
+	//
+	// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+	//
+	// 1. `completion_percentage`: Overall progress (0-100)
+	// 2. `current_step`: Current processing stage
+	// 3. `fields_processed`: Number of schema fields completed
+	// 4. `total_fields`: Total number of schema fields to process
+	//
+	// Getting Results:
+	//
+	// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+	//
+	// 1. `results`: Extracted data conforming to your schema
+	// 2. `metadata`: Processing information, costs, and performance metrics
+	// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+	//
+	// Example Request:
+	// ```json
+	// {
+	//   "document_id": "123e4567-e89b-12d3-a456-426614174000",
+	//   "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+	//   "config": {
+	//     "model": "gemini-2.5-flash",
+	//     "per_key_attribution": true,
+	//     "temperature": 0.1,
+	//     "enable_thinking": true
+	//     "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+	//   }
+	// }
+	// ```
+	//
+	// Example Response:
+	// ```json
+	// {
+	//   "job_id": "456e7890-e89b-12d3-a456-426614174000",
+	//   "status": "pending",
+	//   "created_at": "2025-01-11T18:35:00Z",
+	//   "estimated_completion": "2025-01-11T18:40:00Z"
+	// }
+	// ```
+	//
+	// Error Handling:
+	//
+	// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+	//
+	// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+	// - `404`: Not Found (document or schema not found)
+	// - `422`: Unprocessable Entity (invalid schema definition)
+	// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+	// - `500`: Internal Server Error (processing error)
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+	StartExtractionJobExtractJobsPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StartExtractionJobExtractJobsPostResponse, error)
+
+	// StartExtractionJobExtractJobsPostWithResponse Start Extraction Job
+	//
+	// Start a new structured extraction job.
+	//
+	// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+	//
+	// How It Works:
+	//
+	// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+	// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+	// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+	// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+	// 5. Results: Structured data is returned in the format defined by your schema
+	//
+	// Supported Models:
+	//
+	// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+	// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+	//
+	// Configuration Options:
+	//
+	// Basic Settings:
+	//
+	// 1. `model`: AI model to use for extraction
+	// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+	// 3. `validate_response_schema`: Whether to validate extracted data against schema
+	//
+	// Advanced Settings:
+	//
+	// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+	// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+	// 3. `seed`: Set random seed for reproducible results
+	// 4. `enable_thinking`: Show AI reasoning process
+	// 5. `n_max_retries`: Maximum retry attempts for failed requests
+	//
+	// Streaming Mode (`stream=true`):
+	//
+	// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+	//
+	// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+	// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+	// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+	// - Automatic retries: Temporal handles activity failures and retries automatically
+	// - Use case: Interactive frontend UI where users want real-time extraction progress
+	//
+	// SSE Event Types:
+	//
+	// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+	// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+	// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+	//
+	// See `STREAMING-DESIGN.md` for full protocol specification.
+	//
+	// Job Lifecycle:
+	//
+	// 1. `pending`: Job is queued and waiting to start
+	// 2. `processing`: AI is actively extracting data from the document
+	// 3. `completed`: Extraction finished successfully with results
+	// 4. `failed`: Extraction failed due to an error
+	// 5. `cancelled`: Job was cancelled before completion
+	//
+	// Monitoring Progress:
+	//
+	// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+	//
+	// 1. `completion_percentage`: Overall progress (0-100)
+	// 2. `current_step`: Current processing stage
+	// 3. `fields_processed`: Number of schema fields completed
+	// 4. `total_fields`: Total number of schema fields to process
+	//
+	// Getting Results:
+	//
+	// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+	//
+	// 1. `results`: Extracted data conforming to your schema
+	// 2. `metadata`: Processing information, costs, and performance metrics
+	// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+	//
+	// Example Request:
+	// ```json
+	// {
+	//   "document_id": "123e4567-e89b-12d3-a456-426614174000",
+	//   "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+	//   "config": {
+	//     "model": "gemini-2.5-flash",
+	//     "per_key_attribution": true,
+	//     "temperature": 0.1,
+	//     "enable_thinking": true
+	//     "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+	//   }
+	// }
+	// ```
+	//
+	// Example Response:
+	// ```json
+	// {
+	//   "job_id": "456e7890-e89b-12d3-a456-426614174000",
+	//   "status": "pending",
+	//   "created_at": "2025-01-11T18:35:00Z",
+	//   "estimated_completion": "2025-01-11T18:40:00Z"
+	// }
+	// ```
+	//
+	// Error Handling:
+	//
+	// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+	//
+	// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+	// - `404`: Not Found (document or schema not found)
+	// - `422`: Unprocessable Entity (invalid schema definition)
+	// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+	// - `500`: Internal Server Error (processing error)
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+	StartExtractionJobExtractJobsPostWithResponse(ctx context.Context, body StartExtractionJobExtractJobsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StartExtractionJobExtractJobsPostResponse, error)
+
+	// GetJobStatusExtractJobsJobIdGetWithResponse Get Job Status
+	//
+	// Get the status of an extraction job.
+	//
+	// For running jobs with a Temporal workflow, returns accumulated results and failed subtrees from workflow queries. For completed/failed jobs or jobs without workflow, these fields are empty.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/jobs/{job_id} (the `GetJobStatusExtractJobsJobIdGet` operationId).
+	GetJobStatusExtractJobsJobIdGetWithResponse(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*GetJobStatusExtractJobsJobIdGetResponse, error)
+
+	// GetJobResultsExtractJobsJobIdResultsGetWithResponse Get Job Results
+	//
+	// Get the results of a completed extraction job.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/jobs/{job_id}/results (the `GetJobResultsExtractJobsJobIdResultsGet` operationId).
+	GetJobResultsExtractJobsJobIdResultsGetWithResponse(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*GetJobResultsExtractJobsJobIdResultsGetResponse, error)
+
+	// UpdateJobResultsExtractJobsJobIdResultsPutWithBodyWithResponse Update Job Results
+	//
+	// Update the results of a completed extraction job.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+	UpdateJobResultsExtractJobsJobIdResultsPutWithBodyWithResponse(ctx context.Context, jobId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateJobResultsExtractJobsJobIdResultsPutResponse, error)
+
+	// UpdateJobResultsExtractJobsJobIdResultsPutWithResponse Update Job Results
+	//
+	// Update the results of a completed extraction job.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+	UpdateJobResultsExtractJobsJobIdResultsPutWithResponse(ctx context.Context, jobId string, body UpdateJobResultsExtractJobsJobIdResultsPutJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateJobResultsExtractJobsJobIdResultsPutResponse, error)
+
+	// ResumeStreamingExtractionExtractJobsJobIdStreamGetWithResponse Resume Streaming Extraction
+	//
+	// Resume streaming events for an existing extraction job.
+	//
+	// This endpoint:
+	// 1. Validates the job exists and is still processing
+	// 2. Queries Temporal workflow for current state (accumulated_results)
+	// 3. Sends current state as initial event
+	// 4. Streams new events going forward
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/jobs/{job_id}/stream (the `ResumeStreamingExtractionExtractJobsJobIdStreamGet` operationId).
+	ResumeStreamingExtractionExtractJobsJobIdStreamGetWithResponse(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse, error)
+
+	// ListSchemasExtractSchemasGetWithResponse List Schemas
+	//
+	// List schemas with optional search.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/schemas (the `ListSchemasExtractSchemasGet` operationId).
+	ListSchemasExtractSchemasGetWithResponse(ctx context.Context, params *ListSchemasExtractSchemasGetParams, reqEditors ...RequestEditorFn) (*ListSchemasExtractSchemasGetResponse, error)
+
+	// CreateSchemaExtractSchemasPostWithBodyWithResponse Create Schema
+	//
+	// Create a new extraction schema.
+	//
+	// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+	//
+	// Supported Schema Features:
+	//
+	// Basic Types:
+	//
+	// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+	// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 4. `boolean`: True/false values
+	// 5. `null`: Null values (often used with `anyOf` for optional fields)
+	//
+	// Complex Types:
+	//
+	// 1. `object`: Key-value pairs with defined properties
+	// 2. `array`: Lists of items with defined item schemas
+	// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+	//
+	// String Formats:
+	//
+	// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+	//
+	// Schema Structure:
+	//
+	// 1. Root schema must be an `object` type
+	// 2. Use `$defs` for reusable schema components
+	// 3. Use `$ref` to reference definitions
+	// 4. Arrays must have `items` schema defined
+	//
+	// Constraints:
+	//
+	// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+	// 2. No circular references in `$ref` definitions
+	// 3. String formats must be from the supported list
+	//
+	// Example Schemas:
+	//
+	// Simple Company Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "company_name": {
+	//       "type": "string",
+	//       "description": "The name of the company exactly as it appears in the document"
+	//     },
+	//     "form_type": {
+	//       "type": "string",
+	//       "enum": ["10-K", "10-Q", "8-K", "S-1"],
+	//       "description": "The type of SEC form"
+	//     },
+	//     "trading_symbol": {
+	//       "type": "string",
+	//       "description": "The trading symbol of the company"
+	//     },
+	//     "zip_code": {
+	//       "type": "integer",
+	//       "description": "The zip code of the company headquarters"
+	//     }
+	//   },
+	//   "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+	// }
+	// ```
+	//
+	// Complex Resume Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "personalInfo": {
+	//       "type": "object",
+	//       "properties": {
+	//         "fullName": {"type": "string"},
+	//         "contact": {
+	//           "type": "object",
+	//           "properties": {
+	//             "emails": {
+	//               "type": "array",
+	//               "items": {"type": "string", "format": "email"}
+	//             },
+	//             "phones": {
+	//               "type": "array",
+	//               "items": {"type": "string"}
+	//             }
+	//           }
+	//         }
+	//       },
+	//       "required": ["fullName"]
+	//     },
+	//     "workExperience": {
+	//       "type": "array",
+	//       "items": {
+	//         "type": "object",
+	//         "properties": {
+	//           "jobTitle": {"type": "string"},
+	//           "company": {"type": "string"},
+	//           "startDate": {"type": "string"},
+	//           "endDate": {"type": ["string", "null"]},
+	//           "isCurrent": {"type": "boolean"}
+	//         },
+	//         "required": ["jobTitle", "company", "startDate"]
+	//       }
+	//     }
+	//   },
+	//   "required": ["personalInfo", "workExperience"]
+	// }
+	// ```
+	//
+	// Schema with References:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "algorithms": {
+	//       "type": "array",
+	//       "items": {"$ref": "#/$defs/algorithm"}
+	//     }
+	//   },
+	//   "$defs": {
+	//     "algorithm": {
+	//       "type": "object",
+	//       "properties": {
+	//         "name": {"type": "string"},
+	//         "description": {"type": "string"}
+	//       },
+	//       "required": ["name"]
+	//     }
+	//   }
+	// }
+	// ```
+	//
+	// Best Practices:
+	//
+	// 1. Use descriptive field names that clearly indicate what data should be extracted
+	// 2. Add detailed descriptions to help the AI understand what to extract
+	// 3. Use `enum` for known values (e.g., form types, status values)
+	// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+	// 5. Use arrays for lists of similar items (e.g., work experience, education)
+	// 6. Keep schemas focused - avoid overly complex nested structures
+	// 7. Test with sample documents to ensure the schema captures the expected data
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+	CreateSchemaExtractSchemasPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateSchemaExtractSchemasPostResponse, error)
+
+	// CreateSchemaExtractSchemasPostWithResponse Create Schema
+	//
+	// Create a new extraction schema.
+	//
+	// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+	//
+	// Supported Schema Features:
+	//
+	// Basic Types:
+	//
+	// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+	// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+	// 4. `boolean`: True/false values
+	// 5. `null`: Null values (often used with `anyOf` for optional fields)
+	//
+	// Complex Types:
+	//
+	// 1. `object`: Key-value pairs with defined properties
+	// 2. `array`: Lists of items with defined item schemas
+	// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+	//
+	// String Formats:
+	//
+	// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+	//
+	// Schema Structure:
+	//
+	// 1. Root schema must be an `object` type
+	// 2. Use `$defs` for reusable schema components
+	// 3. Use `$ref` to reference definitions
+	// 4. Arrays must have `items` schema defined
+	//
+	// Constraints:
+	//
+	// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+	// 2. No circular references in `$ref` definitions
+	// 3. String formats must be from the supported list
+	//
+	// Example Schemas:
+	//
+	// Simple Company Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "company_name": {
+	//       "type": "string",
+	//       "description": "The name of the company exactly as it appears in the document"
+	//     },
+	//     "form_type": {
+	//       "type": "string",
+	//       "enum": ["10-K", "10-Q", "8-K", "S-1"],
+	//       "description": "The type of SEC form"
+	//     },
+	//     "trading_symbol": {
+	//       "type": "string",
+	//       "description": "The trading symbol of the company"
+	//     },
+	//     "zip_code": {
+	//       "type": "integer",
+	//       "description": "The zip code of the company headquarters"
+	//     }
+	//   },
+	//   "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+	// }
+	// ```
+	//
+	// Complex Resume Schema:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "personalInfo": {
+	//       "type": "object",
+	//       "properties": {
+	//         "fullName": {"type": "string"},
+	//         "contact": {
+	//           "type": "object",
+	//           "properties": {
+	//             "emails": {
+	//               "type": "array",
+	//               "items": {"type": "string", "format": "email"}
+	//             },
+	//             "phones": {
+	//               "type": "array",
+	//               "items": {"type": "string"}
+	//             }
+	//           }
+	//         }
+	//       },
+	//       "required": ["fullName"]
+	//     },
+	//     "workExperience": {
+	//       "type": "array",
+	//       "items": {
+	//         "type": "object",
+	//         "properties": {
+	//           "jobTitle": {"type": "string"},
+	//           "company": {"type": "string"},
+	//           "startDate": {"type": "string"},
+	//           "endDate": {"type": ["string", "null"]},
+	//           "isCurrent": {"type": "boolean"}
+	//         },
+	//         "required": ["jobTitle", "company", "startDate"]
+	//       }
+	//     }
+	//   },
+	//   "required": ["personalInfo", "workExperience"]
+	// }
+	// ```
+	//
+	// Schema with References:
+	// ```json
+	// {
+	//   "type": "object",
+	//   "properties": {
+	//     "algorithms": {
+	//       "type": "array",
+	//       "items": {"$ref": "#/$defs/algorithm"}
+	//     }
+	//   },
+	//   "$defs": {
+	//     "algorithm": {
+	//       "type": "object",
+	//       "properties": {
+	//         "name": {"type": "string"},
+	//         "description": {"type": "string"}
+	//       },
+	//       "required": ["name"]
+	//     }
+	//   }
+	// }
+	// ```
+	//
+	// Best Practices:
+	//
+	// 1. Use descriptive field names that clearly indicate what data should be extracted
+	// 2. Add detailed descriptions to help the AI understand what to extract
+	// 3. Use `enum` for known values (e.g., form types, status values)
+	// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+	// 5. Use arrays for lists of similar items (e.g., work experience, education)
+	// 6. Keep schemas focused - avoid overly complex nested structures
+	// 7. Test with sample documents to ensure the schema captures the expected data
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+	CreateSchemaExtractSchemasPostWithResponse(ctx context.Context, body CreateSchemaExtractSchemasPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateSchemaExtractSchemasPostResponse, error)
+
+	// DeleteSchemaExtractSchemasSchemaIdDeleteWithResponse Delete Schema
+	//
+	// Delete a schema.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /extract/schemas/{schema_id} (the `DeleteSchemaExtractSchemasSchemaIdDelete` operationId).
+	DeleteSchemaExtractSchemasSchemaIdDeleteWithResponse(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*DeleteSchemaExtractSchemasSchemaIdDeleteResponse, error)
+
+	// GetSchemaExtractSchemasSchemaIdGetWithResponse Get Schema
+	//
+	// Get schema information by ID.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /extract/schemas/{schema_id} (the `GetSchemaExtractSchemasSchemaIdGet` operationId).
+	GetSchemaExtractSchemasSchemaIdGetWithResponse(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*GetSchemaExtractSchemasSchemaIdGetResponse, error)
+
+	// UpdateSchemaExtractSchemasSchemaIdPutWithBodyWithResponse Update Schema
+	//
+	// Update an existing schema.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+	UpdateSchemaExtractSchemasSchemaIdPutWithBodyWithResponse(ctx context.Context, schemaId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateSchemaExtractSchemasSchemaIdPutResponse, error)
+
+	// UpdateSchemaExtractSchemasSchemaIdPutWithResponse Update Schema
+	//
+	// Update an existing schema.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+	UpdateSchemaExtractSchemasSchemaIdPutWithResponse(ctx context.Context, schemaId string, body UpdateSchemaExtractSchemasSchemaIdPutJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateSchemaExtractSchemasSchemaIdPutResponse, error)
+
 	// GenerateGeneratePostWithBodyWithResponse Generate
 	//
 	// Generate a response using Contextual's Grounded Language Model (GLM), an LLM engineered specifically to prioritize faithfulness to in-context retrievals over parametric knowledge to reduce hallucinations in Retrieval-Augmented Generation and agentic use cases.
@@ -8129,7 +13284,7 @@ type ClientWithResponsesInterface interface {
 
 	// ParseParsePostWithBodyWithResponse Parse File
 	//
-	// Parse a file into a structured Markdown and/or JSON. Files must be less than 100MB and 400 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
+	// Parse a file into a structured Markdown and/or JSON. Files must be less than 300MB and 2000 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
 	//
 	// See our [blog post](https://contextual.ai/blog/document-parser-for-rag) and [code examples](https://github.com/ContextualAI/examples/blob/main/03-standalone-api/04-parse/parse.ipynb). Email [parse-feedback@contextual.ai](mailto:parse-feedback@contextual.ai) with any feedback or questions.
 	//
@@ -8263,6 +13418,33 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with PUT /users (the `UpdateUserUsersPut` operationId).
 	UpdateUserUsersPutWithResponse(ctx context.Context, body UpdateUserUsersPutJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateUserUsersPutResponse, error)
+
+	// GetConsentWorkspacesConsentGetWithResponse Get Consent
+	//
+	// Retrieve the current consent status for the workspace.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /workspaces/consent (the `GetConsentWorkspacesConsentGet` operationId).
+	GetConsentWorkspacesConsentGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetConsentWorkspacesConsentGetResponse, error)
+
+	// UpdateConsentWorkspacesConsentPutWithBodyWithResponse Update Consent
+	//
+	// Update the consent status for the workspace.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+	UpdateConsentWorkspacesConsentPutWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateConsentWorkspacesConsentPutResponse, error)
+
+	// UpdateConsentWorkspacesConsentPutWithResponse Update Consent
+	//
+	// Update the consent status for the workspace.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+	UpdateConsentWorkspacesConsentPutWithResponse(ctx context.Context, body UpdateConsentWorkspacesConsentPutJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateConsentWorkspacesConsentPutResponse, error)
 }
 
 type ListAgentsAgentsGetResponse struct {
@@ -8396,6 +13578,47 @@ func (r ListTemplatesAgentsTemplatesGetResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r ListTemplatesAgentsTemplatesGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ListAclTemplatesAgentsTemplatesAclGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ListACLTemplatesResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListAclTemplatesAgentsTemplatesAclGetResponse) GetJSON200() *ListACLTemplatesResponse {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r ListAclTemplatesAgentsTemplatesAclGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListAclTemplatesAgentsTemplatesAclGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListAclTemplatesAgentsTemplatesAclGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListAclTemplatesAgentsTemplatesAclGetResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -8646,13 +13869,13 @@ type GetAgentMetadataAgentsAgentIdMetadataGetResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
-	JSON200 *GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody
+	JSON200 *GetAgentResponse
 	// JSON422 the response for an HTTP 422 `application/json` response
 	JSON422 *HTTPValidationError
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
-func (r GetAgentMetadataAgentsAgentIdMetadataGetResponse) GetJSON200() *GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody {
+func (r GetAgentMetadataAgentsAgentIdMetadataGetResponse) GetJSON200() *GetAgentResponse {
 	return r.JSON200
 }
 
@@ -8780,6 +14003,54 @@ func (r QueryAgentsAgentIdQueryPostResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r QueryAgentsAgentIdQueryPostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type QueryAgentsAgentIdQueryAclPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ACLQueryResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r QueryAgentsAgentIdQueryAclPostResponse) GetJSON200() *ACLQueryResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r QueryAgentsAgentIdQueryAclPostResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r QueryAgentsAgentIdQueryAclPostResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r QueryAgentsAgentIdQueryAclPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r QueryAgentsAgentIdQueryAclPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r QueryAgentsAgentIdQueryAclPostResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -8924,6 +14195,321 @@ func (r SaveTemplateAgentsAgentIdTemplatePostResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r SaveTemplateAgentsAgentIdTemplatePostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetBalanceBillingBalanceGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BalanceResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetBalanceBillingBalanceGetResponse) GetJSON200() *BalanceResponse {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GetBalanceBillingBalanceGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetBalanceBillingBalanceGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetBalanceBillingBalanceGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetBalanceBillingBalanceGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *GetTopUpHistoryResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse) GetJSON200() *GetTopUpHistoryResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetBillingModeHistoryBillingBillingModeHistoryGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BillingModeHistoryResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetBillingModeHistoryBillingBillingModeHistoryGetResponse) GetJSON200() *BillingModeHistoryResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetBillingModeHistoryBillingBillingModeHistoryGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetBillingModeHistoryBillingBillingModeHistoryGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetBillingModeHistoryBillingBillingModeHistoryGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetBillingModeHistoryBillingBillingModeHistoryGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetBillingModeHistoryBillingBillingModeHistoryGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetBillingMetadataBillingMetadataGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BillingMetadataResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetBillingMetadataBillingMetadataGetResponse) GetJSON200() *BillingMetadataResponse {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GetBillingMetadataBillingMetadataGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetBillingMetadataBillingMetadataGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetBillingMetadataBillingMetadataGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetBillingMetadataBillingMetadataGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetAclStepUsageEndpointBillingUsagesAclGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *AgentComposerStepUsageResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetAclStepUsageEndpointBillingUsagesAclGetResponse) GetJSON200() *AgentComposerStepUsageResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetAclStepUsageEndpointBillingUsagesAclGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetAclStepUsageEndpointBillingUsagesAclGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetAclStepUsageEndpointBillingUsagesAclGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetAclStepUsageEndpointBillingUsagesAclGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetAclStepUsageEndpointBillingUsagesAclGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *EarliestUsageDateResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse) GetJSON200() *EarliestUsageDateResponse {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *MonthlyUsageResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse) GetJSON200() *MonthlyUsageResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -9650,6 +15236,726 @@ func (r ResetDatastoreDatastoresDatastoreIdResetPutResponse) ContentType() strin
 	return ""
 }
 
+type ListDocumentsExtractDocumentsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *DocumentListResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListDocumentsExtractDocumentsGetResponse) GetJSON200() *DocumentListResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r ListDocumentsExtractDocumentsGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r ListDocumentsExtractDocumentsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListDocumentsExtractDocumentsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListDocumentsExtractDocumentsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListDocumentsExtractDocumentsGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type UploadDocumentExtractDocumentsUploadPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *DocumentUploadResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r UploadDocumentExtractDocumentsUploadPostResponse) GetJSON200() *DocumentUploadResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r UploadDocumentExtractDocumentsUploadPostResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r UploadDocumentExtractDocumentsUploadPostResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r UploadDocumentExtractDocumentsUploadPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UploadDocumentExtractDocumentsUploadPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r UploadDocumentExtractDocumentsUploadPostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteDocumentExtractDocumentsDocumentIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *map[string]string
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DeleteDocumentExtractDocumentsDocumentIdDeleteResponse) GetJSON200() *map[string]string {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r DeleteDocumentExtractDocumentsDocumentIdDeleteResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteDocumentExtractDocumentsDocumentIdDeleteResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteDocumentExtractDocumentsDocumentIdDeleteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteDocumentExtractDocumentsDocumentIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteDocumentExtractDocumentsDocumentIdDeleteResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetDocumentExtractDocumentsDocumentIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *DocumentInfoResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetDocumentExtractDocumentsDocumentIdGetResponse) GetJSON200() *DocumentInfoResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetDocumentExtractDocumentsDocumentIdGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetDocumentExtractDocumentsDocumentIdGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetDocumentExtractDocumentsDocumentIdGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetDocumentExtractDocumentsDocumentIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetDocumentExtractDocumentsDocumentIdGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ListJobsExtractJobsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JobListResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListJobsExtractJobsGetResponse) GetJSON200() *JobListResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r ListJobsExtractJobsGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r ListJobsExtractJobsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListJobsExtractJobsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListJobsExtractJobsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListJobsExtractJobsGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type StartExtractionJobExtractJobsPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ExtractJobResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r StartExtractionJobExtractJobsPostResponse) GetJSON200() *ExtractJobResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r StartExtractionJobExtractJobsPostResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r StartExtractionJobExtractJobsPostResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r StartExtractionJobExtractJobsPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StartExtractionJobExtractJobsPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r StartExtractionJobExtractJobsPostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetJobStatusExtractJobsJobIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JobStatusResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetJobStatusExtractJobsJobIdGetResponse) GetJSON200() *JobStatusResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetJobStatusExtractJobsJobIdGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetJobStatusExtractJobsJobIdGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetJobStatusExtractJobsJobIdGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetJobStatusExtractJobsJobIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetJobStatusExtractJobsJobIdGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetJobResultsExtractJobsJobIdResultsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *JobResultsResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetJobResultsExtractJobsJobIdResultsGetResponse) GetJSON200() *JobResultsResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetJobResultsExtractJobsJobIdResultsGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetJobResultsExtractJobsJobIdResultsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetJobResultsExtractJobsJobIdResultsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetJobResultsExtractJobsJobIdResultsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetJobResultsExtractJobsJobIdResultsGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type UpdateJobResultsExtractJobsJobIdResultsPutResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *interface{}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r UpdateJobResultsExtractJobsJobIdResultsPutResponse) GetJSON200() *interface{} {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r UpdateJobResultsExtractJobsJobIdResultsPutResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r UpdateJobResultsExtractJobsJobIdResultsPutResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateJobResultsExtractJobsJobIdResultsPutResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateJobResultsExtractJobsJobIdResultsPutResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r UpdateJobResultsExtractJobsJobIdResultsPutResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *interface{}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse) GetJSON200() *interface{} {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ListSchemasExtractSchemasGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SchemaListResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListSchemasExtractSchemasGetResponse) GetJSON200() *SchemaListResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r ListSchemasExtractSchemasGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r ListSchemasExtractSchemasGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListSchemasExtractSchemasGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListSchemasExtractSchemasGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListSchemasExtractSchemasGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CreateSchemaExtractSchemasPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SchemaResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CreateSchemaExtractSchemasPostResponse) GetJSON200() *SchemaResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CreateSchemaExtractSchemasPostResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r CreateSchemaExtractSchemasPostResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CreateSchemaExtractSchemasPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CreateSchemaExtractSchemasPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CreateSchemaExtractSchemasPostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteSchemaExtractSchemasSchemaIdDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *map[string]string
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DeleteSchemaExtractSchemasSchemaIdDeleteResponse) GetJSON200() *map[string]string {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r DeleteSchemaExtractSchemasSchemaIdDeleteResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteSchemaExtractSchemasSchemaIdDeleteResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteSchemaExtractSchemasSchemaIdDeleteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteSchemaExtractSchemasSchemaIdDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteSchemaExtractSchemasSchemaIdDeleteResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetSchemaExtractSchemasSchemaIdGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SchemaResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetSchemaExtractSchemasSchemaIdGetResponse) GetJSON200() *SchemaResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r GetSchemaExtractSchemasSchemaIdGetResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r GetSchemaExtractSchemasSchemaIdGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetSchemaExtractSchemasSchemaIdGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetSchemaExtractSchemasSchemaIdGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetSchemaExtractSchemasSchemaIdGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type UpdateSchemaExtractSchemasSchemaIdPutResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SchemaResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r UpdateSchemaExtractSchemasSchemaIdPutResponse) GetJSON200() *SchemaResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r UpdateSchemaExtractSchemasSchemaIdPutResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r UpdateSchemaExtractSchemasSchemaIdPutResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateSchemaExtractSchemasSchemaIdPutResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateSchemaExtractSchemasSchemaIdPutResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r UpdateSchemaExtractSchemasSchemaIdPutResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type GenerateGeneratePostResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -10178,6 +16484,95 @@ func (r UpdateUserUsersPutResponse) ContentType() string {
 	return ""
 }
 
+type GetConsentWorkspacesConsentGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *GetConsentResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetConsentWorkspacesConsentGetResponse) GetJSON200() *GetConsentResponse {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GetConsentWorkspacesConsentGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetConsentWorkspacesConsentGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetConsentWorkspacesConsentGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetConsentWorkspacesConsentGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type UpdateConsentWorkspacesConsentPutResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *EmptyResponse
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *HTTPValidationError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r UpdateConsentWorkspacesConsentPutResponse) GetJSON200() *EmptyResponse {
+	return r.JSON200
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r UpdateConsentWorkspacesConsentPutResponse) GetJSON422() *HTTPValidationError {
+	return r.JSON422
+}
+
+// GetBody returns the raw response body bytes
+func (r UpdateConsentWorkspacesConsentPutResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateConsentWorkspacesConsentPutResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateConsentWorkspacesConsentPutResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r UpdateConsentWorkspacesConsentPutResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 // ListAgentsAgentsGetWithResponse List Agents
 //
 // Retrieve a list of all `Agents`.
@@ -10201,8 +16596,6 @@ func (c *ClientWithResponses) ListAgentsAgentsGetWithResponse(ctx context.Contex
 //
 // Retrieval and generation parameters are defined in the provided `Agent` configuration.
 //
-// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
-//
 // > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
@@ -10223,8 +16616,6 @@ func (c *ClientWithResponses) CreateAgentAgentsPostWithBodyWithResponse(ctx cont
 // This creates a specialized RAG `Agent` which queries over one or multiple `Datastores` to retrieve relevant data on which its generations are grounded.
 //
 // Retrieval and generation parameters are defined in the provided `Agent` configuration.
-//
-// If no `datastore_id` is provided in the configuration, this API automatically creates an empty `Datastore` and configures the `Agent` to use the newly created `Datastore`.
 //
 // > Note that self-serve users are currently required to create agents through our UI. Otherwise, they will receive the following message: "This endpoint is disabled as you need to go through checkout. Please use the UI to make this request."
 //
@@ -10254,12 +16645,29 @@ func (c *ClientWithResponses) ListTemplatesAgentsTemplatesGetWithResponse(ctx co
 	return ParseListTemplatesAgentsTemplatesGetResponse(rsp)
 }
 
+// ListAclTemplatesAgentsTemplatesAclGetWithResponse List Agent Composer Templates
+//
+// Retrieve a list of all available Agent Composer Templates.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /agents/templates/acl (the `ListAclTemplatesAgentsTemplatesAclGet` operationId).
+func (c *ClientWithResponses) ListAclTemplatesAgentsTemplatesAclGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ListAclTemplatesAgentsTemplatesAclGetResponse, error) {
+	rsp, err := c.ListAclTemplatesAgentsTemplatesAclGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListAclTemplatesAgentsTemplatesAclGetResponse(rsp)
+}
+
 // GetTemplateConfigurationAgentsTemplatesTemplateGetWithResponse Get Template Configuration
 //
 // Returns a wrapper object for the known response body format(s).
 //
 // Corresponds with GET /agents/templates/{template} (the `GetTemplateConfigurationAgentsTemplatesTemplateGet` operationId).
-func (c *ClientWithResponses) GetTemplateConfigurationAgentsTemplatesTemplateGetWithResponse(ctx context.Context, template string, reqEditors ...RequestEditorFn) (*GetTemplateConfigurationAgentsTemplatesTemplateGetResponse, error) {
+func (c *ClientWithResponses) GetTemplateConfigurationAgentsTemplatesTemplateGetWithResponse(ctx context.Context, template struct {
+	union json.RawMessage
+}, reqEditors ...RequestEditorFn) (*GetTemplateConfigurationAgentsTemplatesTemplateGetResponse, error) {
 	rsp, err := c.GetTemplateConfigurationAgentsTemplatesTemplateGet(ctx, template, reqEditors...)
 	if err != nil {
 		return nil, err
@@ -10423,6 +16831,36 @@ func (c *ClientWithResponses) QueryAgentsAgentIdQueryPostWithResponse(ctx contex
 	return ParseQueryAgentsAgentIdQueryPostResponse(rsp)
 }
 
+// QueryAgentsAgentIdQueryAclPostWithBodyWithResponse Query
+//
+// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+func (c *ClientWithResponses) QueryAgentsAgentIdQueryAclPostWithBodyWithResponse(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*QueryAgentsAgentIdQueryAclPostResponse, error) {
+	rsp, err := c.QueryAgentsAgentIdQueryAclPostWithBody(ctx, agentId, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseQueryAgentsAgentIdQueryAclPostResponse(rsp)
+}
+
+// QueryAgentsAgentIdQueryAclPostWithResponse Query
+//
+// Start a conversation with an `Agent` and receive its generated response, along with relevant retrieved data and attributions.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /agents/{agent_id}/query/acl (the `QueryAgentsAgentIdQueryAclPost` operationId).
+func (c *ClientWithResponses) QueryAgentsAgentIdQueryAclPostWithResponse(ctx context.Context, agentId openapi_types.UUID, params *QueryAgentsAgentIdQueryAclPostParams, body QueryAgentsAgentIdQueryAclPostJSONRequestBody, reqEditors ...RequestEditorFn) (*QueryAgentsAgentIdQueryAclPostResponse, error) {
+	rsp, err := c.QueryAgentsAgentIdQueryAclPost(ctx, agentId, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseQueryAgentsAgentIdQueryAclPostResponse(rsp)
+}
+
 // GetRetrievalInfoAgentsAgentIdQueryMessageIdRetrievalInfoGetWithResponse Get Retrieval Info
 //
 // Return metadata of the contents used to generate the response for a given message.
@@ -10477,6 +16915,127 @@ func (c *ClientWithResponses) SaveTemplateAgentsAgentIdTemplatePostWithResponse(
 		return nil, err
 	}
 	return ParseSaveTemplateAgentsAgentIdTemplatePostResponse(rsp)
+}
+
+// GetBalanceBillingBalanceGetWithResponse Get Balance
+//
+// Get the remaining balance for a tenant.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /billing/balance (the `GetBalanceBillingBalanceGet` operationId).
+func (c *ClientWithResponses) GetBalanceBillingBalanceGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetBalanceBillingBalanceGetResponse, error) {
+	rsp, err := c.GetBalanceBillingBalanceGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetBalanceBillingBalanceGetResponse(rsp)
+}
+
+// GetTopUpHistoryEndpointBillingBalanceTopUpsGetWithResponse Get Top Up History Endpoint
+//
+// Get the top-up history for a tenant. Paginated.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /billing/balance/top-ups (the `GetTopUpHistoryEndpointBillingBalanceTopUpsGet` operationId).
+func (c *ClientWithResponses) GetTopUpHistoryEndpointBillingBalanceTopUpsGetWithResponse(ctx context.Context, params *GetTopUpHistoryEndpointBillingBalanceTopUpsGetParams, reqEditors ...RequestEditorFn) (*GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse, error) {
+	rsp, err := c.GetTopUpHistoryEndpointBillingBalanceTopUpsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse(rsp)
+}
+
+// GetBillingModeHistoryBillingBillingModeHistoryGetWithResponse Get Billing Mode History
+//
+// Get the billing mode history for a tenant for a specific month.
+//
+// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions
+//
+// Returns: Billing mode history records for the specified month and year Returns at least one entry which is the mode of the first date of the given month, with potential mode changes in the middle of the month. If no record found, defaults to LEGACY mode.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /billing/billing_mode/history (the `GetBillingModeHistoryBillingBillingModeHistoryGet` operationId).
+func (c *ClientWithResponses) GetBillingModeHistoryBillingBillingModeHistoryGetWithResponse(ctx context.Context, params *GetBillingModeHistoryBillingBillingModeHistoryGetParams, reqEditors ...RequestEditorFn) (*GetBillingModeHistoryBillingBillingModeHistoryGetResponse, error) {
+	rsp, err := c.GetBillingModeHistoryBillingBillingModeHistoryGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetBillingModeHistoryBillingBillingModeHistoryGetResponse(rsp)
+}
+
+// GetBillingMetadataBillingMetadataGetWithResponse Get Billing Metadata
+//
+// Non admin endpoint for getting the billing metadata for a tenant.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /billing/metadata (the `GetBillingMetadataBillingMetadataGet` operationId).
+func (c *ClientWithResponses) GetBillingMetadataBillingMetadataGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetBillingMetadataBillingMetadataGetResponse, error) {
+	rsp, err := c.GetBillingMetadataBillingMetadataGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetBillingMetadataBillingMetadataGetResponse(rsp)
+}
+
+// GetAclStepUsageEndpointBillingUsagesAclGetWithResponse Get Agent Composer Step Usage
+//
+// Get Agent Composer step-level usage data for a specific month.
+//
+// This API returns daily usages of advance queries grouped by steps. The data is used for visualization purposes to show users which Agent Composer steps were executed and their associated costs and token consumption.
+//
+// Note: The costs returned here are already included in the ACL_COST entry from the daily_usages table and should not be double-counted in billing.
+//
+// Args: request: Request object containing year, month, and optional resource_id user_context: User context with tenant admin permissions
+//
+// Returns: Agent Composer step usage data aggregated by step and date
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /billing/usages/acl (the `GetAclStepUsageEndpointBillingUsagesAclGet` operationId).
+func (c *ClientWithResponses) GetAclStepUsageEndpointBillingUsagesAclGetWithResponse(ctx context.Context, params *GetAclStepUsageEndpointBillingUsagesAclGetParams, reqEditors ...RequestEditorFn) (*GetAclStepUsageEndpointBillingUsagesAclGetResponse, error) {
+	rsp, err := c.GetAclStepUsageEndpointBillingUsagesAclGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetAclStepUsageEndpointBillingUsagesAclGetResponse(rsp)
+}
+
+// GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetWithResponse Get Earliest Usage Date Endpoint
+//
+// Get the earliest usage date for a tenant.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /billing/usages/earliest_date (the `GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet` operationId).
+func (c *ClientWithResponses) GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse, error) {
+	rsp, err := c.GetEarliestUsageDateEndpointBillingUsagesEarliestDateGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse(rsp)
+}
+
+// GetMonthlyUsageEndpointBillingUsagesMonthlyGetWithResponse Get Monthly Usage Endpoint
+//
+// Get monthly usage data for a tenant with validation for year and month parameters.
+//
+// Args: request: Request object containing year and month with validation user_context: User context with tenant admin permissions resource_id: Optional[UUID]. If provided, get usage data for a specific resource. Otherwise, get aggregated usage data across all resources.
+//
+// Returns: Monthly usage records for the specified month and year
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /billing/usages/monthly (the `GetMonthlyUsageEndpointBillingUsagesMonthlyGet` operationId).
+func (c *ClientWithResponses) GetMonthlyUsageEndpointBillingUsagesMonthlyGetWithResponse(ctx context.Context, params *GetMonthlyUsageEndpointBillingUsagesMonthlyGetParams, reqEditors ...RequestEditorFn) (*GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse, error) {
+	rsp, err := c.GetMonthlyUsageEndpointBillingUsagesMonthlyGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse(rsp)
 }
 
 // ListDatastoresDatastoresGetWithResponse List Datastores
@@ -10664,7 +17223,7 @@ func (c *ClientWithResponses) ListDocumentsDatastoresDatastoreIdDocumentsGetWith
 //
 // This `id` can also be used to delete the document through the `DELETE /datastores/{datastore_id}/documents/{document_id}` API.
 //
-// `file` must be a PDF, HTML, DOC(X) or PPT(X) file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`.
+// `file` must be a PDF, HTML, DOC(X), PPT(X), PNG, JPG, or JPEG file. The filename must end with one of the following extensions: `.pdf`, `.html`, `.htm`, `.mhtml`, `.doc`, `.docx`, `.ppt`, `.pptx`, `.png`, `.jpg`, `.jpeg`.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -10782,6 +17341,856 @@ func (c *ClientWithResponses) ResetDatastoreDatastoresDatastoreIdResetPutWithRes
 	return ParseResetDatastoreDatastoresDatastoreIdResetPutResponse(rsp)
 }
 
+// ListDocumentsExtractDocumentsGetWithResponse List Documents
+//
+// List documents for structured extraction.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/documents (the `ListDocumentsExtractDocumentsGet` operationId).
+func (c *ClientWithResponses) ListDocumentsExtractDocumentsGetWithResponse(ctx context.Context, params *ListDocumentsExtractDocumentsGetParams, reqEditors ...RequestEditorFn) (*ListDocumentsExtractDocumentsGetResponse, error) {
+	rsp, err := c.ListDocumentsExtractDocumentsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListDocumentsExtractDocumentsGetResponse(rsp)
+}
+
+// UploadDocumentExtractDocumentsUploadPostWithBodyWithResponse Upload Document
+//
+// Upload a document for structured extraction.
+//
+// Uploads a PDF document that can be used for structured data extraction. Only PDF files are supported.
+//
+// Supported File Types:
+//
+// 1. PDF files only (`.pdf` extension)
+// 2. Maximum file size: 50MB (recommended)
+// 3. Documents are processed and validated upon upload
+//
+// Document Processing:
+//
+// 1. File size and page count are automatically calculated
+// 2. Document is validated for PDF format and readability
+// 3. Metadata is extracted and stored for future reference
+// 4. Document is stored securely and can be referenced by ID
+//
+// Usage:
+//
+// After uploading, you'll receive a `document_id` that can be used with:
+//
+// 1. `POST /jobs` endpoint to start extraction jobs
+// 2. `GET /documents/{document_id}` to retrieve document information
+// 3. `DELETE /documents/{document_id}` to remove the document
+//
+// Example Response:
+// ```json
+//
+//	{
+//	  "document_id": "123e4567-e89b-12d3-a456-426614174000",
+//	  "file_name": "financial_report.pdf",
+//	  "file_size": 2048576,
+//	  "page_count": 45,
+//	  "uploaded_at": "2025-01-11T18:35:00Z",
+//	  "status": "uploaded"
+//	}
+//
+// ```
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /extract/documents/upload (the `UploadDocumentExtractDocumentsUploadPost` operationId).
+func (c *ClientWithResponses) UploadDocumentExtractDocumentsUploadPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UploadDocumentExtractDocumentsUploadPostResponse, error) {
+	rsp, err := c.UploadDocumentExtractDocumentsUploadPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUploadDocumentExtractDocumentsUploadPostResponse(rsp)
+}
+
+// DeleteDocumentExtractDocumentsDocumentIdDeleteWithResponse Delete Document
+//
+// Delete a document.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /extract/documents/{document_id} (the `DeleteDocumentExtractDocumentsDocumentIdDelete` operationId).
+func (c *ClientWithResponses) DeleteDocumentExtractDocumentsDocumentIdDeleteWithResponse(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*DeleteDocumentExtractDocumentsDocumentIdDeleteResponse, error) {
+	rsp, err := c.DeleteDocumentExtractDocumentsDocumentIdDelete(ctx, documentId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteDocumentExtractDocumentsDocumentIdDeleteResponse(rsp)
+}
+
+// GetDocumentExtractDocumentsDocumentIdGetWithResponse Get Document
+//
+// Get document information by ID.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/documents/{document_id} (the `GetDocumentExtractDocumentsDocumentIdGet` operationId).
+func (c *ClientWithResponses) GetDocumentExtractDocumentsDocumentIdGetWithResponse(ctx context.Context, documentId string, reqEditors ...RequestEditorFn) (*GetDocumentExtractDocumentsDocumentIdGetResponse, error) {
+	rsp, err := c.GetDocumentExtractDocumentsDocumentIdGet(ctx, documentId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetDocumentExtractDocumentsDocumentIdGetResponse(rsp)
+}
+
+// ListJobsExtractJobsGetWithResponse List Jobs
+//
+// List extraction jobs.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/jobs (the `ListJobsExtractJobsGet` operationId).
+func (c *ClientWithResponses) ListJobsExtractJobsGetWithResponse(ctx context.Context, params *ListJobsExtractJobsGetParams, reqEditors ...RequestEditorFn) (*ListJobsExtractJobsGetResponse, error) {
+	rsp, err := c.ListJobsExtractJobsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListJobsExtractJobsGetResponse(rsp)
+}
+
+// StartExtractionJobExtractJobsPostWithBodyWithResponse Start Extraction Job
+//
+// Start a new structured extraction job.
+//
+// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+//
+// How It Works:
+//
+// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+// 5. Results: Structured data is returned in the format defined by your schema
+//
+// Supported Models:
+//
+// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+//
+// Configuration Options:
+//
+// Basic Settings:
+//
+// 1. `model`: AI model to use for extraction
+// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+// 3. `validate_response_schema`: Whether to validate extracted data against schema
+//
+// Advanced Settings:
+//
+// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+// 3. `seed`: Set random seed for reproducible results
+// 4. `enable_thinking`: Show AI reasoning process
+// 5. `n_max_retries`: Maximum retry attempts for failed requests
+//
+// Streaming Mode (`stream=true`):
+//
+// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+//
+// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+// - Automatic retries: Temporal handles activity failures and retries automatically
+// - Use case: Interactive frontend UI where users want real-time extraction progress
+//
+// SSE Event Types:
+//
+// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+//
+// See `STREAMING-DESIGN.md` for full protocol specification.
+//
+// Job Lifecycle:
+//
+// 1. `pending`: Job is queued and waiting to start
+// 2. `processing`: AI is actively extracting data from the document
+// 3. `completed`: Extraction finished successfully with results
+// 4. `failed`: Extraction failed due to an error
+// 5. `cancelled`: Job was cancelled before completion
+//
+// Monitoring Progress:
+//
+// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+//
+// 1. `completion_percentage`: Overall progress (0-100)
+// 2. `current_step`: Current processing stage
+// 3. `fields_processed`: Number of schema fields completed
+// 4. `total_fields`: Total number of schema fields to process
+//
+// Getting Results:
+//
+// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+//
+// 1. `results`: Extracted data conforming to your schema
+// 2. `metadata`: Processing information, costs, and performance metrics
+// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+//
+// Example Request:
+// ```json
+//
+//	{
+//	  "document_id": "123e4567-e89b-12d3-a456-426614174000",
+//	  "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+//	  "config": {
+//	    "model": "gemini-2.5-flash",
+//	    "per_key_attribution": true,
+//	    "temperature": 0.1,
+//	    "enable_thinking": true
+//	    "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+//	  }
+//	}
+//
+// ```
+//
+// Example Response:
+// ```json
+//
+//	{
+//	  "job_id": "456e7890-e89b-12d3-a456-426614174000",
+//	  "status": "pending",
+//	  "created_at": "2025-01-11T18:35:00Z",
+//	  "estimated_completion": "2025-01-11T18:40:00Z"
+//	}
+//
+// ```
+//
+// Error Handling:
+//
+// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+//
+// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+// - `404`: Not Found (document or schema not found)
+// - `422`: Unprocessable Entity (invalid schema definition)
+// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+// - `500`: Internal Server Error (processing error)
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+func (c *ClientWithResponses) StartExtractionJobExtractJobsPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StartExtractionJobExtractJobsPostResponse, error) {
+	rsp, err := c.StartExtractionJobExtractJobsPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStartExtractionJobExtractJobsPostResponse(rsp)
+}
+
+// StartExtractionJobExtractJobsPostWithResponse Start Extraction Job
+//
+// Start a new structured extraction job.
+//
+// Extracts structured data from a PDF document using AI models based on a JSON Schema. The `document_id` and `schema_id` must be valid UUIDs of previously uploaded documents and created schemas.
+//
+// How It Works:
+//
+// 1. Document Processing: The system analyzes the PDF document and splits it into manageable sections
+// 2. Schema Analysis: Your JSON schema is parsed and validated for supported features
+// 3. Extraction: The pipeline processes each section and extracts data according to your schema
+// 4. Validation: Extracted data is validated against your schema to ensure constraints and requirements are met
+// 5. Results: Structured data is returned in the format defined by your schema
+//
+// Supported Models:
+//
+// 1. `gemini-2.5-flash`: Fast, cost-effective model for most use cases (default)
+// 2. `gemini-2.5-pro`: More powerful model for complex extractions
+//
+// Configuration Options:
+//
+// Basic Settings:
+//
+// 1. `model`: AI model to use for extraction
+// 2. `max_num_concurrent_requests`: Number of parallel processing requests (1-20)
+// 3. `validate_response_schema`: Whether to validate extracted data against schema
+//
+// Advanced Settings:
+//
+// 1. `per_key_attribution`: Enable detailed reasoning and confidence scores for each field
+// 2. `temperature`: Control randomness in AI responses (0.0-2.0)
+// 3. `seed`: Set random seed for reproducible results
+// 4. `enable_thinking`: Show AI reasoning process
+// 5. `n_max_retries`: Maximum retry attempts for failed requests
+//
+// Streaming Mode (`stream=true`):
+//
+// When `stream=true`, the endpoint returns an SSE stream instead of a job ID. Results are streamed as subtrees complete, enabling real-time progress visibility in the frontend.
+//
+// - Response: SSE stream (`text/event-stream`) with events: `start`, `subtree_result`, `subtree_error`, `agentic_array_progress`
+// - Job records are still created and results persisted (retrievable via `GET /jobs/{job_id}`)
+// - Always durable: Uses Temporal workflow—job continues running even if client disconnects
+// - Automatic retries: Temporal handles activity failures and retries automatically
+// - Use case: Interactive frontend UI where users want real-time extraction progress
+//
+// SSE Event Types:
+//
+// 1. `start`: Emitted once with `job_id`, `total_subtrees`, and `start_time`
+// 2. `subtree_result`: Emitted per successful subtree with `extracted_result`, `attributions`, `usage_metadata`
+// 3. `subtree_error`: Emitted per failed subtree with `error_message` and `error_type`
+//
+// See `STREAMING-DESIGN.md` for full protocol specification.
+//
+// Job Lifecycle:
+//
+// 1. `pending`: Job is queued and waiting to start
+// 2. `processing`: AI is actively extracting data from the document
+// 3. `completed`: Extraction finished successfully with results
+// 4. `failed`: Extraction failed due to an error
+// 5. `cancelled`: Job was cancelled before completion
+//
+// Monitoring Progress:
+//
+// Use the `GET /jobs/{job_id}` endpoint to check job status and progress:
+//
+// 1. `completion_percentage`: Overall progress (0-100)
+// 2. `current_step`: Current processing stage
+// 3. `fields_processed`: Number of schema fields completed
+// 4. `total_fields`: Total number of schema fields to process
+//
+// Getting Results:
+//
+// Once a job is completed, use `GET /jobs/{job_id}/results` to retrieve:
+//
+// 1. `results`: Extracted data conforming to your schema
+// 2. `metadata`: Processing information, costs, and performance metrics
+// 3. `attributions`: (if enabled) Reasoning and confidence scores for each field
+//
+// Example Request:
+// ```json
+//
+//	{
+//	  "document_id": "123e4567-e89b-12d3-a456-426614174000",
+//	  "schema_id": "987fcdeb-51a2-43d1-b456-426614174000",
+//	  "config": {
+//	    "model": "gemini-2.5-flash",
+//	    "per_key_attribution": true,
+//	    "temperature": 0.1,
+//	    "enable_thinking": true
+//	    "additional_instructions": "Extract information only about company X. Do not include information about company Y."
+//	  }
+//	}
+//
+// ```
+//
+// Example Response:
+// ```json
+//
+//	{
+//	  "job_id": "456e7890-e89b-12d3-a456-426614174000",
+//	  "status": "pending",
+//	  "created_at": "2025-01-11T18:35:00Z",
+//	  "estimated_completion": "2025-01-11T18:40:00Z"
+//	}
+//
+// ```
+//
+// Error Handling:
+//
+// Document and schema validation occurs before job creation for both streaming and non-streaming paths:
+//
+// - `400`: Bad Request (invalid `document_id` or `schema_id` format)
+// - `404`: Not Found (document or schema not found)
+// - `422`: Unprocessable Entity (invalid schema definition)
+// - `429`: Too Many Requests (user has exceeded concurrency limit of 5 active jobs)
+// - `500`: Internal Server Error (processing error)
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /extract/jobs (the `StartExtractionJobExtractJobsPost` operationId).
+func (c *ClientWithResponses) StartExtractionJobExtractJobsPostWithResponse(ctx context.Context, body StartExtractionJobExtractJobsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StartExtractionJobExtractJobsPostResponse, error) {
+	rsp, err := c.StartExtractionJobExtractJobsPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStartExtractionJobExtractJobsPostResponse(rsp)
+}
+
+// GetJobStatusExtractJobsJobIdGetWithResponse Get Job Status
+//
+// Get the status of an extraction job.
+//
+// For running jobs with a Temporal workflow, returns accumulated results and failed subtrees from workflow queries. For completed/failed jobs or jobs without workflow, these fields are empty.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/jobs/{job_id} (the `GetJobStatusExtractJobsJobIdGet` operationId).
+func (c *ClientWithResponses) GetJobStatusExtractJobsJobIdGetWithResponse(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*GetJobStatusExtractJobsJobIdGetResponse, error) {
+	rsp, err := c.GetJobStatusExtractJobsJobIdGet(ctx, jobId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetJobStatusExtractJobsJobIdGetResponse(rsp)
+}
+
+// GetJobResultsExtractJobsJobIdResultsGetWithResponse Get Job Results
+//
+// Get the results of a completed extraction job.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/jobs/{job_id}/results (the `GetJobResultsExtractJobsJobIdResultsGet` operationId).
+func (c *ClientWithResponses) GetJobResultsExtractJobsJobIdResultsGetWithResponse(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*GetJobResultsExtractJobsJobIdResultsGetResponse, error) {
+	rsp, err := c.GetJobResultsExtractJobsJobIdResultsGet(ctx, jobId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetJobResultsExtractJobsJobIdResultsGetResponse(rsp)
+}
+
+// UpdateJobResultsExtractJobsJobIdResultsPutWithBodyWithResponse Update Job Results
+//
+// Update the results of a completed extraction job.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+func (c *ClientWithResponses) UpdateJobResultsExtractJobsJobIdResultsPutWithBodyWithResponse(ctx context.Context, jobId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateJobResultsExtractJobsJobIdResultsPutResponse, error) {
+	rsp, err := c.UpdateJobResultsExtractJobsJobIdResultsPutWithBody(ctx, jobId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateJobResultsExtractJobsJobIdResultsPutResponse(rsp)
+}
+
+// UpdateJobResultsExtractJobsJobIdResultsPutWithResponse Update Job Results
+//
+// Update the results of a completed extraction job.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /extract/jobs/{job_id}/results (the `UpdateJobResultsExtractJobsJobIdResultsPut` operationId).
+func (c *ClientWithResponses) UpdateJobResultsExtractJobsJobIdResultsPutWithResponse(ctx context.Context, jobId string, body UpdateJobResultsExtractJobsJobIdResultsPutJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateJobResultsExtractJobsJobIdResultsPutResponse, error) {
+	rsp, err := c.UpdateJobResultsExtractJobsJobIdResultsPut(ctx, jobId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateJobResultsExtractJobsJobIdResultsPutResponse(rsp)
+}
+
+// ResumeStreamingExtractionExtractJobsJobIdStreamGetWithResponse Resume Streaming Extraction
+//
+// Resume streaming events for an existing extraction job.
+//
+// This endpoint:
+// 1. Validates the job exists and is still processing
+// 2. Queries Temporal workflow for current state (accumulated_results)
+// 3. Sends current state as initial event
+// 4. Streams new events going forward
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/jobs/{job_id}/stream (the `ResumeStreamingExtractionExtractJobsJobIdStreamGet` operationId).
+func (c *ClientWithResponses) ResumeStreamingExtractionExtractJobsJobIdStreamGetWithResponse(ctx context.Context, jobId string, reqEditors ...RequestEditorFn) (*ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse, error) {
+	rsp, err := c.ResumeStreamingExtractionExtractJobsJobIdStreamGet(ctx, jobId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseResumeStreamingExtractionExtractJobsJobIdStreamGetResponse(rsp)
+}
+
+// ListSchemasExtractSchemasGetWithResponse List Schemas
+//
+// List schemas with optional search.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/schemas (the `ListSchemasExtractSchemasGet` operationId).
+func (c *ClientWithResponses) ListSchemasExtractSchemasGetWithResponse(ctx context.Context, params *ListSchemasExtractSchemasGetParams, reqEditors ...RequestEditorFn) (*ListSchemasExtractSchemasGetResponse, error) {
+	rsp, err := c.ListSchemasExtractSchemasGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListSchemasExtractSchemasGetResponse(rsp)
+}
+
+// CreateSchemaExtractSchemasPostWithBodyWithResponse Create Schema
+//
+// Create a new extraction schema.
+//
+// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+//
+// Supported Schema Features:
+//
+// Basic Types:
+//
+// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 4. `boolean`: True/false values
+// 5. `null`: Null values (often used with `anyOf` for optional fields)
+//
+// Complex Types:
+//
+// 1. `object`: Key-value pairs with defined properties
+// 2. `array`: Lists of items with defined item schemas
+// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+//
+// String Formats:
+//
+// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+//
+// Schema Structure:
+//
+// 1. Root schema must be an `object` type
+// 2. Use `$defs` for reusable schema components
+// 3. Use `$ref` to reference definitions
+// 4. Arrays must have `items` schema defined
+//
+// Constraints:
+//
+// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+// 2. No circular references in `$ref` definitions
+// 3. String formats must be from the supported list
+//
+// Example Schemas:
+//
+// Simple Company Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "company_name": {
+//	      "type": "string",
+//	      "description": "The name of the company exactly as it appears in the document"
+//	    },
+//	    "form_type": {
+//	      "type": "string",
+//	      "enum": ["10-K", "10-Q", "8-K", "S-1"],
+//	      "description": "The type of SEC form"
+//	    },
+//	    "trading_symbol": {
+//	      "type": "string",
+//	      "description": "The trading symbol of the company"
+//	    },
+//	    "zip_code": {
+//	      "type": "integer",
+//	      "description": "The zip code of the company headquarters"
+//	    }
+//	  },
+//	  "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+//	}
+//
+// ```
+//
+// Complex Resume Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "personalInfo": {
+//	      "type": "object",
+//	      "properties": {
+//	        "fullName": {"type": "string"},
+//	        "contact": {
+//	          "type": "object",
+//	          "properties": {
+//	            "emails": {
+//	              "type": "array",
+//	              "items": {"type": "string", "format": "email"}
+//	            },
+//	            "phones": {
+//	              "type": "array",
+//	              "items": {"type": "string"}
+//	            }
+//	          }
+//	        }
+//	      },
+//	      "required": ["fullName"]
+//	    },
+//	    "workExperience": {
+//	      "type": "array",
+//	      "items": {
+//	        "type": "object",
+//	        "properties": {
+//	          "jobTitle": {"type": "string"},
+//	          "company": {"type": "string"},
+//	          "startDate": {"type": "string"},
+//	          "endDate": {"type": ["string", "null"]},
+//	          "isCurrent": {"type": "boolean"}
+//	        },
+//	        "required": ["jobTitle", "company", "startDate"]
+//	      }
+//	    }
+//	  },
+//	  "required": ["personalInfo", "workExperience"]
+//	}
+//
+// ```
+//
+// Schema with References:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "algorithms": {
+//	      "type": "array",
+//	      "items": {"$ref": "#/$defs/algorithm"}
+//	    }
+//	  },
+//	  "$defs": {
+//	    "algorithm": {
+//	      "type": "object",
+//	      "properties": {
+//	        "name": {"type": "string"},
+//	        "description": {"type": "string"}
+//	      },
+//	      "required": ["name"]
+//	    }
+//	  }
+//	}
+//
+// ```
+//
+// Best Practices:
+//
+// 1. Use descriptive field names that clearly indicate what data should be extracted
+// 2. Add detailed descriptions to help the AI understand what to extract
+// 3. Use `enum` for known values (e.g., form types, status values)
+// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+// 5. Use arrays for lists of similar items (e.g., work experience, education)
+// 6. Keep schemas focused - avoid overly complex nested structures
+// 7. Test with sample documents to ensure the schema captures the expected data
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+func (c *ClientWithResponses) CreateSchemaExtractSchemasPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateSchemaExtractSchemasPostResponse, error) {
+	rsp, err := c.CreateSchemaExtractSchemasPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateSchemaExtractSchemasPostResponse(rsp)
+}
+
+// CreateSchemaExtractSchemasPostWithResponse Create Schema
+//
+// Create a new extraction schema.
+//
+// Creates a JSON Schema that defines the structure of data to extract from documents. The schema must conform to our supported subset of JSON Schema 2020-12 features.
+//
+// Supported Schema Features:
+//
+// Basic Types:
+//
+// 1. `string`: Text data with optional constraints (`minLength`, `maxLength`, `pattern`, `enum`)
+// 2. `integer`: Whole numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 3. `number`: Decimal numbers with optional constraints (`minimum`, `maximum`, `enum`)
+// 4. `boolean`: True/false values
+// 5. `null`: Null values (often used with `anyOf` for optional fields)
+//
+// Complex Types:
+//
+// 1. `object`: Key-value pairs with defined properties
+// 2. `array`: Lists of items with defined item schemas
+// 3. `anyOf`: Union types (e.g., string or null for optional fields)
+//
+// String Formats:
+//
+// Supported formats: `date-time`, `time`, `date`, `duration`, `email`, `hostname`, `ipv4`, `ipv6`, `uuid`, `uri`
+//
+// Schema Structure:
+//
+// 1. Root schema must be an `object` type
+// 2. Use `$defs` for reusable schema components
+// 3. Use `$ref` to reference definitions
+// 4. Arrays must have `items` schema defined
+//
+// Constraints:
+//
+// 1. Maximum 10 leaf nodes per array (prevents overly complex schemas)
+// 2. No circular references in `$ref` definitions
+// 3. String formats must be from the supported list
+//
+// Example Schemas:
+//
+// Simple Company Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "company_name": {
+//	      "type": "string",
+//	      "description": "The name of the company exactly as it appears in the document"
+//	    },
+//	    "form_type": {
+//	      "type": "string",
+//	      "enum": ["10-K", "10-Q", "8-K", "S-1"],
+//	      "description": "The type of SEC form"
+//	    },
+//	    "trading_symbol": {
+//	      "type": "string",
+//	      "description": "The trading symbol of the company"
+//	    },
+//	    "zip_code": {
+//	      "type": "integer",
+//	      "description": "The zip code of the company headquarters"
+//	    }
+//	  },
+//	  "required": ["company_name", "form_type", "trading_symbol", "zip_code"]
+//	}
+//
+// ```
+//
+// Complex Resume Schema:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "personalInfo": {
+//	      "type": "object",
+//	      "properties": {
+//	        "fullName": {"type": "string"},
+//	        "contact": {
+//	          "type": "object",
+//	          "properties": {
+//	            "emails": {
+//	              "type": "array",
+//	              "items": {"type": "string", "format": "email"}
+//	            },
+//	            "phones": {
+//	              "type": "array",
+//	              "items": {"type": "string"}
+//	            }
+//	          }
+//	        }
+//	      },
+//	      "required": ["fullName"]
+//	    },
+//	    "workExperience": {
+//	      "type": "array",
+//	      "items": {
+//	        "type": "object",
+//	        "properties": {
+//	          "jobTitle": {"type": "string"},
+//	          "company": {"type": "string"},
+//	          "startDate": {"type": "string"},
+//	          "endDate": {"type": ["string", "null"]},
+//	          "isCurrent": {"type": "boolean"}
+//	        },
+//	        "required": ["jobTitle", "company", "startDate"]
+//	      }
+//	    }
+//	  },
+//	  "required": ["personalInfo", "workExperience"]
+//	}
+//
+// ```
+//
+// Schema with References:
+// ```json
+//
+//	{
+//	  "type": "object",
+//	  "properties": {
+//	    "algorithms": {
+//	      "type": "array",
+//	      "items": {"$ref": "#/$defs/algorithm"}
+//	    }
+//	  },
+//	  "$defs": {
+//	    "algorithm": {
+//	      "type": "object",
+//	      "properties": {
+//	        "name": {"type": "string"},
+//	        "description": {"type": "string"}
+//	      },
+//	      "required": ["name"]
+//	    }
+//	  }
+//	}
+//
+// ```
+//
+// Best Practices:
+//
+// 1. Use descriptive field names that clearly indicate what data should be extracted
+// 2. Add detailed descriptions to help the AI understand what to extract
+// 3. Use `enum` for known values (e.g., form types, status values)
+// 4. Make fields optional by using `anyOf` with `null` or omitting from `required`
+// 5. Use arrays for lists of similar items (e.g., work experience, education)
+// 6. Keep schemas focused - avoid overly complex nested structures
+// 7. Test with sample documents to ensure the schema captures the expected data
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /extract/schemas (the `CreateSchemaExtractSchemasPost` operationId).
+func (c *ClientWithResponses) CreateSchemaExtractSchemasPostWithResponse(ctx context.Context, body CreateSchemaExtractSchemasPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateSchemaExtractSchemasPostResponse, error) {
+	rsp, err := c.CreateSchemaExtractSchemasPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateSchemaExtractSchemasPostResponse(rsp)
+}
+
+// DeleteSchemaExtractSchemasSchemaIdDeleteWithResponse Delete Schema
+//
+// Delete a schema.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /extract/schemas/{schema_id} (the `DeleteSchemaExtractSchemasSchemaIdDelete` operationId).
+func (c *ClientWithResponses) DeleteSchemaExtractSchemasSchemaIdDeleteWithResponse(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*DeleteSchemaExtractSchemasSchemaIdDeleteResponse, error) {
+	rsp, err := c.DeleteSchemaExtractSchemasSchemaIdDelete(ctx, schemaId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteSchemaExtractSchemasSchemaIdDeleteResponse(rsp)
+}
+
+// GetSchemaExtractSchemasSchemaIdGetWithResponse Get Schema
+//
+// Get schema information by ID.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /extract/schemas/{schema_id} (the `GetSchemaExtractSchemasSchemaIdGet` operationId).
+func (c *ClientWithResponses) GetSchemaExtractSchemasSchemaIdGetWithResponse(ctx context.Context, schemaId string, reqEditors ...RequestEditorFn) (*GetSchemaExtractSchemasSchemaIdGetResponse, error) {
+	rsp, err := c.GetSchemaExtractSchemasSchemaIdGet(ctx, schemaId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetSchemaExtractSchemasSchemaIdGetResponse(rsp)
+}
+
+// UpdateSchemaExtractSchemasSchemaIdPutWithBodyWithResponse Update Schema
+//
+// Update an existing schema.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+func (c *ClientWithResponses) UpdateSchemaExtractSchemasSchemaIdPutWithBodyWithResponse(ctx context.Context, schemaId string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateSchemaExtractSchemasSchemaIdPutResponse, error) {
+	rsp, err := c.UpdateSchemaExtractSchemasSchemaIdPutWithBody(ctx, schemaId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateSchemaExtractSchemasSchemaIdPutResponse(rsp)
+}
+
+// UpdateSchemaExtractSchemasSchemaIdPutWithResponse Update Schema
+//
+// Update an existing schema.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /extract/schemas/{schema_id} (the `UpdateSchemaExtractSchemasSchemaIdPut` operationId).
+func (c *ClientWithResponses) UpdateSchemaExtractSchemasSchemaIdPutWithResponse(ctx context.Context, schemaId string, body UpdateSchemaExtractSchemasSchemaIdPutJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateSchemaExtractSchemasSchemaIdPutResponse, error) {
+	rsp, err := c.UpdateSchemaExtractSchemasSchemaIdPut(ctx, schemaId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateSchemaExtractSchemasSchemaIdPutResponse(rsp)
+}
+
 // GenerateGeneratePostWithBodyWithResponse Generate
 //
 // Generate a response using Contextual's Grounded Language Model (GLM), an LLM engineered specifically to prioritize faithfulness to in-context retrievals over parametric knowledge to reduce hallucinations in Retrieval-Augmented Generation and agentic use cases.
@@ -10860,7 +18269,7 @@ func (c *ClientWithResponses) LmunitLmunitPostWithResponse(ctx context.Context, 
 
 // ParseParsePostWithBodyWithResponse Parse File
 //
-// Parse a file into a structured Markdown and/or JSON. Files must be less than 100MB and 400 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
+// Parse a file into a structured Markdown and/or JSON. Files must be less than 300MB and 2000 pages. We use LibreOffice to convert DOC(X) and PPT(X) files to PDF, which may affect page count.
 //
 // See our [blog post](https://contextual.ai/blog/document-parser-for-rag) and [code examples](https://github.com/ContextualAI/examples/blob/main/03-standalone-api/04-parse/parse.ipynb). Email [parse-feedback@contextual.ai](mailto:parse-feedback@contextual.ai) with any feedback or questions.
 //
@@ -11073,6 +18482,51 @@ func (c *ClientWithResponses) UpdateUserUsersPutWithResponse(ctx context.Context
 	return ParseUpdateUserUsersPutResponse(rsp)
 }
 
+// GetConsentWorkspacesConsentGetWithResponse Get Consent
+//
+// Retrieve the current consent status for the workspace.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /workspaces/consent (the `GetConsentWorkspacesConsentGet` operationId).
+func (c *ClientWithResponses) GetConsentWorkspacesConsentGetWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetConsentWorkspacesConsentGetResponse, error) {
+	rsp, err := c.GetConsentWorkspacesConsentGet(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetConsentWorkspacesConsentGetResponse(rsp)
+}
+
+// UpdateConsentWorkspacesConsentPutWithBodyWithResponse Update Consent
+//
+// Update the consent status for the workspace.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+func (c *ClientWithResponses) UpdateConsentWorkspacesConsentPutWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateConsentWorkspacesConsentPutResponse, error) {
+	rsp, err := c.UpdateConsentWorkspacesConsentPutWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateConsentWorkspacesConsentPutResponse(rsp)
+}
+
+// UpdateConsentWorkspacesConsentPutWithResponse Update Consent
+//
+// Update the consent status for the workspace.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PUT /workspaces/consent (the `UpdateConsentWorkspacesConsentPut` operationId).
+func (c *ClientWithResponses) UpdateConsentWorkspacesConsentPutWithResponse(ctx context.Context, body UpdateConsentWorkspacesConsentPutJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateConsentWorkspacesConsentPutResponse, error) {
+	rsp, err := c.UpdateConsentWorkspacesConsentPut(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateConsentWorkspacesConsentPutResponse(rsp)
+}
+
 // ParseListAgentsAgentsGetResponse parses an HTTP response from a ListAgentsAgentsGetWithResponse call
 func ParseListAgentsAgentsGetResponse(rsp *http.Response) (*ListAgentsAgentsGetResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -11155,6 +18609,32 @@ func ParseListTemplatesAgentsTemplatesGetResponse(rsp *http.Response) (*ListTemp
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest ListTemplatesResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListAclTemplatesAgentsTemplatesAclGetResponse parses an HTTP response from a ListAclTemplatesAgentsTemplatesAclGetWithResponse call
+func ParseListAclTemplatesAgentsTemplatesAclGetResponse(rsp *http.Response) (*ListAclTemplatesAgentsTemplatesAclGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListAclTemplatesAgentsTemplatesAclGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ListACLTemplatesResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11345,7 +18825,7 @@ func ParseGetAgentMetadataAgentsAgentIdMetadataGetResponse(rsp *http.Response) (
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest GetAgentMetadataAgentsAgentIdMetadataGet200JSONResponseBody
+		var dest GetAgentResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11412,6 +18892,39 @@ func ParseQueryAgentsAgentIdQueryPostResponse(rsp *http.Response) (*QueryAgentsA
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest QueryResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseQueryAgentsAgentIdQueryAclPostResponse parses an HTTP response from a QueryAgentsAgentIdQueryAclPostWithResponse call
+func ParseQueryAgentsAgentIdQueryAclPostResponse(rsp *http.Response) (*QueryAgentsAgentIdQueryAclPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &QueryAgentsAgentIdQueryAclPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ACLQueryResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -11511,6 +19024,216 @@ func ParseSaveTemplateAgentsAgentIdTemplatePostResponse(rsp *http.Response) (*Sa
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest EmptyResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetBalanceBillingBalanceGetResponse parses an HTTP response from a GetBalanceBillingBalanceGetWithResponse call
+func ParseGetBalanceBillingBalanceGetResponse(rsp *http.Response) (*GetBalanceBillingBalanceGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetBalanceBillingBalanceGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BalanceResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse parses an HTTP response from a GetTopUpHistoryEndpointBillingBalanceTopUpsGetWithResponse call
+func ParseGetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse(rsp *http.Response) (*GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetTopUpHistoryEndpointBillingBalanceTopUpsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest GetTopUpHistoryResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetBillingModeHistoryBillingBillingModeHistoryGetResponse parses an HTTP response from a GetBillingModeHistoryBillingBillingModeHistoryGetWithResponse call
+func ParseGetBillingModeHistoryBillingBillingModeHistoryGetResponse(rsp *http.Response) (*GetBillingModeHistoryBillingBillingModeHistoryGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetBillingModeHistoryBillingBillingModeHistoryGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BillingModeHistoryResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetBillingMetadataBillingMetadataGetResponse parses an HTTP response from a GetBillingMetadataBillingMetadataGetWithResponse call
+func ParseGetBillingMetadataBillingMetadataGetResponse(rsp *http.Response) (*GetBillingMetadataBillingMetadataGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetBillingMetadataBillingMetadataGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BillingMetadataResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetAclStepUsageEndpointBillingUsagesAclGetResponse parses an HTTP response from a GetAclStepUsageEndpointBillingUsagesAclGetWithResponse call
+func ParseGetAclStepUsageEndpointBillingUsagesAclGetResponse(rsp *http.Response) (*GetAclStepUsageEndpointBillingUsagesAclGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetAclStepUsageEndpointBillingUsagesAclGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AgentComposerStepUsageResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse parses an HTTP response from a GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetWithResponse call
+func ParseGetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse(rsp *http.Response) (*GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetEarliestUsageDateEndpointBillingUsagesEarliestDateGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest EarliestUsageDateResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse parses an HTTP response from a GetMonthlyUsageEndpointBillingUsagesMonthlyGetWithResponse call
+func ParseGetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse(rsp *http.Response) (*GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetMonthlyUsageEndpointBillingUsagesMonthlyGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest MonthlyUsageResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -12023,6 +19746,501 @@ func ParseResetDatastoreDatastoresDatastoreIdResetPutResponse(rsp *http.Response
 	return response, nil
 }
 
+// ParseListDocumentsExtractDocumentsGetResponse parses an HTTP response from a ListDocumentsExtractDocumentsGetWithResponse call
+func ParseListDocumentsExtractDocumentsGetResponse(rsp *http.Response) (*ListDocumentsExtractDocumentsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListDocumentsExtractDocumentsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest DocumentListResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUploadDocumentExtractDocumentsUploadPostResponse parses an HTTP response from a UploadDocumentExtractDocumentsUploadPostWithResponse call
+func ParseUploadDocumentExtractDocumentsUploadPostResponse(rsp *http.Response) (*UploadDocumentExtractDocumentsUploadPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UploadDocumentExtractDocumentsUploadPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest DocumentUploadResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteDocumentExtractDocumentsDocumentIdDeleteResponse parses an HTTP response from a DeleteDocumentExtractDocumentsDocumentIdDeleteWithResponse call
+func ParseDeleteDocumentExtractDocumentsDocumentIdDeleteResponse(rsp *http.Response) (*DeleteDocumentExtractDocumentsDocumentIdDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteDocumentExtractDocumentsDocumentIdDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest map[string]string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetDocumentExtractDocumentsDocumentIdGetResponse parses an HTTP response from a GetDocumentExtractDocumentsDocumentIdGetWithResponse call
+func ParseGetDocumentExtractDocumentsDocumentIdGetResponse(rsp *http.Response) (*GetDocumentExtractDocumentsDocumentIdGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetDocumentExtractDocumentsDocumentIdGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest DocumentInfoResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListJobsExtractJobsGetResponse parses an HTTP response from a ListJobsExtractJobsGetWithResponse call
+func ParseListJobsExtractJobsGetResponse(rsp *http.Response) (*ListJobsExtractJobsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListJobsExtractJobsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest JobListResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStartExtractionJobExtractJobsPostResponse parses an HTTP response from a StartExtractionJobExtractJobsPostWithResponse call
+func ParseStartExtractionJobExtractJobsPostResponse(rsp *http.Response) (*StartExtractionJobExtractJobsPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StartExtractionJobExtractJobsPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ExtractJobResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetJobStatusExtractJobsJobIdGetResponse parses an HTTP response from a GetJobStatusExtractJobsJobIdGetWithResponse call
+func ParseGetJobStatusExtractJobsJobIdGetResponse(rsp *http.Response) (*GetJobStatusExtractJobsJobIdGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetJobStatusExtractJobsJobIdGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest JobStatusResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetJobResultsExtractJobsJobIdResultsGetResponse parses an HTTP response from a GetJobResultsExtractJobsJobIdResultsGetWithResponse call
+func ParseGetJobResultsExtractJobsJobIdResultsGetResponse(rsp *http.Response) (*GetJobResultsExtractJobsJobIdResultsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetJobResultsExtractJobsJobIdResultsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest JobResultsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateJobResultsExtractJobsJobIdResultsPutResponse parses an HTTP response from a UpdateJobResultsExtractJobsJobIdResultsPutWithResponse call
+func ParseUpdateJobResultsExtractJobsJobIdResultsPutResponse(rsp *http.Response) (*UpdateJobResultsExtractJobsJobIdResultsPutResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateJobResultsExtractJobsJobIdResultsPutResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseResumeStreamingExtractionExtractJobsJobIdStreamGetResponse parses an HTTP response from a ResumeStreamingExtractionExtractJobsJobIdStreamGetWithResponse call
+func ParseResumeStreamingExtractionExtractJobsJobIdStreamGetResponse(rsp *http.Response) (*ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ResumeStreamingExtractionExtractJobsJobIdStreamGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListSchemasExtractSchemasGetResponse parses an HTTP response from a ListSchemasExtractSchemasGetWithResponse call
+func ParseListSchemasExtractSchemasGetResponse(rsp *http.Response) (*ListSchemasExtractSchemasGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListSchemasExtractSchemasGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SchemaListResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCreateSchemaExtractSchemasPostResponse parses an HTTP response from a CreateSchemaExtractSchemasPostWithResponse call
+func ParseCreateSchemaExtractSchemasPostResponse(rsp *http.Response) (*CreateSchemaExtractSchemasPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CreateSchemaExtractSchemasPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SchemaResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteSchemaExtractSchemasSchemaIdDeleteResponse parses an HTTP response from a DeleteSchemaExtractSchemasSchemaIdDeleteWithResponse call
+func ParseDeleteSchemaExtractSchemasSchemaIdDeleteResponse(rsp *http.Response) (*DeleteSchemaExtractSchemasSchemaIdDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteSchemaExtractSchemasSchemaIdDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest map[string]string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetSchemaExtractSchemasSchemaIdGetResponse parses an HTTP response from a GetSchemaExtractSchemasSchemaIdGetWithResponse call
+func ParseGetSchemaExtractSchemasSchemaIdGetResponse(rsp *http.Response) (*GetSchemaExtractSchemasSchemaIdGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetSchemaExtractSchemasSchemaIdGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SchemaResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateSchemaExtractSchemasSchemaIdPutResponse parses an HTTP response from a UpdateSchemaExtractSchemasSchemaIdPutWithResponse call
+func ParseUpdateSchemaExtractSchemasSchemaIdPutResponse(rsp *http.Response) (*UpdateSchemaExtractSchemasSchemaIdPutResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateSchemaExtractSchemasSchemaIdPutResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SchemaResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGenerateGeneratePostResponse parses an HTTP response from a GenerateGeneratePostWithResponse call
 func ParseGenerateGeneratePostResponse(rsp *http.Response) (*GenerateGeneratePostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -12362,6 +20580,65 @@ func ParseUpdateUserUsersPutResponse(rsp *http.Response) (*UpdateUserUsersPutRes
 	}
 
 	response := &UpdateUserUsersPutResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest EmptyResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest HTTPValidationError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetConsentWorkspacesConsentGetResponse parses an HTTP response from a GetConsentWorkspacesConsentGetWithResponse call
+func ParseGetConsentWorkspacesConsentGetResponse(rsp *http.Response) (*GetConsentWorkspacesConsentGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetConsentWorkspacesConsentGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest GetConsentResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseUpdateConsentWorkspacesConsentPutResponse parses an HTTP response from a UpdateConsentWorkspacesConsentPutWithResponse call
+func ParseUpdateConsentWorkspacesConsentPutResponse(rsp *http.Response) (*UpdateConsentWorkspacesConsentPutResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateConsentWorkspacesConsentPutResponse{
 		Body:         bodyBytes,
 		HTTPResponse: rsp,
 	}
