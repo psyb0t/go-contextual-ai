@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.1, 2026-11-20
+
+- Raised the minimum Go version in `go.mod` from 1.26.10 to 1.26.11, which fixes the `net/http` vulnerability GO-2026-6859 found by govulncheck.
+- The development image is based on `golang:1.26.11-trixie` with an updated digest.
+- The agent skill setup reference now says Go 1.26.11 or newer.
+- No exported API changes.
+
 ## v0.2.0, 2026-10-28
 
 - The client is generated from the spec Contextual AI publishes at `https://docs.contextual.ai/api-reference/openapi.json`. The Stainless-hosted copy of the spec it used before is no longer publicly readable, so scheduled regeneration had stopped.
